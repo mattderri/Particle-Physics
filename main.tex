@@ -813,5 +813,63 @@ The $\pi^0$ decay is an EM process but we discuss it here because it critically 
 \[
 \braket{\gamma\gamma|H_{\text{EM}}|\pi^0}\propto f_\pi\frac{N_c}{\sqrt{2}}\left(\frac{4}{9}e^2-\frac{1}{9}e^2\right)
 \]
-where $f_\pi$ is the decay constant of $\pi^0$, related to the wave-function overlap of the quarks and anti-quarks. The full computation, compared with the experimental measure, gives a value compatible with the QCD prediction $N_c=3$. 
+where $f_\pi$ is the decay constant of $\pi^0$, related to the wave-function overlap of the quarks and anti-quarks. The full computation, compared with the experimental measure, gives a value compatible with the QCD prediction $N_c=3$.\\
+The colour is a charge, equivalent to the electric one, it is exactly conserved in strong interactions. Gluons carry two colours and are therefore self-coupled: vertices with three or four gluons are allowed in QCD, while for example in QED it happens only on higher orders with a triangle of fermions. The number of gluons comes from the Gell-Mann matrices, the generators of SU(3).The colour does not manifest directly in an observable property of the particle. The standard explanation of this fact requires that only \textit{white}, i.e. colour singlets, states can be physically existent. Quarks and gluons themselves cannot be observed as free states (\textbf{confinement}), they exist only as hadrons.\\
+The study of the DIS shows that at high $Q^2$ the projectile \textit{sees} smaller objects inside the nucleon. At small distances, the force between quarks and gluons is apparently smaller and smaller, the quarks behave as free objects. Scattering onto free quarks is the origin of the Bjorken scaling. This effect is called \textbf{asymptotic freedom}. With increasing distance among the quarks (lower $Q^2$), the intensity of the strong force increases, keeping the quarks confined in the nucleon. On the other hand, at some distance the available energy becomes sufficient to create a new quark-anti-quark pair, leading to the production of new hadrons but preventing the emission of quarks as free particles. Mesons are colour singlets, a $q\overline{q}$ with symmetric wave-function while baryons are colour singlets $qqq$ with anti-symmetric wave-function.\\
+A semi-classical approach tells us that for small distances, the potential has a Coulomb shape with a coupling $\alpha_{\text{S}}$. At large distances, it has a linearly increasing function responsible for the confinement.
+\[
+V(r)=\underbrace{-\frac{4\alpha_{\text{S}}}{3r}}_{\text{small $r$}}+\underbrace{kr}_{\text{large $r$}}
+\]
+Consider a two-body process at high $Q^2$, $q\overline{q}\to q\overline{q}$. There are 8 possible cases, according to $q\overline{q}g$ and it is basically impossible to disentangle on an event-by-event basis. A more effective approach for scattering processes is to reabsorb higher orders into an effective coupling $\alpha_{\text{S}}$. The loops increase with $Q^2$, but since the gluons are self-interacting there will be mainly gluon loops, hence $\alpha_{\text{S}}$ decreases with $Q^2$. This explains the nucleons and the DIS.
+\section{High Energy $\nu$ Interactions}
+After 1960, the accelerator production of $\nu$-beams of high intensity and high energy has led to a dramatic development of our understanding of weak interactions. Neutrinos cross sections are very small, beams, detectors and experimental setups have to compensate for this. For example, statistically we need 3o billions $\nu$ of energy 1 GeV to get one interaction in 10 meters of iron.
+\subsection{The $\nu$ Beam}
+The relevant observables the cross section and in order to measure it, the experiments need the flux of incoming $\nu$. A neutrino cannot be observed before its interaction, therefore the flux can only be computed statistically. The ingredients are:
+\begin{enumerate}
+    \item the inclusive differential cross sections of the $\pi^\pm$ and $K^\pm$ production in the target
+    \item the collection and collimation of $\pi^\pm$ and $K^\pm$
+    \item the distribution of the decay length and position
+    \item the distribution of the $\nu$ decay angle
+\end{enumerate}
+Using all these elements, the flux is numerically computed, usually with MonteCarlo simulations and used in the analysis.\\
+The statistical distribution of (1) and (2) can be directly measured, the momentum distribution of $\mu^\pm$ from $\pi^\pm/K^\pm$ decay can be computed and checked using their measurement in the decay and absorber tunnels. Collection and collimation (2) may use different strategies:
+\begin{itemize}
+    \item wide band beam (WBB): intense beam, not monochromatic
+    \item narrow band beam (NBB): less intense but more monochromatic
+\end{itemize}
+In practice, both beams are optimized for different measurements.\\
+As an example, the SPS at CERN accelerates $\sim5\cdot10^{13}$ protons per cycle to an energy $E_p=450$\;GeV. The proton beam is extracted and sent to a target (copper, beryllium, graphite), the average secondary multiplicity is $\sim10$ charged, with energies from 10 to 100 GeV. The secondaries are then focused and let decay. The focusing process is a compromise between resolution (ideally monochromatic) and intensity (as many neutrinos as possible). A good solution is the WBB beam where a Van der Meer horn selects with good acceptance $\pi^\pm$ and $K^\pm$. $\pi^\pm$ and $K^\pm$ decay in the decay tunnel. Again, the length of the tunnel is a compromise between cost and intensity, it should be about the average decay length. In the laboratory frame, the average $d_m$ is $d_M=\beta c\tau$ which, for $\pi^\pm$ of 50 GeV is approximately 2800\,m. In reality, tunnels are only a few hundreds meters long. In these decays, only beams of $\nu_\mu$ can be created, electron neutrinos are small contaminations. Neutrinos cannot be directly measured, some information about their four-momentum comes from the kinematics of the decay $\pi^\pm/K^\pm\to\mu^\pm\nu_\mu$. $\pi^\pm/K^\pm$ have spin 0 and in the center of mass the decay is isotropic. Moreover, in the CM we have:
+\[
+\pi^\pm=(m_\pi,0,0) \quad \nu=(p*,p*\cos\theta*, p*\sin\theta*) \quad \mu^\pm=(m_\pi-p*,-p*\cos\theta*.-p*\sin\theta*)
+\]
+Kinematics tells us that:
+\[
+p*=\frac{m_\pi^2-m_\mu^2}{2m_\pi} \quad E_\mu*=m_\pi-p*=\frac{m_\pi^2+m_\mu^2}{2m_\pi}
+\]
+The longitudinal momentum in the laboratory frame, is obtained by a boost:
+\[
+p_\nu^\parallel\bigr|_{\substack{\text{LAB}}}=p\cos\theta=\gamma p*\cos\theta*+\beta\gamma p*
+\]
+This has a minimum for $\cos\theta*=-1$, corresponding to $p_\nu^\parallel\bigr|^{{\min}}_{\substack{\text{LAB}}}=\gamma p*(\beta-1)\approx0$ and a maximum for $\cos\theta*=1$:
+\[
+p_\nu^\parallel\bigr|^{{\max}}_{\substack{\text{LAB}}}=\gamma p*(\beta+1)\approx2\gamma p*=2\frac{E_\pi}{m_\pi}\frac{m_\pi^2-m_\mu^2}{2m_\pi}=E_\pi\left(1-\frac{m_\mu^2}{m_\pi^2}\right)=0.43E_\pi
+\]
+For $K^\pm$, the maximum is higher around 0.96$E_K$. The angular distribution of a $\nu$ with respect to a $\pi^\pm$ is:
+\[
+\frac{dn}{d\Omega}\approx\frac{1}{4\pi}\frac{4\gamma^2(1+\tan^2\theta)^{3/2}}{(1+\gamma^2\tan^2\theta)^2}
+\]
+The detectors must get only neutrinos and not the muons, pions and kaons. Therefore, a thick absorber is positioned at the end of the decay tunnel. At the SPS at CERN, this is made with 185m of iron + 220m of rock. The main contaminations for WBB $\nu_\mu$ come from $\overline{\nu}_\mu$ and vice-versa. For NBB, the relation between the radial distance of the impact point and the $\nu$ energy allows for a discrimination of the neutrino energy with a certain resolution and little $\pi/K$ ambiguity.
+\subsection{CC $\nu$ Processes}
+A very simple CC process is the pure lepton scattering $\nu_\mu e^-\to\mu^-\nu_e$. Kinematics tells us that:
+\[
+E_{\nu_\mu}^{\min}=\frac{(m_\mu+m_{\nu_e})^2-m_{\nu_\mu}^2-m_e^2}{2m_e}\approx\frac{m_\mu^2-m_e^2}{2m_e}\approx\frac{m_\mu^2}{2m_e}\approx11\;\text{GeV}
+\]
+The creation of $\mu$ requires high energy neutrinos. Repeating the same calculations with $\tau$ gives a minimum energy of roughly 3 TeV, not possible with present accelerators. The cross-section of this process is:
+\[
+\sigma(\nu_\mu e^-\to\mu^-\nu_e)=\frac{2G_F^2m_eE_\nu}{\pi}\left(1-\frac{m_\mu^2}{2m_eE_\nu}\right)^2
+\]
+However, the pure lepton process is so rare that it is hard to get statistical significance. More commen processes are quasi-elastic scatterings:
+\[
+\nu_\mu n\to\mu^-p \quad \overline{\nu}_\mu p\to\mu^+n
+\]
 \end{document}
