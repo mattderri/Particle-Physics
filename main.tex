@@ -846,7 +846,7 @@ Kinematics tells us that:
 \[
 p*=\frac{m_\pi^2-m_\mu^2}{2m_\pi} \quad E_\mu*=m_\pi-p*=\frac{m_\pi^2+m_\mu^2}{2m_\pi}
 \]
-The longitudinal momentum in the laboratory frame, is obtained by a boost:
+The longitudinal momentum in the laboratory frame is obtained by a boost:
 \[
 p_\nu^\parallel\bigr|_{\substack{\text{LAB}}}=p\cos\theta=\gamma p*\cos\theta*+\beta\gamma p*
 \]
@@ -868,8 +868,55 @@ The creation of $\mu$ requires high energy neutrinos. Repeating the same calcula
 \[
 \sigma(\nu_\mu e^-\to\mu^-\nu_e)=\frac{2G_F^2m_eE_\nu}{\pi}\left(1-\frac{m_\mu^2}{2m_eE_\nu}\right)^2
 \]
-However, the pure lepton process is so rare that it is hard to get statistical significance. More commen processes are quasi-elastic scatterings:
+However, the pure lepton process is so rare that it is hard to get statistical significance. More common processes are quasi-elastic scatterings:
 \[
 \nu_\mu n\to\mu^-p \quad \overline{\nu}_\mu p\to\mu^+n
 \]
+In Fermi theory, with $p$ and $n$ point-like and a threshold $s=2m_NE_\nu$, we get $\sigma\propto2G_F^2m_NE_\nu$:
+\[
+\frac{\sigma(\nu\to N)}{\sigma(\nu\to e)}=\frac{m_N}{m_E}\approx2000
+\]
+In the V-A theory, $f_V(Q^2)$ and $f_A(Q^2)$ makes $\sigma$ not independent on $E_\nu$. At high $Q^2$, as expected, the nucleons \textit{break} and the interactions \textit{see} quarks instead of nucleons: quasi-elastic essentially disappears. At high $Q^2$, the quark model is expected to describe well the neutrinos interactions. 
+\subsection{Neutral Currents}
+The search for NC events began in the early '60s, when the EW theory was still thought to be not renormalizable. The searches were limited by FCNC, decays like $K^+\to\pi^+e^+e^-$ and $K^0\to\mu^+\mu^-$ were searched but not found. The only escape from this difficulty is to make use of neutral particles which are not affected by EW interactions, the neutrinos. The signature for this process is given by the absence in the final state of a charged lepton, which is unavoidable in the CC coupling. The events were of the type:
+\[
+\begin{aligned}
+&\nu_\mu+N\to\nu_\mu+X &&\overline{\nu}_\mu+N\to\overline{\nu}_\mu+X\\
+&\nu_\mu+e^-\to\nu_\mu+e^- &&\overline{\nu}_\mu+e^-\to\overline{\nu}_\mu+e^-
+\end{aligned}
+\]
+where $X$ is an hadronic system without leptons. Events are defined as NC if no $\mu^\pm$ is present and if no charged track escapes the fiducial volume. Instead, events are CC if a clearly $\mu^\pm$ is present and the $\mu^\pm$ has to exit out of the chamber. For $\nu$ beams, there were 102 NC and 428 CC while for $\overline{\nu}$ beam they had 64 NC and 148 CC, results consistent with the presence of NC.\\
+To measure these processes, the strategy is the same as in the CC case, with a simplification due to the absence of FCNC.
+\[
+R_\nu:=\frac{\sigma_{\text{NC}}(\nu N)}{\sigma_{\text{CC}}(\nu N)}\approx\frac{1}{2}-\sin^2\theta_w+\frac{20}{27}\sin^4\theta_w \quad R_{\overline{\nu}}:=\frac{\sigma_{\text{NC}}(\overline{\nu} N)}{\sigma_{\text{CC}}(\overline{\nu} N)}\approx\frac{1}{2}-\sin^2\theta_w+\frac{20}{9}\sin^4\theta_w
+\]
+These values are well-defined and, in principle, easy to measure. CC are easy to detect due to the presence of $\mu^\pm$ and relatively background free. NC are hardly distinguishable from cosmics and low-energy CC. Most recent results show:
+\[
+\sin^2\theta_w=
+\left\{
+\begin{aligned}
+&0.2356\pm0.0050 \quad \text{CHARM}\\
+&0.2250\pm0.0050 \quad \text{CDHS}\\
+&0.2332\pm0.0015 \quad \text{today's best from PDG}\\
+&0.2251\pm0.0039 \quad \text{today's best from PDG}
+\end{aligned}
+\right.
+\]
+The last two results differ because of some definitions of higher order parameters.\\
+The cleanest NC leptonic processes are $\nu_\mu e^-\to\nu_\mu e^-$ (and same with anti-neutrino). The problem with these processes is that the cross section is very small and we need to select the tiny number of signal events from the overwhelming NC hadronic events. The extraction of the signal requires the rejection of the background. The main one is due to NC hadronic interactions, without $\mu^\pm$ in the final state, with one or more $\pi^0$: the photons due to $\pi^0$ decays mimic the EM shower. To reject those events, the deposit of energy in the early scintillators is used. Since $\pi^0\to2\gamma\to4e^\pm$, a scintillator sees 4 minimum ionizing particles instead of one. In this way, by using only the part of the detector immediately upstream of the scintillator, a much better isolation of the signal is obtained, at the price of a reduced statistics. 
+\[
+R_{\text{NC}}^{\nu_\mu e}=\frac{\sigma_{\text{NC}}(\nu_\mu e^-)}{\sigma_{\text{NC}}(\overline{\nu}_\mu e^-)}=3\frac{1-4\sin^2\theta_w+\frac{16}{3}\sin^4\theta_w}{1-4\sin^2\theta_w+16\sin^4\theta_w}
+\]
+Results from $\nu_\mu e$ are:
+\[
+\sin^2\theta_w=
+\left\{
+\begin{aligned}
+&0.2324\pm0.0058\pm0.0059 \quad \text{CHARM}\\
+&0.2311\pm0.0077 \quad \text{today's best from PDG}\\
+&0.2230\pm0.0077 \quad \text{today's best from PDG}
+\end{aligned}
+\right.
+\]
+Again, the last two results differ because of some definitions of higher order parameters.
 \end{document}
