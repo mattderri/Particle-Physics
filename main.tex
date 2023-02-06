@@ -18,6 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{tcolorbox}
 \usepackage{bbm}
 \usepackage{braket}
 \usepackage{amssymb}
@@ -44,9 +45,9 @@
 \begin{itemize}
     \item \textbf{Parity} $\mathbb{P}$:
     \[
-    \mathbb{P}\ket{\Psi(q,-\Vec{x},t)}=P\ket{\Psi(q,\Vec{x},t)}
+    \mathbb{P}\ket{\Psi(q,\Vec{x},t)}=P\ket{\Psi(q,-\Vec{x},t)}
     \]
-    Since $\mathbb{P}^2=\mathbbm{1}$, this implies that $P=\pm1$. The parity of the anti-particle is the opposite of the parity of the anti-particle. Conventionally, parity +1 is assigned to quarks and leptons. For spin-0 bosons, particle and anti-particle have the same parity. The gauge bosons $\gamma$ and $G_\mu^{a=1,\cdots,8}$ have parity -1, the electroweak gauge bosons $W^\pm$ and $Z$ do not have a defined intrinsic parity since electroweak interaction does not conserve parity.
+    Since $\mathbb{P}^2=\mathbbm{1}$, this implies that $P=\pm1$. The parity of the anti-particle is the opposite of the parity of the particle. Conventionally, parity +1 is assigned to quarks and leptons. For spin-0 bosons, particle and anti-particle have the same parity. The gauge bosons $\gamma$ and $G_\mu^{a=1,\cdots,8}$ have parity -1, the electroweak gauge bosons $W^\pm$ and $Z$ do not have a defined intrinsic parity since electroweak interaction does not conserve parity.
     \item \textbf{Charge conjugation} $\mathbb{C}$: it changes a particle p into an anti-particle $\overline{\text{p}}$.
     \[
     \mathbb{C}\ket{\text{p},\Psi(\Vec{x},t)}=C\ket{\overline{\text{p}},\Psi(\Vec{x},t)}
@@ -63,19 +64,23 @@
     \item \textbf{G-parity} $\mathbb{G}=\mathbb{C}\mathbb{R}_2$, where $\mathbb{R}_2$ is a rotation in the isospin space. Conserved only in strong interactions, producing selection rules.
 \end{itemize}
 \subsection{Hadrons}
-Overt time, the concept of \textit{elementary particle} entered a deep crisis and it became natural to interpret hadrons as resonances of elementary components. Gell-Mann and Ne'eman proposed a new classification, the \textbf{Eightfold Way} based on the symmetry group SU(3). Hadrons are classified in the $(I_3,Y)$ plane, where $I_3$ is the third component of the isospin and $Y$ is the strong hypercharge given by $Y=B+S$, with $B$ baryon number and $S$ strangeness. The strangeness enlarges the isospin symmetry group from SU(2) to SU(3). The Gell-Mann-Nishijima formula tells us that:
+Overt time, the concept of \textit{elementary particle} entered a deep crisis. The existence of many hadrons was seen as a contradiction with the elementary nature of the fundamental component of matter and it became natural to interpret hadrons as resonances of elementary components.\\
+Gell-Mann and Ne'eman proposed a new classification, the \textbf{Eightfold Way} based on the symmetry group SU(3). Hadrons are classified in the $(I_3,Y)$ plane, where $I_3$ is the third component of the isospin and $Y$ is the strong hypercharge given by $Y=B+S$, with $B$ baryon number and $S$ strangeness. The strangeness enlarges the isospin symmetry group from SU(2) to SU(3). The Gell-Mann-Nishijima formula tells us that:
+\begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Gell-Mann-Nishijima Formula},colbacktitle={gray!50},coltitle=black]
 \[
 Q=I_3+\frac{1}{2}Y
 \]
+\end{tcolorbox}
+\noindent
 This symmetry is called flavour SU(3), or SU(3)$_\text{F}$, to distinguish it from color SU(3), or SU(3)$_\text{C}$.\\
-Particles form multiplets of SU(3)$_\text{F}$. Each multiplet contains particles with the same spin and intrinsic parity. For mesons, we have an octet+singlet while for baryons octet+decuplet. Notice that for mesons, because of $\mathbb{CPT}$ the masses of the octet are symmetric with respect to $S=0$ and $I_3=0$ while for baryons the masses increase with $-S$.\\
-When EW was proposed, they knew only 9 members of the decuplet, the last one was predicted: it needed to have $Y=-2$ and $I_3=0$, hence $Q=-1$, $S=-3$ and $B=1$. It was called $\Omega^-$ with a predicted mass of $m_{\Omega^-}\approx1680$\,MeV. This $\Omega^-$ can only decay to a $S=-2$ state: since EM and strong interaction conserve strangeness, the lightest $S$ and $B$ conserving decay is:
+Particles form multiplets of SU(3)$_\text{F}$. Each multiplet contains particles with the same spin and intrinsic parity. For \textbf{mesons}, we have an octet+singlet while for \textbf{baryons} octet+decuplet. Notice that for mesons, because of $\mathbb{CPT}$ the masses of the octet are symmetric with respect to $S=0$ and $I_3=0$ while for baryons the masses increase with $-S$.\\
+When the Eightfold Way was proposed, only 9 members of the decuplet were known and the last one was initially predicted: it needed to have $Y=-2$ and $I_3=0$, hence $Q=-1$, $S=-3$ and $B=1$. It was called $\Omega^-$ with a predicted mass of $m_{\Omega^-}\approx1680$\,MeV. This $\Omega^-$ can only decay to a $S=-2$ state: since EM and strong interaction conserve strangeness, the lightest $S$ and $B$ conserving decay is:
 \begin{align*}
 \Omega^-&\to\Xi^0K^-\\
 S:-3&\to-2-1\\
 B:+1&\to+1+0
 \end{align*}
-However, this is impossible since $m_\Omega<m_\Xi+m_K$: it follows that it must decay via $S$-violating weak interaction, this is reflected by its lifetime. 
+However, this is impossible since $m_\Omega<m_\Xi+m_K$: it follows that it must decay via \textbf{S-violating weak interaction}.
 \[
 \Omega^-\to\Xi^0\pi^-/\Xi^-\pi^0/\Lambda^0K^-
 \]
@@ -101,20 +106,22 @@ In 1964, Gell-Mann and Zweig proposed that all the hadrons are composed of three
     \cellcolor{yellow!50}$Q=I_3+\frac{1}{2}Y$ & 2/3 & -1/3 & -1/3\\
     \hline
     \end{tabular}
-    \caption*{}
-    \label{tab:my_label}
+    \caption{Quantum numbers of the three quarks known at the time.}
+    \label{3quak}
 \end{table}\\
 Baryons are combinations of three quarks $qqq$, anti-baryons are combinations of three anti-quarks $\overline{q}\overline{q}\overline{q}$. Mesons are pairs quarks+anti-quarks $q\overline{q}$ while anti-mesons are pairs anti-quarks+quarks: therefore, they are their own anti-particles.\\
 Quarks form a triplet, which is the basic representation of SU(3): they can be represented in the $(I_3,Y)$ plane and their combinations, i.e. hadrons, are sums of such vectors. Mesons are bound states $q\overline{q}$, the states $\pi^+=u\overline{d}, \pi^-=d\overline{u}, K^+=u\overline{s}, K^0=d\overline{s}, K^-=s\overline{u}$ and $\overline{K}^0=s\overline{d}$ have no ambiguity but the combinations $u\overline{u}, d\overline{d}$ and $s\overline{s}$ have the same quantum numbers and these three states mix together. 
 \subsection{SU(3)}
-For SU(2) symmetry, the generators are the $2\times2$ Pauli matrices. For SU(3) instead we have the $3\times3$ Gell-Mann matrices:
+For SU(2) symmetry, the generators are the $2\times2$ \textbf{Pauli matrices}.\\
+For SU(3) instead we have the $3\times3$ \textbf{Gell-Mann matrices}:
 \[
 \begin{aligned}
 &\lambda_1 = \begin{pmatrix} 0 & +1 & 0 \\ +1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} &&\lambda_2 = \begin{pmatrix} 0 & -i & 0 \\ +i & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} &&\lambda_3 = \begin{pmatrix} +1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 0 \end{pmatrix} &&\lambda_4 = \begin{pmatrix} 0 & 0 & +1 \\ 0 & 0 & 0 \\ +1 & 0 & 0 \end{pmatrix} \\
 &\lambda_5 = \begin{pmatrix} 0 & 0 & -i \\ 0 & 0 & 0 \\ +i & 0 & 0 \end{pmatrix} &&\lambda_6 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & +1 \\ 0 & +1 & 0 \end{pmatrix} &&\lambda_7 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & -i \\ 0 & +i & 0 \end{pmatrix} &&\lambda_8 = \frac{1}{\sqrt{3}} \begin{pmatrix} +1 & 0 & 0 \\ 0 & +1 & 0 \\ 0 & 0 & -2 \end{pmatrix}
 \end{aligned}
 \]
-The two diagonal matrices $\lambda_3$ and $\lambda_8$ are associated to the operators of $I_3$ and $Y$. Define $T_3:=\frac{1}{2}\lambda_3$ and $T_8:=\frac{1}{\sqrt{3}}\lambda_8$ and consider the following eigenvectors:
+The two diagonal matrices $\lambda_3$ and $\lambda_8$ are associated to the operators of $I_3$ and $Y$.\\
+Define now $T_3:=\frac{1}{2}\lambda_3$ and $T_8:=\frac{1}{\sqrt{3}}\lambda_8$ and consider the following eigenvectors:
 \[
 \ket{u}=\begin{pmatrix}
     1 \\ 0 \\ 0
@@ -125,7 +132,7 @@ The two diagonal matrices $\lambda_3$ and $\lambda_8$ are associated to the oper
 \end{pmatrix}
 \]
 By applying $T_3$ and $T_8$ to them, one obtains the correct quantum numbers.\\
-Consider now the $\Delta^{++}$ resonance. The wave function associated is the product of spatial wave function, spin wave function and flavour wave function. $\Delta^{++}$ is the lightest $uuu$ state and by symmetry consideration we obtain that its wave function is symmetric. However, it is a fermion, so it must be anti-symmetric. The solution to this problem was proposed by Greenberg, Han and Nambu by introducing a new quantum number for strongly interacting particles, the \textbf{colour}. The idea is that quarks exist in three colours, say red, green and blue. Therefore, when including colour in the wave function of $\Delta^{++}$ we recover its anti-symmetric nature. 
+Consider now the $\Delta^{++}$ resonance. The wave function associated is the product of spatial wave function, spin wave function and flavour wave function. $\Delta^{++}$ is the lightest $uuu$ state and by symmetry consideration we obtain that its wave function is symmetric. However, it is a fermion, so its wave function must be anti-symmetric. The solution to this problem was proposed by Greenberg, Han and Nambu by introducing a new quantum number for strongly interacting particles, the \textbf{colour}. The idea is that quarks exist in three colours, say red, green and blue. They sum like in a TV screen, so when they are all present the screen is white. The \textit{anti-color} is brought by anti-quarks and it is such that color+anti-color=white. Mesons and baryons are white and have no colour: they are a \textbf{colour singlet}. Therefore, when including colour in the wave function of $\Delta^{++}$ we recover its anti-symmetric nature. 
 \section{Hadron Structure}
 \subsection{Fermi Gas Model}
 Nuclei are bound states of protons $p$ and neutrons $n$. In the Fermi gas model, they are assumed to be identical except for their charge: they are little spheres of radius $r=r_0$ and mass $m$, with spin 1/2 and bound inside the nucleus. We define with $N$ the number of neutrons, $Z$ the number of protons and $A$ as $A=N+Z$. The volume of the nucleus, is given by:
@@ -136,7 +143,7 @@ Assuming there are no EM interaction but only nuclear ones, we have $N=Z=\frac{A
 \[
 n_{n,\Uparrow}=n_{n,\Downarrow}=n_{p,\Uparrow}=n_{p,\Downarrow}=\frac{N}{2}=\frac{Z}{2}=\frac{A}{4}=\frac{\frac{4}{3}\pi r_0^3A\frac{4}{3}\pi p_F^3}{(2\pi\hbar)^3}=\frac{2Ar_0^3p_F^3}{9\pi\hbar^3}\Rightarrow N=Z=\frac{A}{2}=\frac{4Ar_0^3p_F^3}{9\pi\hbar^3}
 \]
-\subsection{Rutherford Scattering}
+\subsection{Scattering Experiments}
 Rutherford used $\alpha$ particles $(Z=2,A=4)$ as probes and gold as fixed target $(Z=79, A=197)$. The kinetic energy of the $\alpha$ particles was a few MeV and sometimes he observed a particle scattered by an angle $\theta>90^\circ$: this is impossible if matter is soft and homogeneous. The only explanation was that matter concentrates in small heavy bodies, the nuclei. How could he model this scattering? He tried with a two-body scattering, with only Coulomb interaction, non-relativistic and no QM.\\
 Energy and momentum are conserved, because of symmetry the only important thing is $\Delta p_y$:
 \[
@@ -163,12 +170,16 @@ Being $d\Omega=2\pi\sin\theta d\theta=4\pi\sin(\theta/2)\cos(\theta/2)d\theta$, 
 \frac{d\sigma}{d\Omega}=\left(\frac{zZe^2m}{4\pi\varepsilon_0}\right)^2\frac{1}{4p^4\sin^4(\theta/2)}=\left(\frac{zZe^2m}{2\pi\varepsilon_0}\right)^2\frac{1}{|\Vec{p}-\Vec{p}'|^4}
 \]
 By defining $d_0:=\frac{zZe^2}{2\pi\varepsilon_0mv^2}$, it is possible to write:
+\begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Rutherford Scattering},colbacktitle={gray!50},coltitle=black]
 \[
 \frac{d\sigma}{d\Omega}=\frac{d_0^2}{16\sin^4(\theta/2)}
 \]
+\end{tcolorbox}
+\noindent
 For a large $b$, $\theta$ is small: this sends $d\sigma/d\Omega$ to infinity.\\
-If the $\alpha$ trajectory is external to the nucleus, it does not probe its internal structure, Rutherford experiment could only limit $R_{\text{nucleus}}<10^{-14}$\,m. When the kinetic energy of the probe increases, $r_{\min}$ becomes smaller than $R_{\text{nucleus}}$: a Rutherford-like scattering on lead at fixed $\theta=60^\circ$ showed deviation for kinetic energy larger than 25 MeV, giving $r_{\min}=14$\,fm.\\
-In an elastic scattering, the kinematics tells us that:
+If the $\alpha$ trajectory is external to the nucleus, it does not probe its internal structure, the Rutherford experiment could only limit $R_{\text{nucleus}}<10^{-14}$\,m. When the kinetic energy of the probe increases, $r_{\min}$ becomes smaller than $R_{\text{nucleus}}$: a Rutherford-like scattering on lead at fixed $\theta=60^\circ$ showed deviation for kinetic energy larger than 25 MeV, giving $r_{\min}=14$\,fm.\\
+In scattering experiments, a probe, usually assumed point-like, hits a hadronic complex system. In the final state, the probe emerges unchanged while the nucleus may or may not survive intact. The underlying idea is to study the structure of the hadrons by observing the scattering.\\
+We now look at the kinematics of this type of processes. The 4-momentum conservation tells us that:
 \[
 \left\{
 \begin{aligned}
@@ -181,7 +192,7 @@ It follows that:
 \[
 E_{\text{N}}^2-p_{\text{N}}^2=\cancel{M^2}=E^2+\cancel{M^2}+E'^2+2EM-2EE'-2ME'-p^2-p'^2-2pp'\cos\theta
 \]
-In the ultra-relativistic approximation, it is assumed that $p\approx E$ and $p'\approx E'$, neglecting the mass of the probe (usually an electron). The expression above now becomes:
+In the ultra-relativistic approximation, it is assumed that $p\approx E$ and $p'\approx E'$. Neglecting the mass of the probe (usually an electron), the expression above now becomes:
 \[
 0=\cancel{E^2+E'^2}+2EM-2ME'\cancel{-E^2-E'^2}+2EE'\cos\theta\Rightarrow EM=E'[E(1-\cos\theta)+M]
 \]
@@ -189,7 +200,7 @@ Finally, we get:
 \[
 E'=\frac{EM}{M+E(1-\cos\theta)}=\frac{EM}{M+2E\sin^2(\theta/2)}
 \]
-A useful quantity is the momentum transfer $\Vec{q}:=\Vec{p}-\Vec{p}'$. In terms of this new variable, one gets:
+A useful quantity is the \textbf{momentum transfer} $\Vec{q}:=\Vec{p}-\Vec{p}'$. In terms of this new variable, one gets:
 \[
 q^2=2m^2-2EE'+2pp'\cos\theta\approx-4EE'\sin^2(\theta/2)=-Q^2
 \]
@@ -198,19 +209,24 @@ The relation for $E'$ becomes now:
 E'=\frac{EM}{M+\frac{Q^2}{2E'}}=\frac{2EME'}{2ME'+Q^2}\Rightarrow 2EM=2ME'+Q^2\to Q^2=2M(E-E')
 \]
 The momentum transfer represents the scale of the scattering, structures smaller than $\sim1/|\Vec{q}|$ are not visible to the probe.\\
-In the inelastic case, important quantities are:
+In the inelastic case, kinematics is the same but we usually work with the following Lorentz-invariant variables:
+\begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Lorentz-Invariant Variables},colbacktitle={gray!50},coltitle=black]
 \[
-\nu:=\frac{q\cdot P}{M}=E-E' \quad x:=\frac{Q^2}{2M\nu} \quad y:=\frac{q\cdot P}{p\cdot P}=\frac{\nu}{E} \quad W^2=M^2-Q^2+2M\nu
+\nu:=\frac{q\cdot P}{M}=E-E' \quad x:=\frac{Q^2}{2M\nu} \quad y:=\frac{q\cdot P}{p\cdot P}=\frac{\nu}{E} \quad W^2:=M^2-Q^2+2M\nu
 \]
-Redefine the kinematics of scattering processes in the plane $(2M\nu,Q^2)$: the bisector $x=1$, i.e. $W^2=M^2$, defines the elastic scattering. At higher distance from the bisector we have the deep inelastic scattering.
+\end{tcolorbox}
+\noindent
+$\nu$ is the energy lost by the probe, usually an electron, $x$ is the fraction of the hadron 4-momentum carried by the interacting parton, $y$ is the fraction of the energy lost by the lepton in the target frame and $W^2$ is the mass squared of the hadron system in the final state ($W=M$ if the scattering is elastic).\\
+In the elastic case, $\nu$ and $Q$ are not independent, therefore there is only one independent parameter. On the other hand, in the inelastic case they are independent and there are two independent variables.\\
+It is possible to redefine the kinematics of scattering processes in the plane $(2M\nu,Q^2)$: the bisector $x=1$, i.e. $W^2=M^2$, defines the elastic scattering. At higher distance from the bisector we have the \textbf{deep inelastic scattering} (DIS) and, possibly, new physics.
 \subsection{Electron-Nucleus Scattering}
 In the '20s, QM entered the game. Rutherford formula still works in QM, using non-relativistic QM and Born approximation. However, the $\alpha$-nucleus scattering takes place between two nuclei so it is not suitable for measuring the nucleus structure. It was needed to replace the $\alpha$ with something point-like, an electron $e^-$. The dynamics of electron-nucleus scattering can be described by the Rutherford formula with an adjustment due to Mott:
 \[
 \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott*}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}\left(1-\beta^2\sin^2(\theta/2)\right)\approx\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}\cos^2(\theta/2)=\frac{4Z^2\alpha^2E'^2}{|\Vec{q}|^4}\cos^2(\theta/2)
 \]
-The Mott* cross-section neglects the nucleus dimension and its recoil (that's why the *), but it takes into account the spin of the electron with the factor $\cos^2(\theta/2)$. For relativistic particles, what is conserved is the helicity, the projection of the spin along the momentum. This conservation requires the spin flip of the electron between initial and final state. The angular momentum is not conserved if the nucleus does not absorb the spin variation. Therefore, the scattering for $\theta\simeq180^\circ$ is forbidden.
+The Mott* cross-section neglects the nucleus dimension and its recoil (that's why the *), but it takes into account the spin of the electron with the factor $\cos^2(\theta/2)$. For relativistic particles, what is conserved is the \textbf{helicity}, the projection of the spin along the momentum. This conservation requires the spin flip of the electron between initial and final state. The angular momentum is not conserved if the nucleus does not absorb the spin variation. Therefore, the scattering for $\theta\simeq180^\circ$ is forbidden.
 \subsection{Form Factors}
-Experiments agrees with Mott* cross section only for small $|\Vec{q}|$, otherwise the experimental cross section is smaller. Possibly, the reason of this disagreement is the structure of the nucleus which results in a smaller electric charge seen by the projectile. The form factor $\pazocal{F}(\Vec{q})$ is defined as the Fourier transform of the charge distribution $\rho(\Vec{x})=Zef(\Vec{x})$:
+Experiments agrees with Mott* cross section only for small $|\Vec{q}|$, otherwise the experimental cross section is smaller. Possibly, the reason of this disagreement is the structure of the nucleus which results in a smaller electric charge seen by the projectile. The \textbf{form factor} $\pazocal{F}(\Vec{q})$ is defined as the Fourier transform of the charge distribution $\rho(\Vec{x})=Zef(\Vec{x})$:
 \[
 \pazocal{F}(\Vec{q})=\int d^3xf(\Vec{x})\exp\left(i\frac{\Vec{q}\cdot\Vec{x}}{\hbar}\right)
 \]
@@ -221,9 +237,10 @@ If $\rho(\Vec{x})$ depends only on $|\Vec{x}|$, then:
 In principle, the function $\rho(r)$ may be computed by measuring $\pazocal{F}(q^2)$. However, the range of $q$ accessible to experiments is limited, therefore the behaviour of the form factor for large $q^2$ has to be extrapolated with reasonable assumptions.\\
 Consider for example a homogeneous sphere with unit charge, $\rho(r)=\rho_0=\frac{3}{4\pi R^3}$ for $r\le R$ and 0 otherwise. The form factor can be computed as:
 \begin{align*}
-\pazocal{F}(q^2)&=4\pi\int_0^\infty drf(r)r^2\frac{\sin(qr)}{qr}=\frac{4\pi\rho_0}{q}\int_0^Rdrr\sin(qr)=\frac{4\pi\rho_0}{q^3}\int_0^{t*}dtt\sin t\\
+\pazocal{F}(q^2)&=4\pi\int_0^\infty dr\rho(r)r^2\frac{\sin(qr)}{qr}=\frac{4\pi\rho_0}{q}\int_0^Rdrr\sin(qr)=\frac{4\pi\rho_0}{q^3}\int_0^{t*}dtt\sin t\\
 &=\frac{4\pi\rho_0}{q^3}[\sin(qR)-qR\cos(qR)]=\frac{3}{q^3R^3}[\sin(qR)-qR\cos(qR)]
 \end{align*}
+By comparing the first minimum of this function with the experiments for $^{12}$C ($q/\habr\approx1.8$\,fm$^{-1}$), we get $R\approx4.5 r_{\min}\approx2.5$\,fm, i.e. $^{12}$C is approximately a sphere of radius 2.5 fm.\\
 For $q\to0$, we can write:
 \[
 \pazocal{F}(q^2)\simeq1-\frac{1}{6}q^2\braket{r^2}+\cdots \quad \braket{r^2}:=\int d^3xf(\Vec{x})r^2
@@ -236,11 +253,7 @@ Both the limit $q\to0$ and $q\to\infty$ have a deep meaning. $q$ is approximatel
 \end{itemize}
 Heavy nuclei are not homogeneous spheres with a sharp edge, rather spheres with a soft edge. Light nuclei are more Gaussian-like.
 \subsection{Nucleons Structure}
-Probing smaller scales requires larger energies and we have to take into account the magnetic moment of the nucleons, by introducing the parameter $\tau=Q^2/4M^2$. For point-like particles of mass $m$, charge $e$ and spin 1/2 the Dirac equation assigns them an intrinsic magnetic dipole moment:
-\[
-\mu_C=\frac{ge\hbar}{4m}
-\]
-where $g$ is the gyromagnetic ration. An ideal electron has $g=2$, the first measurements roughly confirmed this value. This effect adds to the cross section a term corresponding to the spin flip probability.
+Probing smaller scales requires larger energies and we have to take into account the magnetic moment of the nucleons, by introducing the parameter $\tau=Q^2/4M^2$. For point-like particles of mass $m$, charge $e$ and spin 1/2 the Dirac equation assigns them an intrinsic magnetic dipole moment $\mu_C=\frac{ge\hbar}{4m}$, where $g$ is the gyromagnetic ratio. An ideal electron has $g=2$, the first measurements roughly confirmed this value. This effect adds to the cross section a term corresponding to the spin flip probability.
 \[
 \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{spin 1/2}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(1+2\frac{Q^2}{4M^2}\tan^2(\theta/2)\right)
 \]
@@ -249,11 +262,14 @@ For the nucleons, we define $\mu_{\text{N}}=e\hbar/4m_{\text{N}}$. If $p$ and $n
 \[
 \mu_p=2\mu_{\text{N}} \quad \mu_n=0
 \]
-Instead, experimental measurements disagree with these values: there are other effects which contribute to the magnetic moment, $p$ and $n$ are not ideal Dirac particles, maybe they are not point-like.\\
+Instead, experimental measurements disagree with these values: there are other effects which contribute to the magnetic moment, $p$ and $n$ are not ideal Dirac particles, \textit{maybe} they are not point-like.\\
 In an electron-nucleon scattering, the main contribution is from single photon exchange. The $ee\gamma*$ vertex is well understood, while the $NN'\gamma*$ is unknown. The strategy is to assume a simpler process, compare it with experiments and opportunely modify the theory. The cross section is generalized by defining the Rosenbluth cross section, introducing two form factors $G_{\text{e}}(Q^2)$ for the electric part and $G_{\text{M}}(Q^2)$ for the magnetic part.
+\begin{tcolorbox}[[width=\textwidth,colback={yellow!50},title={Rosenbluth Cross Section},colbacktitle={gray!50},coltitle=black]
 \[
 \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(\frac{G_{\text{e}}^2+\tau G_{\text{M}}^2}{1+\tau}+2\tau G_{\text{M}}^2\tan^2(\theta/2)\right)
 \]
+\end{tcolorbox}
+\noindent
 In 1956, the Hofstadter spectrometer measured the elastic process $ep\to ep$. It measured $\theta$ in the range $[35^\circ,138^\circ]$ and therefore $Q^2$. At small $\theta$, i.e. small $Q^2$, all formulas agree, $G_{\text{E}}(Q^2\simeq0)\approx1$. However, at large $\theta$, i.e. large $Q^2$, the results disagree with any theoretical prediction. Consider the Rosenbluth formula at fixed $Q^2$:
 \[
 \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}\Bigr/\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}=\left({\color{blue}\frac{G_{\text{e}}^2+\tau G_{\text{M}}^2}{1+\tau}}+{\color{green}2\tau G_{\text{M}}^2}\tan^2(\theta/2)\right)={\color{blue}A}+{\color{green}B}\tan^2(\theta/2)
@@ -684,7 +700,7 @@ The CP violation in the $K^0$ system can be explained with the CKM formalism. Fo
 \pazocal{M}(K^0\to\overline{K}^0)\propto V_{cd}V_{ts}*V_{cs}*V_{td} \quad \pazocal{M}(\overline{K}^0\to K^0)\propto V_{cs}*V_{ts}V_{cs}V_{td}*
 \]
 If $V_{ij}$ is real, then $\pazocal{M}(K^0\to\overline{K}^0)=\pazocal{M}(\overline{K}^0\to K^0)$ and there is no CP violation, while if $V_{ij}$ is complex, then $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and we have CP violation. In this case, $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ their difference is proportional to $\mathfrak{Im}(V_{td})=iA\lambda^3\eta$.\\
-In the SM, CP violation is expected to occur also in the $D^'0\overline{D}^0$ and $B^0-\overline{B}^0$ systems. The importance of the phenomenon depends on the value of the CKM matrix, i.e. by the quark mixing: in the first case, the main contribution is from the $b$ quark exchange but the product $V_{cb}V_{ub}$ is very small. In the second case, it is dominated by the $t$ quark exchange and substantial levels of mixing are expected.
+In the SM, CP violation is expected to occur also in the $D'^0-\overline{D}^0$ and $B^0-\overline{B}^0$ systems. The importance of the phenomenon depends on the value of the CKM matrix, i.e. by the quark mixing: in the first case, the main contribution is from the $b$ quark exchange but the product $V_{cb}V_{ub}$ is very small. In the second case, it is dominated by the $t$ quark exchange and substantial levels of mixing are expected.
 \subsection{$\nu$ Oscillations}
 Quarks of same charge and different flavours mix together, with the CKM matrix parametrizing this process. What about the lepton sector? Do neutrinos oscillate? The answer is yes. Consider a simple toy model with only two families:
 \[
