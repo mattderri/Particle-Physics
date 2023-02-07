@@ -412,23 +412,23 @@ The top quark was directly searched in hadron ($Sp\overline{p}S$ at Fermilab) an
     \centering
     \begin{tabular}{l|cccccc}
     \hline
-    \cellcolor{gray!50} & \cellcolor{yellow!50}$u$ & \cellcolor{yellow!50}$d$ & \cellcolor{yellow!50}$s$ & \cellcolor{yellow!50}$c$ & \cellcolor{yellow!50}$b$ & \cellcolor{yellow!50}$t$\\
+    \cellcolor{gray!50} & \cellcolor{yellow!50}$u$ & \cellcolor{yellow!50}$d$ & \cellcolor{yellow!50}$c$ & \cellcolor{yellow!50}$s$ & \cellcolor{yellow!50}$t$ & \cellcolor{yellow!50}$b$\\
     \hline\hline
     \cellcolor{yellow!50}Baryon number $\pazocal{B}$ & 1/3 & 1/3 & 1/3 & 1/3 & 1/3 & 1/3\\
     \hline
-    \cellcolor{yellow!50}Electric Charge $Q$ & +2/3 & -1/3 & -1/3 & +2/3 & -1/3 & +2/3\\
+    \cellcolor{yellow!50}Electric Charge $Q$ & +2/3 & -1/3 & +2/3 & -1/3 & +2/3 & -1/3\\
     \hline
-    \cellcolor{yellow!50}Isospin $I$ & +1/2 & 1/2 & 0 & 0 & 0 & 0\\
+    \cellcolor{yellow!50}Isospin $I$ & 1/2 & 1/2 & 1/2 & 1/2 & 1/2 & 1/2\\
     \hline
-    \cellcolor{yellow!50}3$^{\text{rd}}$ Isospin $I_3$ & 1/2 & -1/2 & 0 & 0 & 0 & 0\\
+    \cellcolor{yellow!50}\nth{3} Isospin $I_3$ & +1/2 & -1/2 & +1/2 & -1/2 & +1/2 & -1/2\\
     \hline
-    \cellcolor{yellow!50}Strangeness $S$ & 0 & 0 & -1 & 0 & 0 & 0\\
+    \cellcolor{yellow!50}Charm $C$ & 0 & 0 & +1 & 0 & 0 & 0\\
     \hline
-    \cellcolor{yellow!50}Charm $C$ & 0 & 0 & 0 & +1 & 0 & 0\\
+    \cellcolor{yellow!50}Strangeness $S$ & 0 & 0 & 0 & -1 & 0 & 0\\
     \hline
-    \cellcolor{yellow!50}Bottomness $B$ & 0 & 0 & 0 & 0 & -1 & 0\\
+    \cellcolor{yellow!50}Topness $T$ & 0 & 0 & 0 & 0 & +1 & 0\\
     \hline
-    \cellcolor{yellow!50}Topness $T$ & 0 & 0 & 0 & 0 & 0 & +1\\
+    \cellcolor{yellow!50}Bottomness $B$ & 0 & 0 & 0 & 0 & 0 & -1\\
     \hline
     \end{tabular}
     \caption{Quantum numbers of all known quarks}
@@ -465,17 +465,25 @@ $l$ denotes the lepton, either $e^-$ or $\mu$, $\rho_l$ is the phase space facto
 \frac{\Gamma_\mu^\tau}{\Gamma_e^\tau}=\frac{\text{BR}_\mu^\tau}{\text{BR}_e^\tau}=\frac{g_\mu^2\rho_\mu}{g_e^2\rho_e}\to\frac{\text{BR}_\mu^\tau}{\text{BR}_e^\tau}\Bigr|_{\substack{\text{measured}}}=\frac{(17.36\pm0.05)\%}{(17.84\pm0.05)\%}=0.974\pm0.004
 \]
 Taking into account the values of $\rho_\mu$ and $\rho_e$, we obtain:
+\beginbox{Electron-Muon Universality}
 \[
 \frac{g_\mu}{g_e}\Bigr|_{\substack{\text{measured}}}=1.001\pm0.002
 \]
+\endbox
 The measurement of the $\mu-\tau$ universality is similar. The branching ratio $\mu^-\to e^-\overline{\nu}_e\nu_\mu$ is approximately 100\%, so we can compute:
 \[
 \frac{\Gamma(\mu^-\to e^-\overline{\nu}_e\nu_\mu)}{\Gamma(\tau^-\to e^-\overline{\nu}_e\nu_\tau)}=\frac{g_\mu^2m_\mu^5\rho_\mu}{g_\tau^2m_\tau^5\rho_\tau}=\frac{\tau_\tau}{\tau_\mu}\frac{\text{BR}(\mu^-\to e^-\overline{\nu}_e\nu_\mu)}{\text{BR}(\tau^-\to e^-\overline{\nu}_e\nu_\tau)}
 \]
 From this, it follows that:
 \[
-\frac{g_\mu^2}{g_\tau^2}=\frac{\tau_\tau}{\tau_\mu}\frac{1}{\text{BR}(\tau^-\to e^-\overline{\nu}_e\nu_\tau)}\frac{m_\tau^5\rho_\tau}{m_\mu^5\rho_\mu}\to\frac{g_\mu}{g_\tau}\Bigr|_{\substack{\text{measured}}}=1.001\pm0.003
+\frac{g_\mu^2}{g_\tau^2}=\frac{\tau_\tau}{\tau_\mu}\frac{1}{\text{BR}(\tau^-\to e^-\overline{\nu}_e\nu_\tau)}\frac{m_\tau^5\rho_\tau}{m_\mu^5\rho_\mu}
 \]
+Combining this computation with measurements, we finally get:
+\beginbox{Muon-Tau Universality}
+\[
+\frac{g_\mu}{g_\tau}\Bigr|_{\substack{\text{measured}}}=1.001\pm0.003
+\]
+\endbox
 When we discussed the third family, we said that the $\tau^\pm$ was most likely a lepton: this is a strong confirmation of it.\\
 A more ambitious test was to extend the universality to $\tau$ hadronic decays. Consider the following decay modes:
 \[
@@ -485,7 +493,7 @@ From the branching ratios, one expects:
 \[
 \Gamma_{\tau\to e}\approx\Gamma_{\tau\to\mu}\approx\frac{1}{3}\Gamma_{\tau\to\overline{u}d}
 \]
-in excellent agreement with universality and presence of the colour in the hadronic sector (that's why there is the factor 1/3). A similar test on lepton universality has been performed at LEP in the decays of the $Z$, a NC process. The experiments have measured the decay of the $Z$ into fermion-anti-fermion pairs, finding:
+in excellent agreement with universality and with the presence of the colour in the hadronic sector (that's why there is the factor 1/3). A similar test on lepton universality has been performed at LEP in the decays of the $Z$, a NC process. The experiments have measured the decay of the $Z$ into fermion-anti-fermion pairs, finding:
 \[
 \begin{aligned}
 Z\to e^-e^+&:\qquad\mu^-\mu^+&&:\quad\tau^-\tau^+\\
@@ -494,10 +502,10 @@ Z\to e^-e^+&:\qquad\mu^-\mu^+&&:\quad\tau^-\tau^+\\
 \]
 The total amount of information is impressive and essentially no margin is left to any alternative theory.
 \subsection{Parity Violation}
-The effect was proposed in 1956 and immediately verified by Madame Wu experiment. The historical reason was a review of weak interaction processes and the explanation of the so-called $\theta-\tau$ puzzle, in modern terms the $K^0$ decay,\\
-$(K^0\to2\pi)$vs$(K^0\to3\pi)$. They found that parity conservation in weak decays was not really supported by measurements. The CC is V-A which is an acronym for the factor $\gamma_\mu(1-\gamma_5)$ in the current, i.e. the CC have a \textit{preference} for left-handed particles and right-handed anti-particles. These effects clearly violates parity. Consider for example a neutrino $\nu$ with $h=-1$, parity operator turns it into a $\nu$ with $h=+1$ which does not exist. The conservation is restored when applying also charge conjugation, anti-neutrinos with $h=+1$ do exist. However, this discussion holds only if neutrinos are massless or in the ultra-relativistic approximation where $m_\nu\ll E_\nu$.
-\subsection{$\nu_e$ Helicity}
-In 1958, Goldhaber, Grodzins and Sunyar measured the helicity of $\nu_e$, which gave a crucial confirmation of the V-A theory. They used metastable Europium $^{152}$Eu which decays via K-capture into excited Samarium Sm* and an electron neutrino $\nu_e$. Sm* decays again into more stable Sm, emitting photons $\gamma_1$. These photons are used to excite another Sm, producing $\gamma_2$ which are detected. 
+The effect was proposed in 1956 and immediately verified by Madame Wu experiment. The historical reason was a review of weak interaction processes and the explanation of the so-called $\theta-\tau$ puzzle, in modern terms the $K^0$ decay, $(K^0\to2\pi)$ vs $(K^0\to3\pi)$.\\
+They found that \textbf{parity conservation} in weak decays was \textbf{not} really supported by measurements. The CC is V-A which is an acronym for the factor $\gamma_\mu(1-\gamma_5)$ in the current, i.e. the CC have a \textit{preference} for \textbf{left-handed particles} and \textbf{right-handed anti-particles}: these effects clearly violates parity.\\
+Consider for example a neutrino $\nu$ with helicity $h=-1$. The parity operator turns it into a $\nu$ with $h=+1$ which does not exist. The conservation is restored when applying also charge conjugation, anti-neutrinos with $h=+1$ do exist. However, this discussion holds only if neutrinos are massless or in the ultra-relativistic approximation where $m_\nu\ll E_\nu$.\\
+In 1958, Goldhaber, Grodzins and Sunyar measured the helicity of $\nu_e$, which gave a crucial confirmation of the V-A theory. They used metastable Europium $^{152}$Eu which decays via K-capture into excited Samarium Sm* and an electron neutrino $\nu_e$. Sm* decays again into more stable Sm, emitting photons $\gamma_1$. These photons are used to excite another Sm, producing $\gamma_2$ which are finally detected. 
 \[
 ^{152}\text{Eu}+e^-\to^{152}\text{Sm*}+\nu_e\to^{152}\text{Sm}+\gamma_1\to^{152}\text{Sm*}\to^{152}\text{Sm}+\gamma_2
 \]
@@ -507,13 +515,13 @@ The $\pi^\pm$ is the lightest hadron, therefore it may only decay through semi-l
 \[
 \pi^+\to\mu^+\nu_\mu \quad \pi^+\to e^+\nu_e
 \]
-However, in reality it decays only into muons, the electron decay is suppressed roughly by a factor 8000. The reason of this suppression is the helicity: in the $\pi^+$ reference frame, the momenta of $l^+$ and $\nu_l$ must be opposite. Since $\pi^+$ has spin 0, also the spins of $l^+$ and $\nu_l$ must be opposite, therefore the two particles must have the same helicity. The neutrino must have a negative helicity, so the lepton is also forced to have a negative helicity: the transition is suppressed by a factor $(1-\beta_l)$. The $e^+$ is ultra*relativistic while the $\mu^+$ has small $\beta$ due to its larger mass.
+However, in reality it decays only into muons, the electron decay is suppressed roughly by a factor 8000. The reason of this suppression is the \textbf{helicity}: in the $\pi^+$ reference frame, the momenta of $l^+$ and $\nu_l$ must be opposite. Since $\pi^+$ has spin 0, also the spins of $l^+$ and $\nu_l$ must be opposite, therefore the two particles must have the same helicity. The neutrino must have a negative helicity, so the lepton is also forced to have a negative helicity: the transition is suppressed by a factor $(1-\beta_l)$. The $e^+$ is ultra-relativistic while the $\mu^+$ has a smaller $\beta$ due to its larger mass.
 \subsection{$\beta$-Decay}
-For point-like fermions, CC is V-A both for leptons and quarks. However, nucleons and hyperons are bound states of non-free quarks. In this case, strong interaction corrections are important and modify the V-A dynamics.\\
-In the Fermi theory, CC are classified according to the properties of the transition operator. In neutron $\beta$-decay, the electron-neutrino pair may be created as a spin singlet or triplet. In the case of no orbital angular momentum, there are two possibilities to conserve the total angular momentum:
+For point-like fermions, CC is V-A both for leptons and quarks. However, nucleons and hyperons $(p, n, \Lambda, \Sigma, \Xi, \Omega)$ are bound states of non-free quarks. In this case, strong interaction corrections are important and modify the V-A dynamics.\\
+In the Fermi theory, CC are classified according to the properties of the transition operator. In neutron $\beta$-decay, the electron-neutrino pair may be created as a spin singlet $(S=0)$ or triplet $(S=1)$. In the case of no orbital angular momentum, there are two possibilities to conserve the total angular momentum:
 \begin{itemize}
-    \item Fermi transitions: $S=0, \Delta J_{e\nu}=0$. The direction of the spin of the nucleus remains unchanged, i.e. the interaction takes place with vector coupling $G_V$.
-    \item Gamow-Teller transitions: $S=1, \Delta J_{e\nu}=0,\pm1$. The direction of the spin of the nucleon is flipped, i.e. the transition happens with axial-vector coupling $G_A$
+    \item \textbf{Fermi transitions}: $S=0, \Delta J_{e\nu}=0$. The direction of the spin of the nucleus remains unchanged, i.e. the interaction takes place with vector coupling $G_V$.
+    \item \textbf{Gamow-Teller transitions}: $S=1, \Delta J_{e\nu}=0,\pm1$. The direction of the spin of the nucleon is flipped, i.e. the transition happens with axial-vector coupling $G_A$
 \end{itemize}
 In principle, these two processes are different, there is no reason why the coupling should be similar or even related.\\
 Assume now that $p,n, e^\pm$ and $\nu$ are spin-1/2 fermions but only neutrinos with $h=-1$ exist. The most general matrix element for the four-body interaction is:
@@ -526,7 +534,11 @@ where $O_j$ are the current operators with given properties: S for scalar, P for
 \]
 The value of $C_V$ can be measured by comparing composite hadrons with free pure V-A leptons and it turns out to be $C_V\approx1$. $(C_A)^2$ can be measured from the relative strength of Fermi and Gamow-Teller transitions, by comparing the neutron $\beta$-decay with a pure Fermi, $^{14}$O$\to^{14}$N$e^+\nu$, obtaining $|C_A|\simeq1.267$. The sign can be measured from the polarization of protons and it turns out to be negative.
 \subsection{Quark Decays}
-For high mass quarks and at high $Q^2$, the structure V-A seems restored and quarks behave as free point-like particles. However, with more accurate data some discrepancies appear, not due to strong interactions. Some tiny but well measured effects seem to contradict the universality: $G_F$ turns out to be slightly larger for leptons than for quarks. In 1963, Cabibbo came up with a theory to explain the effect, introducing the so-called Cabibbo angle $\theta_c$. The idea was the following: hadrons are built up with quarks $u,d,s$ ($c,b,t$ have not been discovered at the time). However, in the CC processes, the quarks $(ds)$ mix together, i.e. rotate by an angle $\theta_c$, in such a way the the CC process sees rotated quarks $(d's')$:
+For high mass quarks and at high $Q^2$, the structure V-A seems restored and quarks behave as free point-like particles. However, with more accurate data some discrepancies appear, not due to strong interactions. Some tiny but well measured effects seem to contradict the universality: $G_F$ turns out to be slightly larger for leptons than for quarks.
+\[
+G_F(\mu^-\to e^-\overline{\nu}_e\nu_\mu)\approx1.166\cdot10^{-5}\,\text{GeV$^{-2}$} \quad G_F(d\to ue^-\overline{\nu}_e)\approx1.136\cdot10^{-5}\,\text{GeV$^{-2}$}
+\]
+In 1963, Cabibbo came up with a theory to explain this effect, introducing the so-called \textbf{Cabibbo angle} $\theta_c$. The idea was the following: hadrons are built up with quarks $u,d,s$ ($c,b,t$ had not been discovered at the time). However, in the CC processes, the quarks $(ds)$ \textbf{mix together}, i.e. rotate by an angle $\theta_c$, in such a way the the CC process sees rotated quarks $(d's')$:
 \[
 \begin{pmatrix}
     d'\\s'
@@ -537,22 +549,23 @@ For high mass quarks and at high $Q^2$, the structure V-A seems restored and qua
     d\\s
 \end{pmatrix}
 \]
-Therefore, with respect to the strength of the leptonic process, the $ud$ coupling is reduced by a factor $\cos\theta_c$ and the $us$ coupling by a factor $\sin\theta_c$. Processes with $\Delta S=0$ are proportional to $\cos^2\theta_c$ and those with $\Delta S=1$ to $\sin^2\theta_c$. Even processes proportional to $\sin^4\theta_c$ may happen, but we say that they are Cabibbo doubly suppressed.\\
-All the anomalies come back under control if $\sin^2\theta_c\approx0.03$ and $\cos^2\theta_c\approx0.97$. In this context, the GIM mechanism was proposed to explain the absence of flavour changing neutral currents (FCNC). At the time, they knew that:
+Therefore, with respect to the strength of the leptonic process, the $ud$ coupling is reduced by a factor $\cos\theta_c$ and the $us$ coupling by a factor $\sin\theta_c$. Processes with $\Delta S=0$ are proportional to $\cos^2\theta_c$ and those with $\Delta S=1$ to $\sin^2\theta_c$. Even processes proportional to $\sin^4\theta_c$ may happen, but we say that they are Cabibbo doubly suppressed. All the anomalies come back under control if $\sin^2\theta_c\approx0.03$ and $\cos^2\theta_c\approx0.97$.\\
+In this context, the GIM mechanism was proposed to explain the absence of flavour changing neutral currents (FCNC). At the time, they knew that:
 \[
 \begin{aligned}
 &\text{BR}(K^0\to\mu^+\mu^-)=7\cdot10^{-9} &&\text{BR}(K^+\to\mu^+\nu_\mu)=0.64\\
 &\text{BR}(K^+\to\pi^+\nu\overline{\nu})=(1.5^{+1.3}_{-0.9})\cdot10^{-10} &&\text{BR}(K^+\to\pi^0e^+\nu_e)=(4.98\pm0.07)\cdot10^{-2}
 \end{aligned}
 \]
-which means a factor $\sim10^{-8}$ between NC and CC decays. If the $Z$, the carrier of NC, sees the same quark mixture as the $W^\pm$ in the CC, then the CC decay would be suppressed only by a factor 5\%. The idea was to introduce a fourth quark, the charm $c$ with charge 2/3 to solve this problem.\\
+which means a factor $\sim10^{-8}$ between NC and CC decays. If the $Z$, the carrier of NC, sees the same quark mixture as the $W^\pm$ in the CC, then the CC decay would be suppressed only by a factor 5\%. The idea was to introduce a \textbf{fourth quark}, the charm $c$ with charge +2/3 to solve this problem.\\
 In the GIM mechanism, NC contains four hadronic terms coupled with the $Z$. Assuming the validity of Cabibbo theory and summing all terms we get:
 \begin{align*}
 u\overline{u}+d'\overline{d}'+c\overline{c}+s'\overline{s}'&=u\overline{u}+(d\cos\theta_c+s\sin\theta_c)(\overline{d}\cos\theta_c+\overline{s}\sin\theta_c)+c\overline{c}+(s\cos\theta_c-d\sin\theta_c)(\overline{s}\cos\theta_c-\overline{d}\sin\theta_c)\\
 &=u\overline{u}+d\overline{d}+c\overline{c}+s\overline{s}
 \end{align*}
-The non-diagonal terms, which induce FCNC, disappears. Why is $\text{BR}(K^0\to\mu^+\mu^-)$ small but not zero? Technically, it is a 2$^{\text{nd}}$ order CC, $\propto g^4\sin\theta_c\cos\theta_c$. The final state is the same as a 1$^{\text{st}}$ order FCNC but it is incompatible with data. This is cured by introducing the $c$ quark, whose contribution cancels the ones coming from FCNC in the limit $m_c\to m_u$. The data on this process, put limits on $m_c$ between 1 and 3 GeV.\\
-In 1973, Kobayashi and Maskawa extended the Cabibbo scheme to the new generation of quarks. The new mixing matrix is a three-dimension unitary matrix with three real parameters and one imaginary phase:
+The non-diagonal terms, which induce FCNC, disappears. Why is $\text{BR}(K^0\to\mu^+\mu^-)$ small but not zero? Technically, it is a \nth{2} order CC, $\propto g^4\sin\theta_c\cos\theta_c$. The final state is the same as a \nth{1} order FCNC but it is incompatible with data. This is cured by introducing the $c$ quark, whose contribution cancels the ones coming from FCNC in the limit $m_c\to m_u$. The data on this process put limits on $m_c$ between 1 and 3 GeV.\\
+In 1973, Kobayashi and Maskawa extended the Cabibbo scheme to the new generation of quarks. The new mixing matrix is a \textbf{three-dimension unitary matrix} with three real parameters and one imaginary phase:
+\beginbox{CKM Matrix}
 \[
 \begin{pmatrix}
     d'\\s'\\b'
@@ -564,33 +577,32 @@ In 1973, Kobayashi and Maskawa extended the Cabibbo scheme to the new generation
     d\\s\\b
 \end{pmatrix}
 \]
-This is known as the CKM matrix. They observed that the CP violation, already discovered, is automatically generated by the matrix when the phase is non-zero. Moreover, the nine elements of this matrix govern the flavour changes in CC processes. 
+\endbox
+This is known as the \textbf{CKM matrix}. They observed that the CP violation, already discovered, is automatically generated by the matrix when the phase is non-zero. Moreover, the nine elements of this matrix govern the flavour changes in CC processes. 
 \section{$K^0$ Mesons and CKM Matrix}
 \subsection{$K^0$ Processes}
-The neutral mesons $K^0$ and $\overline{K}^0$ are special quark systems in which unusual phenomena take place. They are produced by strong interactions with fixed strangeness $S=1$:
+The neutral mesons $K^0$ and $\overline{K}^0$ are special quark systems in which unusual phenomena take place. They are produced by strong interactions with fixed strangeness:
 \[
-\ket{K^0}=\ket{d\overline{s}} \quad \ket{\overline{K}^0}=\ket{s\overline{d}}
+\ket{K^0}=\ket{d\overline{s}}, S=+1 \quad \ket{\overline{K}^0}=\ket{s\overline{d}}, S=-1
 \]
 Simple kinematics shows that it is possible to produce a pure sample of $K^0$. Consider the reaction $ab\to cd$, if $(m_c+m_d)>(m_a+m_b)$ it requires some kinetic energy to happen. Study the process in the system where the target $b$ is at rest:
 \[
 s\Bigr|_{\substack{\text{LAB}}}^{\text{ini}}=m_a^2+m_b^2+2E_a^{\min} m_b=s\Bigr|_{\substack{\text{CM}}}^{\text{fin}}=(m_c+m_d)^2\Rightarrow E_a^{\min}=\frac{(m_c+m_d)^2-(m_a+m_b)^2}{2m_b}
 \]
-The process $\pi^- p\to\Lambda K^0$ has a threshold energy $E_{\pi^-}^{\min}=0.91$\;GeV, compare it with\\
+The process $\pi^- p\to\Lambda K^0$ has a threshold energy $E_{\pi^-}^{\min}=0.91$\;GeV, to compare it with\\
 $\pi^- p\to K^0\overline{K}^0n$ which has $E_{\pi^-}^{\min}=1.50$\;GeV. It follows that for $0.91<E_{\pi^-}<1.50$\;GeV only $K^0$ are produced. However, even when selecting pure $K^0$ some unexpected $\overline{K}^0$ show up in subsequent processes. This demonstrates that production and decay of these mesons follow complicated rules. The following strong interactions are allowed because they conserve strangeness:
-\begin{enumerate}
-    \item $K^+n\to K^0p$
-    \item $K^-p\to\overline{K}^0n$
-    \item $K^0p\to K^+n$
-    \item $\overline{K}^0p\to\pi^0\Sigma^+$
-\end{enumerate}
-Sometimes, the $K^0$ generated in (1) re-interacts as a $\overline{K}^0$ via reaction (4) or the same with (2) and (3). It seems that there are transitions, i.e. \textbf{oscillations}, in flight $K^0\leftrightarrow\overline{K}^0$. Notice that transitions $n\leftrightarrow\overline{n}$ are forbidden because of baryon number and $e^+\leftrightarrow e^-$ are forbidden because of electric charge and lepton number. These quantum numbers are conserved in all interactions, instead the $K^0\leftrightarrow\overline{K}^0$ oscillations are only forbidden by strangeness conservation, which is conserved in strong interactions but violated in weak interactions.
+\[
+(1)\,K^+n\to K^0p \quad (2)\,K^-p\to\overline{K}^0n \quad (3)\,K^0p\to K^+n \quad (4)\,\overline{K}^0p\to\pi^0\Sigma^+
+\]
+Sometimes, the $K^0$ generated in (1) re-interacts as a $\overline{K}^0$ via reaction (4) or the same with (2) and (3). It seems that there are transitions, i.e. \textbf{oscillations}, in flight $K^0\leftrightarrow\overline{K}^0$. Notice that transitions $n\leftrightarrow\overline{n}$ are forbidden because of baryon number and $e^+\leftrightarrow e^-$ are forbidden because of electric charge and lepton number. These quantum numbers are conserved in all interactions, instead the $K^0\leftrightarrow\overline{K}^0$ oscillations are only forbidden by strangeness conservation, which is conserved in strong interactions but \textbf{violated} in weak interactions.
 \subsection{$K^0$ and $\overline{K}^0$ Decays}
-Moreover, the decay of $K^0$ and $\overline{K}^0$ was not understood and created a puzzle. Both $K^0$ and $\overline{K}^0$ can decay into $\pi^+\pi^-$ and $\pi^+\pi^-\pi^0$, two states with different G-parity but we know that G-parity is not conserved in WI. The explanation was provided by Gell-Mann and Pais before the discovery that WI violates parity. $K^0$ and $\overline{K}^0$ are eigenstates of the strong interactions, each one is the anti-particle of the other. They have opposite strangeness but WI does not conserve strangeness and see a mixture of $K^0$ and $\overline{K}^0$. This mixture is interpreted as two new states, a superposition of $K^0$ and $\overline{K}^0$. These two new states are not a particle-anti-particle pair so they may have in principle different properties. If the mass difference allows that, they might oscillate one into the other. The two $K^0$ states have different values of CP, respectively CP=+1 and CP=-1. The first decays into $2\pi$ and the second into $3\pi$. The $3\pi$ state is near the kinematic threshold ($m_k\approx3m_\pi+70$\;MeV) so the lifetime of this state is much longer than the lifetime of the $2\pi$ state: the proposal was to call \textbf{short} the CP=+1 state and \textbf{long} the CP=-1 state.
+Moreover, the decay of $K^0$ and $\overline{K}^0$ was not understood and created a puzzle. Both $K^0$ and $\overline{K}^0$ can decay into $\pi^+\pi^-$ and $\pi^+\pi^-\pi^0$, two states with different G-parity but we know that G-parity is not conserved in WI. The explanation was provided by Gell-Mann and Pais before the discovery that WI violates parity.\\
+$K^0$ and $\overline{K}^0$ are eigenstates of the strong interaction, each one is the anti-particle of the other. They have opposite strangeness but WI does not conserve strangeness and see a mixture of $K^0$ and $\overline{K}^0$. This mixture is interpreted as two new states, a \textbf{superposition} of $K^0$ and $\overline{K}^0$. These two new states are not a particle-anti-particle pair so they may have in principle different properties. If the mass difference allows that, they might oscillate one into the other. The two $K^0$ states have different values of CP, respectively CP=+1 and CP=-1. The first decays into $2\pi$ and the second into $3\pi$. The $3\pi$ state is near the kinematic threshold ($m_K\approx3m_\pi+70$\;MeV) so the lifetime of this state is much longer than the lifetime of the $2\pi$ state: the proposal was to call \textbf{short} the CP=+1 state and \textbf{long} the CP=-1 state.
 \[
 K_S^0: \text{CP}=+1, \tau=0.895\cdot10^{-10}\;\text{s} \quad K_L^0: \text{CP}=-1, \tau=0.512\cdot10^{-7}\;\text{s}
 \]
 The $K_L^0$ was first observed in 1956 by Lande and collaboration with a cloud chamber. The path between the 3 GeV proton beam and the cloud chamber was 6 meters, long enough for the decay of all strange particles known at the time. They observed interactions with nuclei of He, producing a final state with $S\neq0$, like $\overline{K}^0 \text{He}\to\Sigma^-ppn\pi^+$. These final states cannot be generated by a $K^0$ because of the value of $S$ but no $\overline{K}^0$ should be present, because the primary proton energy was chosen to be below the energy threshold for $\overline{K}^0$ production: for some reasons, $\overline{K}^0$ mesons have appeared.\\
-Both $K^0$ and $\overline{K}^0$ are strong interactions and parity eigenstates but not C or CP eigenstates. We define $\ket{K_1^0}$ and $\ket{K_2^0}$ as linear combinations of $K^0$ and $\overline{K}^0$:
+Both $K^0$ and $\overline{K}^0$ are strong interaction and parity eigenstates but not C or CP eigenstates. We define $\ket{K_1^0}$ and $\ket{K_2^0}$ as linear combinations of $K^0$ and $\overline{K}^0$:
 \[
 \left\{
 \begin{aligned}
@@ -657,9 +669,9 @@ Starting with a pure $K^0$, there is an oscillation between the two states accor
 &s\to ul^-\overline{\nu}_l\Rightarrow\overline{K}^0\to\pi^+l^-\overline{\nu}_l
 \end{aligned}
 \]
-The sign of the charged lepton flags the strangeness of the $K^0/\overline{K}^0$. The experimental measures regard the charge asymmetry $\delta$, i.e. the difference between positive charged and negative charged leptons, which is directly correlated to the oscillations. The results are in good agreement with the expectations except for the tail.
+The sign of the charged lepton flags the strangeness of the $K^0/\overline{K}^0$. The experimental measure regards the charge asymmetry $\delta$, i.e. the difference between positive charged and negative charged leptons, which is directly correlated to the oscillations. The results are in good agreement with the expectations except for the tail.
 \subsection{$K^0$ Regeneration}
-The regeneration consists in a clever use of an absorber to demonstrate the superposition of $K^0$ and $\overline{K}^0$. Again, start with a pure $K^0$ beam in vacuum, i.e. equal amounts of $K_S^0$ and $K_L^0$. After $t\approx10\tau_S$, the $K_S^0$ intensity is damped by a factor $e^{-t/\tau_S}\approx45\cdot10^{-6}$. On the other hand, the $K_L^0$ intensity is damped by a factor $e^{-t/\tau_L}\approx0.98$. For $K^0$ with 1 GeV momentum, this corresponds to roughly 0.5m so after this distance we are left with a pure beam of $K_L^0$, 50\% $K^0$ and 50\% $\overline{K}^0$. If we put another target after $t=20\tau_S$, we will get $K^0$ and $\overline{K}^0$ interactions. The two meson interact differently in the target:
+The regeneration consists in a clever use of an absorber to demonstrate the superposition of $K^0$ and $\overline{K}^0$. Again, start with a pure $K^0$ beam in vacuum, i.e. equal amounts of $K_S^0$ and $K_L^0$. After $t\approx10\tau_S$, the $K_S^0$ intensity is damped by a factor $e^{-t/\tau_S}\approx45\cdot10^{-6}$. On the other hand, the $K_L^0$ intensity is damped by a factor $e^{-t/\tau_L}\approx0.98$. For $K^0$ with 1 GeV momentum, this corresponds to roughly 0.5m so after this distance we are left with a pure beam of $K_L^0$, 50\% $K^0$ and 50\% $\overline{K}^0$. If we put another target after $t=20\tau_S$, we will get $K^0$ and $\overline{K}^0$ interactions. The two mesons interact differently in the target:
 \[
 \begin{aligned}
 &K^0p\to K^0p/K^+n &&K^0n\to K^0n\\
@@ -669,9 +681,9 @@ The regeneration consists in a clever use of an absorber to demonstrate the supe
 The $s$ quark from the $\overline{K}^0$ can swap with one of the quarks in the proton or the neutron but this is not possible for the $\overline{s}$ in the $K^0$. It follows that there are more $\overline{K}^0$ processes and we will no longer have 50\% $K^0+50\%\overline{K}^0$ but an amount of $K_S^0$ is born and we will see $K_S^0$ decays again. 200 $2\pi$ decays were observed, so it was possible to confirm oscillations and regeneration. 
 \subsection{CP Violation}
 If we observe some decays $K_L^0\to2\pi$ or $K_S^0\to3\pi$ with small but non-zero branching ratio, it would be an experimental evidence of the non-conservation of CP. Since a small amount of $K_S^0\to3\pi$ is not observable due to background, the key observation is $K_L^0\to2\pi$.\\
-In 1964, an experiment was built at the Brookhaven AGS, following this scheme: the primary 30 GeV proton beam hits a beryllium target and the secondaries at $\theta=30^\circ$ are selected. If they are charged, they are collimated and bent away while if they are neutral they are collimated and let decay. The resultant $K_L^0$ hit a second lead target, regenerate and let decay again in a long decay tube $\sim18$\;m. No $K_S^0$  are left, so if CP is conserved then we should observe only $3\pi$ decays while if there is a violation there should be present also $2\pi$ decays. The final results tell us:
+In 1964, an experiment was built at the Brookhaven AGS, following this scheme: the primary 30 GeV proton beam hits a beryllium target and the secondaries at $\theta=30^\circ$ are selected. If they are charged, they are collimated and bent away while if they are neutral they are collimated and let decay. The resultant $K_L^0$ hit a second lead target, regenerate and let decay again in a long decay tube $\sim18$\;m. No $K_S^0$  are left, so if CP is conserved then we should observe only $3\pi$ decays while if there is a violation $2\pi$ decays should also be present. The final results tell us:
 \[
-R=\frac{\text{BR}(K_L^0\to\pi^+\pi^-)}{\text{BR}(K_L^0\to\text{charged})}=(2.0\pm0.4)\cdot10^{-3}\Rightarrow\text{CP is violated}
+R=\frac{\text{BR}(K_L^0\to\pi^+\pi^-)}{\text{BR}(K_L^0\to\text{charged})}=(2.0\pm0.4)\cdot10^{-3}\Rightarrow\text{CP is violated!}
 \]
 The $K_L^0\to\pi^+\pi^-$ is not the only decay channel which shows CP violation. Another important process is the semi-leptonic decay $K_L^0\to\pi^\pm l^\mp\nu_l$ with:
 \[
@@ -718,14 +730,15 @@ V_{\text{CKM}}^{\text{W}}=\begin{pmatrix}
     A\lambda^3(1-\rho-i\eta) & A\lambda^2 & 1
 \end{pmatrix}
 \]
-where $\lambda\simeq s_{12}$, mixing 1$^{\text{st}}$ and 2$^{\text{nd}}$ family, $A\lambda^2\simeq s_{23}$, mixing 2$^{\text{nd}}$ and 3$^{\text{rd}}$ family and\\
+where $\lambda\simeq s_{12}$, mixing \nth{1} and \nth{2} family, $A\lambda^2\simeq s_{23}$, mixing \nth{2} and \nth{3} family and\\
 $A\lambda^3(\rho+i\eta)\simeq s_{13}e^{+i\delta}$. If $\eta=0$, therefore $\delta=0$, the matrix is real and there is no CP violation.\\
-The CP violation in the $K^0$ system can be explained with the CKM formalism. For each of the $K^0\leftrightarrow\overline{K}^0$ diagram, look at the t-channel exchange, with 9 couples of diagrams $(uu,uc,ut,cu,cc,ct,\cdot)$. Here we discuss only the $ct$ case.
+The CP violation in the $K^0$ system can be explained with the CKM formalism. For each of the $K^0\leftrightarrow\overline{K}^0$ diagram, look at the t-channel exchange, with 9 couples of diagrams $(uu,uc,ut,cu,cc,ct,\dots)$. Here we discuss only the $ct$ case.
 \[
-\pazocal{M}(K^0\to\overline{K}^0)\propto V_{cd}V_{ts}*V_{cs}*V_{td} \quad \pazocal{M}(\overline{K}^0\to K^0)\propto V_{cs}*V_{ts}V_{cs}V_{td}*
+\pazocal{M}(K^0\to\overline{K}^0)\propto V_{cd}V_{ts}^*V_{cs}^*V_{td} \quad \pazocal{M}(\overline{K}^0\to K^0)\propto V_{cs}^*V_{ts}V_{cs}V_{td}^*
 \]
-If $V_{ij}$ is real, then $\pazocal{M}(K^0\to\overline{K}^0)=\pazocal{M}(\overline{K}^0\to K^0)$ and there is no CP violation, while if $V_{ij}$ is complex, then $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and we have CP violation. In this case, $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ their difference is proportional to $\mathfrak{Im}(V_{td})=iA\lambda^3\eta$.\\
-In the SM, CP violation is expected to occur also in the $D'^0-\overline{D}^0$ and $B^0-\overline{B}^0$ systems. The importance of the phenomenon depends on the value of the CKM matrix, i.e. by the quark mixing: in the first case, the main contribution is from the $b$ quark exchange but the product $V_{cb}V_{ub}$ is very small. In the second case, it is dominated by the $t$ quark exchange and substantial levels of mixing are expected.
+If $V_{ij}$ is real, then $\pazocal{M}(K^0\to\overline{K}^0)=\pazocal{M}(\overline{K}^0\to K^0)$ and there is no CP violation, while if $V_{ij}$ is complex, then $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and we have CP violation.\\
+In this case, $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and their difference is proportional to $\mathfrak{Im}(V_{td})=iA\lambda^3\eta$.\\
+In the SM, CP violation is expected to occur also in the $D^0-\overline{D}^0$ and $B^0-\overline{B}^0$ systems through the same dynamical mechanism. The importance of the phenomenon depends on the value of the CKM matrix, i.e. by the quark mixing: in the first case, the main contribution is from the $b$ quark exchange but the product $V_{cb}V_{ub}$ is very small. In the second case, it is dominated by the $t$ quark exchange and substantial levels of mixing are expected.
 \subsection{$\nu$ Oscillations}
 Quarks of same charge and different flavours mix together, with the CKM matrix parametrizing this process. What about the lepton sector? Do neutrinos oscillate? The answer is yes. Consider a simple toy model with only two families:
 \[
@@ -767,7 +780,7 @@ Current oscillation experiments measure:
 \Delta m_{12}^2=m_2^2-m_1^2\approx7.37\cdot10^{-5}\;\text{eV$^2$} \quad |\Delta m_{32}|^2=|m_3^2-m_2^2|^2\approx2.56\cdot10^{-3}\;\text{eV$^2$}
 \]
 with an ambiguity about the hierarchy still not resolved.\\
-In the SM, there are three families, the neutrinos mixing matrix is a $3\time3$ with the same mathematical properties as the CKM one, it is called the Pontecorvo-Maki-Nakagawa-Sakata (PMNS) matrix. 
+In the SM, there are three families, the neutrinos mixing matrix is a $3\times3$ with the same mathematical properties as the CKM one, it is called the \textbf{Pontecorvo-Maki-Nakagawa-Sakata matrix} (PMNS). 
 \section{The Standard Model}
 \subsection{The Electroweak Theory}
 Glashow, Salam and Weinberg provided the main ingredients for the unification of weak and EM interactions. Fundamental interactions are described by field theories, i.e. by a Lagrangian, invariant under appropriate symmetries which correspond to conservation laws of the theory. In the SM, EM and WI are related to the symmetry group SU(2)$\times$U(1). In mathematical terms, it has to be renormalizable which means that it must exist a mathematically consistent procedure that eliminates the infinities which arise in calculations of physical observables. As a consequence, the EW Lagrangian must not contain explicit mass terms so at the Lagrangian level both the gauge bosons and the fermions must be massless. The masses are then generated in the theory, without destroying the renormalizability, via the Higgs mechanism. This predicts the existence of one scalar, the Higgs boson $H$. The values of the fermion masses are left as free parameters but once they are fixed all the couplings are predicted by the theory.\\
