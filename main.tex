@@ -30,7 +30,10 @@
 \DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{multicol}
-
+\usepackage[super]{nth}
+\newcommand{\beginbox}[1]{\begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={#1},colbacktitle={gray!50},coltitle=black]}
+\renewcommand{\endbox}{\end{tcolorbox}\noindent}
+% \begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Rosenbluth Cross Section},colbacktitle={gray!50},coltitle=black]
 \title{Particle Physics}
 \author{Matteo D'Errigo}
 
@@ -240,7 +243,7 @@ Consider for example a homogeneous sphere with unit charge, $\rho(r)=\rho_0=\fra
 \pazocal{F}(q^2)&=4\pi\int_0^\infty dr\rho(r)r^2\frac{\sin(qr)}{qr}=\frac{4\pi\rho_0}{q}\int_0^Rdrr\sin(qr)=\frac{4\pi\rho_0}{q^3}\int_0^{t*}dtt\sin t\\
 &=\frac{4\pi\rho_0}{q^3}[\sin(qR)-qR\cos(qR)]=\frac{3}{q^3R^3}[\sin(qR)-qR\cos(qR)]
 \end{align*}
-By comparing the first minimum of this function with the experiments for $^{12}$C ($q/\habr\approx1.8$\,fm$^{-1}$), we get $R\approx4.5 r_{\min}\approx2.5$\,fm, i.e. $^{12}$C is approximately a sphere of radius 2.5 fm.\\
+By comparing the first minimum of this function with the experiments for $^{12}$C ($q/\hbar\approx1.8$\,fm$^{-1}$), we get $R\approx4.5 r_{\min}\approx2.5$\,fm, i.e. $^{12}$C is approximately a sphere of radius 2.5 fm.\\
 For $q\to0$, we can write:
 \[
 \pazocal{F}(q^2)\simeq1-\frac{1}{6}q^2\braket{r^2}+\cdots \quad \braket{r^2}:=\int d^3xf(\Vec{x})r^2
@@ -263,18 +266,24 @@ For the nucleons, we define $\mu_{\text{N}}=e\hbar/4m_{\text{N}}$. If $p$ and $n
 \mu_p=2\mu_{\text{N}} \quad \mu_n=0
 \]
 Instead, experimental measurements disagree with these values: there are other effects which contribute to the magnetic moment, $p$ and $n$ are not ideal Dirac particles, \textit{maybe} they are not point-like.\\
-In an electron-nucleon scattering, the main contribution is from single photon exchange. The $ee\gamma*$ vertex is well understood, while the $NN'\gamma*$ is unknown. The strategy is to assume a simpler process, compare it with experiments and opportunely modify the theory. The cross section is generalized by defining the Rosenbluth cross section, introducing two form factors $G_{\text{e}}(Q^2)$ for the electric part and $G_{\text{M}}(Q^2)$ for the magnetic part.
-\begin{tcolorbox}[[width=\textwidth,colback={yellow!50},title={Rosenbluth Cross Section},colbacktitle={gray!50},coltitle=black]
+In an electron-nucleon scattering, the main contribution is from single photon exchange. The $ee\gamma*$ vertex is well understood, while the $NN'\gamma*$ is unknown. The strategy is to assume a simpler process, compare it with experiments and opportunely modify the theory. The cross section is generalized by defining the Rosenbluth cross section, introducing two form factors $G_{\text{E}}(Q^2)$ for the electric part and $G_{\text{M}}(Q^2)$ for the magnetic part.
+\begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Rosenbluth Cross Section},colbacktitle={gray!50},coltitle=black]
 \[
-\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(\frac{G_{\text{e}}^2+\tau G_{\text{M}}^2}{1+\tau}+2\tau G_{\text{M}}^2\tan^2(\theta/2)\right)
+\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(\frac{G_{\text{E}}^2+\tau G_{\text{M}}^2}{1+\tau}+2\tau G_{\text{M}}^2\tan^2(\theta/2)\right)
 \]
 \end{tcolorbox}
 \noindent
-In 1956, the Hofstadter spectrometer measured the elastic process $ep\to ep$. It measured $\theta$ in the range $[35^\circ,138^\circ]$ and therefore $Q^2$. At small $\theta$, i.e. small $Q^2$, all formulas agree, $G_{\text{E}}(Q^2\simeq0)\approx1$. However, at large $\theta$, i.e. large $Q^2$, the results disagree with any theoretical prediction. Consider the Rosenbluth formula at fixed $Q^2$:
+In 1956, the Hofstadter spectrometer measured the elastic process $ep\to ep$. It measured $\theta$ in the range $[35^\circ,138^\circ]$ and therefore $Q^2$.
 \[
-\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}\Bigr/\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}=\left({\color{blue}\frac{G_{\text{e}}^2+\tau G_{\text{M}}^2}{1+\tau}}+{\color{green}2\tau G_{\text{M}}^2}\tan^2(\theta/2)\right)={\color{blue}A}+{\color{green}B}\tan^2(\theta/2)
+E'=\frac{E}{1+\frac{E}{M}(1-\cos\theta)}\leftrightarrow Q^2=2EE'(1-\cos\theta)
 \]
-Measure $A$ and $B$ from which one gets $G_{\text{e}}$ and $G_{\text{M}}$ for both protons and neutrons. By repeating this process varying $Q^2$, it is possible to obtain the full dependence on the form factors. Results show that electric and magnetic form factors tend to a universal function of $Q^2$: the nucleons do not look like point-like particles or homogeneous spheres but like diffused non-homogeneous systems. At this level, it is unclear whether the nucleons have substructures, experiments at larger $Q^2$ are required: at higher $Q^2$, one can expect a variety of phenomena. 
+At small $\theta$, i.e. small $Q^2$, all formulas agree, $G_{\text{E}}(Q^2\simeq0)\approx1$. However, at large $\theta$, i.e. large $Q^2$, the results disagree with any theoretical prediction. Consider the Rosenbluth formula at fixed $Q^2$:
+\[
+\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}\Bigr/\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}=\left({\color{blue}\frac{G_{\text{E}}^2+\tau G_{\text{M}}^2}{1+\tau}}+{\color{green}2\tau G_{\text{M}}^2}\tan^2(\theta/2)\right)={\color{blue}A}+{\color{green}B}\tan^2(\theta/2)
+\]
+It is possible to measure $A$ and $B$ from which one gets $G_{\text{E}}$ and $G_{\text{M}}$ for both protons and neutrons. By repeating this process varying $Q^2$, it is possible to obtain the full dependence on the form factors. Results show that electric and magnetic form factors tend to a universal function of $Q^2$: the nucleons do not look like point-like particles or homogeneous spheres but like \textbf{diffused non-homogeneous systems}.\\
+For $Q^2\ll m_p$, hence small $\tau$, G$_{\text{E}}$ dominates the cross section. In this range, we measure the average radius of electric charge, $\braket{r_{\text{E}}}=0.85\pm0.02$\,fm. In the range $0.02\le Q^2\le3$\, GeV$^2$, G$_{\text{E}}$ and G$_{\text{M}}$ are equally important while for $Q^2>3$\,GeV$^2$, the dominant contribution comes from G$_{\text{M}}$. Notice that if the proton was point-like, one would find both form factors equal to 1 and independent on $Q^2$.\\
+At this level, it is unclear whether the nucleons have substructures, experiments at larger $Q^2$ are required: at higher $Q^2$, one can expect a variety of phenomena. 
 \subsection{Deep Inelastic Scattering}
 The usual parametrization of the cross section in the Deep Inelastic Scattering (DIS) region is:
 \begin{align*}
@@ -282,12 +291,14 @@ The usual parametrization of the cross section in the Deep Inelastic Scattering 
 &=\frac{4Z^2\alpha^2\hbar^2c^2E'^2}{|qc|^4}\cos^2(\theta/2)[W_2(Q^2,\nu)+2W_1(Q^2,\nu)\tan^2(\theta/2)]\\
 &=\frac{4\alpha^2E'^2}{Q^4}[W_2(Q^2,\nu)\cos^2(\theta/2)+2W_1(Q^2,\nu)\sin^2(\theta/2)]
 \end{align*}
-The inelastic cross section requires tow final-state variables, since $Q^2$ and $\nu$ are Lorentz-invariant they are more convenient. $W_1$ and $W_2$ are combinations of $G_{\text{E}}$ and $G_{\text{M}}$:
+The inelastic cross section requires two final-state variables, since $Q^2$ and $\nu$ are Lorentz-invariant they are more convenient. $W_1$ and $W_2$ are combinations of $G_{\text{E}}$ and $G_{\text{M}}$:
+\beginbox{Lorentz Invariant Variables}
 \[
 W_1(Q^2,\nu)=\frac{F_1(x,y)}{M}=\frac{3}{E}\tau G^2_{\text{M}} \quad W_2(Q^2,\nu)=\frac{F_2(x,y)}{\nu}=\frac{3}{E}\left(\frac{G^2_{\text{E}}+\tau G_{\text{M}}^2}{1+\tau}\right)
 \]
-They are known as structure functions and must be measured. The dynamics of the scattering depend on the structure of the target: $W_1$ and $W_2$ contain this information. Notice that there is no deep difference between $W_{1,2}$ and $F_{1,2}$, just use the more convenient ones.\\
-From results, one observes that the structure functions appear to be nearly independent of $Q^2$. On the other hand, the elastic scattering for a non-point-like target has a strong dependence on $Q^2$. This means that for DIS the target behaves like a point-like particle: this $Q^2$ independence is another confirmation that DIS \textit{breaks} the proton, the scattering happens with its constituents.\\
+\endbox
+They are known as \textbf{structure functions} and must be measured. The dynamics of the scattering depend on the structure of the target: $W_1$ and $W_2$ contain this information. Notice that there is no deep difference between $W_{1,2}$ and $F_{1,2}$, just use the more convenient ones.\\
+From results, one observes that the structure functions appear to be nearly independent of $Q^2$. On the other hand, the elastic scattering for a non-point-like target has a strong dependence on $Q^2$. This means that for DIS the target behaves like a \textbf{point-like particle}: this $Q^2$ independence is another confirmation that DIS \textit{breaks} the proton, the scattering happens with its constituents.\\
 Consider now the cross section of spin 1/2 particle of mass $m$, à la Rosenbluth with $G_{\text{E}}=G_{\text{M}}=1$:
 \[
 W_2\cos^2(\theta/2)+2W_1\sin^2(\theta/2)=\frac{3}{E}[\cos^2(\theta/2)+2\tau\sin^2(\theta/2)]
@@ -298,42 +309,55 @@ Q^2=2m\nu=2M\nu x\to m=Mx \quad \frac{F_1(x)}{F_2(x)}=\frac{Q^2}{4m^2}\frac{M}{\
 \]
 This is known as the Callan-Gross relation, $F_2(x)=2xF_1(x)$.
 \subsection{Parton Model}
-Nucleons are made up of partons, later identified with quarks. Partons are spin 1/2 point-like fermions. The electron-partons interaction is so fast and violent that they behave like free particles, the other partons do not take part in the interaction, at least at first approximation.  The DIS is an incoherent sum of processes on the partons. Define now:
+Assume now that nucleons are made up of \textbf{partons}, later identified with \textbf{quarks}. Partons are spin 1/2 point-like fermions with a certain mass $m_i$  which scatter elastically in the $ep$ process. The DIS cross section reduces to an incoherent sum of constituents cross sections. For such partons, we have:
+\[
+F_1(x)=MW_1(Q^2,\nu)=\frac{1}{2}\sum_je_j^2f_j(x) \quad F_2(x)=\nu W_2(Q^2,\nu)=x\sum_je_j^2f_j(x)
+\]
+They do not depend on $Q^2$ and $\nu$ separately but only on their ratio. This mechanism called \textbf{Bjorken scaling} was interpreted by Feynman in 1969 as the dominance of partons in the nucleon dynamics. 
+Define now:
 \[
 x_{\text{F}}=\frac{\Vec{p}_{\text{parton}}}{\Vec{p}_{\text{nucleon}}}=x_{\text{B}}=x
 \]
-This model implies that $\sum_ix_i=1$ when the sum runs over all partons. At the time, there was no clue about the nature of the partons, nor if they were charged or neutral, therefore $\sum_i'x_i\le1$ when the sum runs over the partons which interacts with the electron. If partons are spin 1/2 particles, then the Callan-Gross relation holds, instead if they have spin 0, $F_1(x)=0$: they are measured to have spin 1/2. What is the dynamical meaning of $F_{1,2}$? In principle, proton and neutron have different structure functions. However, these functions are not independent: if they parametrize the actual structure of nucleons, they must be correlated. Assume now that the nucleons are made by three quarks. For short intervals, QM allows quark-anti-quark pairs to exist in the nucleons. Moreover, in the hadrons we have some neutral particles, called gluons. Therefore, in the nucleons there are three types of particles:
+The interaction electron-parton is so fast and violent that they behave like free particles, in \nth{1} approximation the other partons do not take part in the interaction.\\
+This model implies that $\sum_ix_i=1$ when the sum runs over all partons. At the time, there was no clue about the nature of the partons, nor if they were charged or neutral, therefore $\sum_i'x_i\le1$ when the sum runs over the partons which interacts with the electron. If partons are spin 1/2 particles, then the Callan-Gross relation holds, instead if they have spin 0, $F_1(x)=0$. At the end, they are measured to have spin 1/2.\\
+What is the dynamical meaning of $F_{1,2}$? In principle, proton and neutron have different structure functions. However, these functions are not independent: if they parametrize the actual structure of nucleons, they must be correlated. Assume now that the nucleons are made by three quarks, each of them described by a $x$ distribution identified with $f_j^p(x)$ (e.g. $u^p(x)$ denotes the $x$ distribution of up quarks in the proton, with $x$ in the interval $(x,x+dx)$). For short intervals, QM allows quark-anti-quark pairs to exist in the nucleons. Moreover, in the hadrons we have some neutral particles, called \textbf{gluons}. Therefore, in the nucleons there are three types of particles:
 \begin{itemize}
-    \item Valence quarks $q_V(x)$, e.g. $u_V^p(x)$ is the $x$ distribution for $u$ quarks in the proton
-    \item Sea quarks $q_s(x)$, i.e. the quark-anti-quark pairs
-    \item Gluons $g^p(x)$ and $g^n(x)$
+    \item \textbf{Valence quarks} with distribution $q_V(x)$
+    \item \textbf{Sea quarks}, i.e. the quark-anti-quark pairs, described by distributions $q_S(x)$
+    \item \textbf{Gluons} described by distributions $g^p(x)$ and $g^n(x)$
 \end{itemize}
-We know that:
+What can be measured are sums like $u^p(x):=u^p_V(x)+u^p_S(x)$ and so on.\\ 
+From the Callan-Gross relation we know that:
 \[
-F_2(x)=x\sum_je_j^2f_j(x)
+F_2(x)=2xF_1(x)=x\sum_je_j^2f_j(x)
 \]
-Putting everything together:
+Putting everything together and neglecting heavy quarks we obtain:
 \begin{align*}
 F_2^{\text{ep}}(x)&=x\left\{\frac{4}{9}[u^p(x)+\overline{u}^p(x)]+\frac{1}{9}[d^p(x)+\overline{d}^p(x)]+\frac{1}{9}[s^p(x)+\overline{s}^p(x)]\right\}\\
-&=x\left\{\frac{4}{9}[u_V(x)+2q_s(x)]+\frac{1}{9}[d_V(x)+2q_s(x)]+\frac{1}{9}[2q_s(x)]\right\}=x\left\{\frac{4}{9}u_V(x)+\frac{1}{9}d_V(x)+\frac{4}{3}q_s(x)\right\}\\
-F_2^{\text{en}}(x)&=x\left\{\frac{1}{9}u_V(x)+\frac{4}{9}d_V(x)+\frac{4}{3}q_s(x)\right\}
+&=x\left\{\frac{4}{9}[u_V(x)+2q_S(x)]+\frac{1}{9}[d_V(x)+2q_S(x)]+\frac{1}{9}[2q_S(x)]\right\}=x\left\{\frac{4}{9}u_V(x)+\frac{1}{9}d_V(x)+\frac{4}{3}q_S(x)\right\}\\
+F_2^{\text{en}}(x)&=x\left\{\frac{1}{9}u_V(x)+\frac{4}{9}d_V(x)+\frac{4}{3}q_S(x)\right\}
 \end{align*}
 Then, it follows that:
 \[
 \frac{F_2^{\text{en}}}{F_2^{\text{ep}}}=R_{\text{np}}=\left\{\begin{aligned}&1 &&(a)\\
 &\frac{4d_V(x)+u_V(x)}{4u_V(x)+d_V(x)} &&(b)\end{aligned}\right.
 \]
-(a) if sea dominates, (b) if valence dominates. Measurements show that (a) happens at low $x$ while (b) dominates at high $x$. In other words, there are plenty of $q\overline{q}$ pairs at low momentum, while valence is important at high $x$. Moreover, $F_2^{\text{ep}}-F_2^{\text{en}}=\frac{1}{3}x[u_V(x)-d_V(x)]/3$ and if, from the naive quark model, $u_V(x)\approx2d_V(x)$ we get $F_2^{\text{ep}}-F_2^{\text{en}}=\frac{1}{3}xd_V(x)$. The integrals of $F_2(x)$ are calculable and measurable:
+(a) corresponds to the case in which sea dominates, while (b) corresponds to when valence dominates. Measurements show that (a) happens at low $x$ while (b) dominates at high $x$. In other words, there are plenty of $q\overline{q}$ pairs at low momentum, while valence is important at high $x$. Moreover, one obtains:
+\[
+F_2^{\text{ep}}-F_2^{\text{en}}=\frac{1}{3}x[u_V(x)-d_V(x)]
+\]
+And if, from the naive quark model, $u_V(x)\approx2d_V(x)$ we get $F_2^{\text{ep}}-F_2^{\text{en}}=\frac{1}{3}xd_V(x)$.\\
+The integrals of $F_2(x)$ are calculable and measurable. By neglecting the small contribution of $s\overline{s}$:
 \begin{align*}
 &\int_0^1dxF_2^{\text{ep}}=\frac{4}{9}f_u+\frac{1}{9}f_d\\
-&\int_0^1dxF_2^{\text{en}}=\frac{4}{9}f_d+\frac{1}{9}f_u
+&\int_0^1dxF_2^{\text{en}}=\frac{1}{9}f_u+\frac{4}{9}f_d
 \end{align*}
-where $f_{u,d}$ are the fractions of proton and neutron momentum carried by the quark $u,d$(+ their respective anti-quarks). From direct measurement, we get:
+where $f_{u,d}$ are the fractions of proton and neutron momentum carried by the quark $u,d$(+ their respective anti-quarks). From direct measurements, we get:
 \begin{align*}
 &\int_0^1dxF_2^{\text{ep}}=\frac{4}{9}f_u+\frac{1}{9}f_d\approx0.18\\
-&\int_0^1dxF_2^{\text{en}}=\frac{4}{9}f_d+\frac{1}{9}f_u\approx0.12
+&\int_0^1dxF_2^{\text{en}}=\frac{1}{9}f_u+\frac{4}{9}f_d\approx0.12
 \end{align*}
-From which it follows $f_u\approx0.36$ and $f_d\approx0.18$. Note that $f_u+f_d\approx0.54$: only roughly a half of the nucleon momentum is carried by quarks and anti-quarks, the rest is invisible in the DIS by a charged lepton. This was one of the first evidences for the existence of gluons, they are neutral and do not see the EM interactions.\\
+Hence it follows $f_u\approx0.36$ and $f_d\approx0.18$. Note that $f_u+f_d\approx0.54$: only roughly a half of the nucleon momentum is carried by quarks and anti-quarks, the rest is invisible in the DIS by a charged lepton. This was one of the first evidences for the existence of gluons, they are neutral and do not see the EM interactions.\\
 Modern experiments have probed the nucleus to very high values of $Q^2$, up to $Q^2\approx10^5$\,Gev$^2$. When plotting $F_2$ as a function of $Q^2$ at fixed $x$, some $Q^2$ dependence appears, incompatible with Bjorken scaling. However, this effect is not attributed to sub-structures or other new physics, but to a dynamical change in $F_2$ well understood in QCD.
 \section{Heavy Flavours}
 \subsection{$e^+e^-$ Collisions}
@@ -343,45 +367,47 @@ e^+=(E,p,0,0) \quad e^-=(E,-p,0,0) \quad \gamma*=(2E,0,0,0)
 \]
 At higher energies, it is possible to have $e^-e^+\to\mu^-\mu^+$. Still in the center of mass, we have:
 \[
-e^+=(E,p,0,0) \quad e^-=(E,-p,0,0) \quad \mu^+=(E,p\cos\theta,p\sin\theta,0 \quad \mu^-=(E,-p\cos\theta,-p\sin\theta,0)
+e^+=(E,p,0,0) \quad e^-=(E,-p,0,0) \quad \mu^+=(E,p\cos\theta,p\sin\theta,0) \quad \mu^-=(E,-p\cos\theta,-p\sin\theta,0)
 \]
 The cross section is given by:
 \[
 \sigma_{\mu\mu}=\int_{-1}^{+1}d\cos\theta\frac{d\sigma_{\mu\mu}}{d\cos\theta}=\frac{\pi\alpha^2}{2s}\int_{-1}^{+1}d\cos\theta(1+\cos^2\theta)=\frac{4\pi\alpha^2}{3s}
 \]
-For $0.5\le\sqrt{s}\le50$\,GeV the measurements agree with the predicted $1/2$ behaviour plus some resonances corresponding to $q\overline{q}$. For $\sqrt{s}>50$\;GeV the process is dominated by the $Z$ formation in the s-channel. Define now the quantity $R$:
+For $0.5\le\sqrt{s}\le50$\,GeV the measurements agree with the predicted $1/s$ behaviour plus some resonances corresponding to $q\overline{q}$. For $\sqrt{s}>50$\;GeV (e.g. LEP) the process is dominated by the $Z$ formation in the s-channel. Define now the quantity $R$:
 \[
 R=\frac{\sigma(e^+e^-\to\text{hadrons})}{\sigma(e^+e^-\to\mu^+\mu^-}=3\sum_{\text{quarks}}e_i^2=R(\sqrt{s})
 \]
 The sum is extended over all the quarks produced at energy $\sqrt{s}$, i.e. $2m_q<\sqrt{s}$.
-\begin{itemize}
-    \item $0<\sqrt{s}<2m_c$: $R=R_{uds}=3\left[\left(\frac{2}{3}\right)^2+\left(-\frac{1}{3}\right)^2+\left(-\frac{1}{3}\right)^2\right]=2$
-    \item $2m_c<\sqrt{s}<2m_b$: $R=R_{udsc}=R_{uds}+3\left(\frac{2}{3}\right)^2=\frac{10}{3}$
-    \item $2m_b<\sqrt{s}<2m_t$: $R=R_{udscb}=R_{udsc}+3\left(-\frac{1}{3}\right)^2=\frac{11}{3}$
-    \item $2m_t<\sqrt{s}<\infty$: $R=R_{udscbt}=R_{udscb}+3\left(\frac{2}{3}\right)^2=5$
-\end{itemize}
-However, reality is more complicated. $q\overline{q}$ resonances are formed at $\sqrt{s}\approx2m_q$ and their decay modes affect the value of $R$. At $\sqrt{s}\approx m_Z$ the weak interactions completely change the scenario.
+\[
+\begin{aligned}
+&\bullet 0<\sqrt{s}<2m_c: &&R=R_{uds}=3\left[\left(\frac{2}{3}\right)^2+\left(-\frac{1}{3}\right)^2+\left(-\frac{1}{3}\right)^2\right]=2\\
+&\bullet 2m_c<\sqrt{s}<2m_b: &&R=R_{udsc}=R_{uds}+3\left(\frac{2}{3}\right)^2=\frac{10}{3}\\
+&\bullet 2m_b<\sqrt{s}<2m_t: &&R=R_{udscb}=R_{udsc}+3\left(-\frac{1}{3}\right)^2=\frac{11}{3}\\
+&\bullet 2m_t<\sqrt{s}<\infty: &&R=R_{udscbt}=R_{udscb}+3\left(\frac{2}{3}\right)^2=5
+\end{aligned}
+\]
+However, reality is more complicated. $q\overline{q}$ resonances are formed at $\sqrt{s}\approx2m_q$ and their decay modes affect the value of $R$. At $\sqrt{s}\approx m_Z$ the \textbf{weak interactions} completely change the scenario.
 \subsection{The November Revolution}
 The $u,d,s$ quarks have not been predicted. In fact, mesons and baryons have been discovered and later interpreted in terms of their quark content. In November 1974, the group of Richter (SLAC) and Ting (Brookhaven), simultaneously discovered a new state with mass $\approx3.1$\;GeV and a width much smaller than their respective resolution. The width was measured to be $0.087$\;MeV and this was called $J/\Psi$.\\
 The group of Ting measured the inclusive production of $e^+e^-$ pairs in interactions of 30 GeV protons on a plate of beryllium. The experiment was searching for mass reasonances with\\
 $J^P=1^-$  decaying into $e^+e^-$ pairs. They used a two arm magnetic spectrometer to measure separately the electrons and the positrons.\\
 In 1974, up to the highest available energies, $R\approx2$. Instead, at the Cambridge Electron Accelerator measurements found $R\simeq6$. The scanning in energy was performed in steps of 200 MeV and the measured cross section appeared to be constant, not with the expected trend $1/s$. Decreasing the step from 200 MeV to 2.5 MeV increased the resolving power: a resonance appeared. This particle was called $\Psi$.
 \subsection{Charmonium}
-After some discussion, the correct interpretation emerged: the resonance is a bound state of a new quark $c$ and its anti-quark. The charm quark had been proposed in 1970 to exclude flavour changing neutral currents (FCNC). After 1974, many decays have been precisely measured, the present most precise one gives the mass and width:
+After some discussion, the correct interpretation emerged: the resonance is a bound state of a \textbf{new quark} $c$ and its anti-quark. The \textbf{charm} quark had been proposed in 1970 to exclude flavour changing neutral currents (FCNC). After 1974, many decays have been precisely measured, the present most precise one gives the mass and width:
 \[
 m(J/\Psi)=3097\;\text{MeV} \quad \Gamma(J/\Psi)=93\;\text{keV}
 \]
 It was possible to measure many of the $J/\Psi$ quantum numbers. The resonance is asymmetric, therefore there is interference between $J/\Psi$ formation and the usual $\gamma*$ exchange in the s-channel, hence $J^P=1^-$. The equality BR$(J/\Psi\to\rho^0\pi^0)=$BR$(J/\Psi\to\rho^\pm\pi^\pm)$ implies isospin $I=0$. The $J/\Psi$ decays into an odd number of $\pi$: the G-parity is conserved, therefore $J/\Psi$ decays via strong interaction.\\
-The weak neutral current processes between quarks of different flavour (FCNC) are strongly suppressed, e.g. $\Gamma(K_L^0\to\mu^+\mu^-)\ll\Gamma(K^\pm\to\mu^\pm\nu)$. This was explained in 1970 by Glashow, Iliopoulos and Maiani by introducing the charm quark. They predicted a fourth quark identical to the up, but with $m_c\gg m_u$ carrying a new quantum number $C$, the charm. As for strangeness, $C$ is conserved in strong and EM interactions and violated in weak interactions. The lightest charmed mesons are $c\overline{q}$ or $\overline{c}q$, with $q=uds$, have a mass of 1500-2000 MeV and $J^P=0^-$. These mesons decay weakly because of their larger mass.\\
-Now, $Q=s,c$ and $q=u,d$. The Zweig rule was set empirically before the advent of QCD. It says that in the decay of a bound state of heavy quarks $Q$ the final states without $Q$ (disconnected decays) have suppressed amplitude with respect to connected decays. If the only decays allowed are the disconnected ones, then the total width is small and the bound state is narrow.\\
-A $Q\overline{Q}$ state decays preferentially into $(Q\overline{q})(\overline{Q}q)$. Then $c\overline{c}$ annihilates into gluons: one gluon is forbidden by colour, two gluons is forbidden by C-parity, 3 gluons are allowed. The latter amplitude is proportional to the strong coupling constant $\alpha_S^3$ and its value produces a smaller width for larger masses, i.e. we say that there is the phenomenon of the running coupling.\\
+The weak neutral current processes between quarks of different flavour (FCNC) are strongly suppressed, e.g. $\Gamma(K_L^0\to\mu^+\mu^-)\ll\Gamma(K^\pm\to\mu^\pm\nu)$. This was explained in 1970 by Glashow, Iliopoulos and Maiani by introducing the charm quark. They predicted a fourth quark identical to the up quark, but with larger mass, $m_c\gg m_u$, carrying a new quantum number $C$, the charm. As for strangeness, $C$ is conserved in strong and EM interactions and violated in weak interactions. The lightest charmed mesons are $c\overline{q}$ or $\overline{c}q$, with $q=uds$, and have a mass of 1500-2000 MeV and $J^P=0^-$. These mesons decay weakly because of their larger mass.\\
+Now, $Q=s,c$ and $q=u,d$. The \textbf{Zweig rule} was set empirically before the advent of QCD. It says that in the decay of a bound state of heavy quarks $Q$ the final states without $Q$ (disconnected decays) have suppressed amplitude with respect to connected decays. If the only decays allowed are the disconnected ones, then the total width is small and the bound state is narrow.\\
+A $Q\overline{Q}$ state decays preferentially into $(Q\overline{q})(\overline{Q}q)$. Then $c\overline{c}$ annihilates into gluons: one gluon is forbidden by colour, two gluons is forbidden by C-parity, 3 gluons are allowed. The latter amplitude is proportional to the strong coupling constant $\alpha_S^3$ and its value produces a smaller width for larger masses, i.e. we say that there is the phenomenon of \textbf{running coupling}.\\
 If the $J/\Psi$ is a bound state $c\overline{c}$ then mesons $c\overline{q}$ and $\overline{c}q$ must exist. In 1976, the Mark I detector started the search for charmed pseudoscalar mesons $D^0$ and $\overline{D}^0$. According to theory, $D$-mesons have a short lifetime therefore the detection strategy was the presence of narrow peaks in the combined mass of the decay products. A first bump at 1865 MeV with a width compatible with the experimental resolution was observed in the combined mass $K^\pm\pi^\pm$, corresponding to $D^0$ and $\overline{D}^0$ decay. Also, the mass $K^\mp\pi^\pm\pi^\pm$ had a bump at 1875 MeV, corresponding to the $D^+$ and $D^-$ decays. Moreover, in agreement with the GIM predictions, no bump was found in $K^\pm\pi^+\pi^-$, which is forbidden.
-\subsection{The 3$^{\text{rd}}$ Family}
-Why consecutive families of quarks/leptons differing only in mass? How do they mix? The answer is that nobody knows: the number of families and the mixing matrix are free parameters of the Standard Model. The Standard Model has some non-QCD constraints: families must be complete, the $Z$ full width constrains the number of light neutrinos and at least three families are necessary to generate a natural mechanism of CP violation in the quark decays.\\
-The analysis of Mark I produced another beautiful discovery, the $\tau$ lepton. The selection followed a well-known method, the unbalanced pairs $e^\pm\mu^\mp$. The unbalanced pairs are only used to cross-check the sample. The yield of $e^\pm\mu^\mp$ pairs vs $\sqrt{s}$ immediately points to the threshold $\sqrt{s}0=2m_\tau$. This gives $m_\tau\approx1780$\;MeV. Why is it a lepton? At the time, the evidence came from the lack of any other plausible explanation. Today instead, the evidence is solid: the $Z$ and $W$ decay into $(e,\mu\tau)$ with the same branching ratio, the $\tau$ lifetime and decays have been measured and found in agreement with predictions.\\
-The discovery of the $\tau$ started the hunt for the particles of the new family, still unknown: the $\nu_\tau$ and the pair of quarks up and down similar to $u$ and $d$, now called top $t$ and bottom $b$.\\
+\subsection{The \nth{3} Family}
+Why do we have consecutive families of quarks/leptons differing only in mass? How do they mix? The answer is that nobody knows: the number of families and the mixing matrix are free parameters of the Standard Model. The Standard Model has some non-QCD constraints: families must be complete, the $Z$ full width constrains the number of light neutrinos and at least three families are necessary to generate a natural mechanism of CP violation in the quark decays.\\
+The analysis of Mark I data produced another beautiful discovery, the $\tau$ lepton. The selection followed a well-known method, the unbalanced pairs $e^\pm\mu^\mp$. The unbalanced pairs are only used to cross-check the sample. The yield of $e^\pm\mu^\mp$ pairs vs $\sqrt{s}$ immediately points to the threshold $\sqrt{s}=2m_\tau$. This gives $m_\tau\approx1780$\;MeV. Why is it a lepton? At the time, the evidence came from the lack of any other plausible explanation. Today instead, the evidence is solid: the $Z$ and $W$ decay into $(e,\mu,\tau)$ with the same branching ratio, the $\tau$ lifetime and decays have been measured and found in agreement with predictions.\\
+The discovery of the $\tau$ started the hunt for the particles of the new family, still unknown: the \textbf{tau neutrino} $\nu_\tau$ and the pair of quarks up and down similar to $u$ and $d$, now called \textbf{top} $t$ and \textbf{bottom} $b$.\\
 In 1977 Lederman and collaborators built at Fermilab a spectrometer with two arms, designed to study $\mu^+\mu^-$ pairs produced by interactions of 400 GeV protons on a copper target. This type of events is rare, therefore it requires intense beams and high rejection power against charged hadrons. There is a clear visible excess between 9 and 10 GeV. When the $\mu\mu$ continuum is subtracted, the excess appears as the superimposition of three separate states. These states called $\Upsilon$(1S), $\Upsilon$(2S) and $\Upsilon$(3S) are bound states $b\overline{b}$.\\
-The top quark was directly searched in hadron ($Sp\overline{p}S$ at Fermilab) and lepton (Tristan, LEP) colliders, but it was not found until '90s. At the time, the mass limit was $m_t\ge90$\;GeV. At $m_t\approx m_w\pm m_b$ the search changes: the golden discovery channel moves from $W^+\to t\overline{b}\to W^+*b\overline{b}$ to $t\to W^+b$. $m_t$ was first computed from the radiative corrections for $m_W$ and $m_Z$. The LEP data allowed for predictions of $m_t\approx175$\;GeV. In the 1990's the search was concluded at Tevatron. The top is produced in pairs via hadronic interactions. In $pp$ and $\overline{p}p$, the probability density function of initial state partons are different: the $q\overline{q}$ decreases from 90\% to 5\%. In the same range, the total cross section increases from 5 to 600 pb. The top quark decays weakly in $W$ and a \textit{down} type quark, i.e. $d,s,b$ with a coupling proportional to the CKM matrix element $V_{tq}$, therefore the most common decay is $t\to bW^+$. Since $\Gamma=\frac{G_F m_t^3}{8\pi\sqrt{2}}\sim2$\;GeV and $\tau_t\sim4\cdot10^{-25}$\;s, the top decays before any hadronic process may happen. In turn, the $W$ decays into all the lepton-neutrino $q\overline{q}$ pairs. Finally, a simple table with all the quarks and their quantum numbers.
+The top quark was directly searched in hadron ($Sp\overline{p}S$ at Fermilab) and lepton (Tristan, LEP) colliders, but it was not found until '90s. At the time, the mass limit was $m_t\ge90$\;GeV. At $m_t\approx m_W\pm m_b$ the search changes: the golden discovery channel moves from $W^+\to t\overline{b}\to W^{+*}b\overline{b}$ to $t\to W^+b$. $m_t$ was first computed from the radiative corrections for $m_W$ and $m_Z$. The LEP data allowed for predictions of $m_t\approx175$\;GeV. In the '90s the search was concluded at Tevatron. The top is produced in pairs via hadronic interactions. In $pp$ and $\overline{p}p$, the probability density function of initial state partons are different: the $q\overline{q}$ decreases from 90\% to 5\%. In the same range, the total cross section increases from 5 to 600 pb. The top quark decays weakly in $W$ and a \textit{down} type quark, i.e. $d,s,b$ with a coupling proportional to the CKM matrix element $V_{tq}$, therefore the most common decay is $t\to bW^+$. Since $\Gamma=\frac{G_F m_t^3}{8\pi\sqrt{2}}\sim2$\;GeV and $\tau_t\sim4\cdot10^{-25}$\;s, the top decays before any hadronic process may happen. In turn, the $W$ decays into all the lepton-neutrino $q\overline{q}$ pairs. Finally, a simple table with all the quarks and their quantum numbers.
 \begin{table}[h]
     \centering
     \begin{tabular}{l|cccccc}
@@ -405,25 +431,24 @@ The top quark was directly searched in hadron ($Sp\overline{p}S$ at Fermilab) an
     \cellcolor{yellow!50}Topness $T$ & 0 & 0 & 0 & 0 & 0 & +1\\
     \hline
     \end{tabular}
-    \caption*{}
-    \label{tab:my_label}
+    \caption{Quantum numbers of all known quarks}
+    \label{tabquarks}
 \end{table}
-\newpage
 \section{Weak Interactions}
-In rare occasions, we see \textbf{violations} of those conservation laws valid for strong and EM interactions: these are known as \textbf{weak interactions} (WI), because of their small coupling. WI happen in almost all processes but they have a negligible effect, except in cases otherwise forbidden. Because of WI, stable matter contains only $u,d,e^-$, the other quarks and charged leptons are unstable. All elementary particles but gluons and photons \textit{see} WI. Most of our knowledge about WI was obtained from decays of particles and neutrino beams.\\
-In the SM, WI are classified in two types, according to the charge of their carriers:
+In rare occasions, we see \textbf{violations} of those conservation laws valid for strong and EM interactions: these are known as \textbf{weak interactions} (WI), because of their small coupling. WI take place in almost all processes but they have a negligible effect, except in cases otherwise forbidden. Because of them, stable matter contains only $u,d,e^-$, the other quarks and charged leptons are unstable. All elementary particles but gluons and photons \textit{see} WI. Most of our knowledge about WI was obtained from decays of particles and neutrino beams.\\
+In the SM, those interactions are classified in two types, according to the charge of their carriers:
 \begin{itemize}
     \item \textbf{Charged currents} (CC), $W^\pm$ exchange. In CC processes, the charge of quarks and leptons changes by $\pm1$ and at the same time there is a variation of flavour, according to the Cabibbo theory.
     \item \textbf{Neutral currents} (NC), $Z$ exchange. In the NC case, quark and lepton flavours remain unchanged (no FCNC).
 \end{itemize}
 In the '60s, Glashow, Salam, Weinberg and others developed a theory that unifies WI and EM, which is today part of the SM. The SM was conceived before the discovery of NC, so the existence of NC and its carrier, predicted by the SM in the '60s and directly observed at CERN in 1983, were among the first great success of the SM.
 \subsection{Charged Currents}
-The modern theory of CC interactions is a successor of the Fermi theory of $\beta$-decay, which describes a point-like interaction proportional to the coupling $G_F$. However, this theory has some intrinsic problems: it is not renormalizable, which means that the cross section violates unitarity at high energy. The SM expands the point-like interaction, introducing a heavy charged mediator $W^\pm$. The SM is mathematically consistent and, more important, reproduces the experimental data with unprecedented accuracy. Unlike $\alpha$, $G_F$ is not dimensionless. The EM coupling is proportional to $e^2$, similarly the intensity of the CC $G_F$ is proportional to $g^2$. The matrix elements of the transitions are proportional to the square of of the \textit{weak charge} $g$ and to the propagator:
+The modern theory of CC interactions is a successor of the Fermi theory of $\beta$-decay, which describes a point-like interaction proportional to the coupling $G_F$. However, this theory has some intrinsic problems: it is not renormalizable, which means that the cross section violates unitarity at high energy. The SM expands the point-like interaction, introducing a \textbf{heavy charged mediator} $W^\pm$. The SM is mathematically consistent and, more important, reproduces the experimental data with unprecedented accuracy. Unlike $\alpha$, $G_F$ is not dimensionless. The EM coupling is proportional to $e^2$, similarly the intensity of the CC $G_F$ is proportional to $g^2$. The matrix elements of the transitions are proportional to the square of of the \textit{weak charge} $g$ and to the propagator:
 \[
-\pazocal{M}\propto g\frac{1}{Q^2+m_W^2}g\approx\frac{g^2}{m_W^2}:=G_F
+\pazocal{M}\propto g\frac{1}{Q^2+m_W^2}g\approx\frac{g^2}{m_W^2}\approx G_F\Rightarrow\frac{G_F}{\sqrt{2}}=\frac{g^2}{8m_W^2}
 \]
-The difference with the EM case is the mass of the carrier: while the photon is massless, the CC carrier is the $W^\pm$ massive particle of spin 1. Therefore, the range of CC turns out to be small $\sim1/m_W$.\\
-The most precise value of the Fermi constant $G_F$ is measured by considering the muon decay $\mu^-\to\nu_mu e^-\overline{\nu}_e$. It is a low energy process approximated by a four-fermion point-like process determined by the Fermi constant. Only leptons are involved and in the approximation that $m_e\approx0$, $m_\mu$ is the only scale of the decay. By dimensional analysis, we get:
+The difference with the EM case is the mass of the carrier: while the photon is massless, the CC carrier is the $W^\pm$ massive particle of spin 1. Therefore, the range of CC turns out to be small $\sim1/m_W$. Moreover, for small values of $Q^2$, the propagator is roughly constant, unlike the case of the massless photon.\\
+The most precise value of the Fermi constant $G_F$ is measured by considering the muon decay $\mu^-\to\nu_\mu e^-\overline{\nu}_e$. It is a low energy process approximated by a four-fermion point-like process determined by the Fermi constant. Only leptons are involved and in the approximation that $m_e\approx0$, $m_\mu$ is the only scale of the decay. By dimensional analysis, we get:
 \[
 \Gamma(\mu^-\to e^-\overline{\nu}_e\nu_\mu)=\frac{1}{\tau_\mu}\propto G_F^2m_\mu^5 \quad \text{Correct computations:}\,\Gamma(\mu^-\to e^-\overline{\nu}_e\nu_\mu)=\frac{G_F^2m_\mu^5}{192\pi^3}(1+\varepsilon)
 \]
@@ -564,7 +589,7 @@ Moreover, the decay of $K^0$ and $\overline{K}^0$ was not understood and created
 \[
 K_S^0: \text{CP}=+1, \tau=0.895\cdot10^{-10}\;\text{s} \quad K_L^0: \text{CP}=-1, \tau=0.512\cdot10^{-7}\;\text{s}
 \]
-The $K_L^0$ was first observed in 1956 by Lande and collaboration with a cloud chamber. The path between the 3 GeV proton beam and the cloud chamber was 6 meters, long enough for the decay of all strange particles known at the time. They observed interactions with nuclei of He, producing a final state with $S\neq0$, like $\overline{K}^0 ^4\text{He}\to\Sigma^-ppn\pi^+$. These final states cannot be generated by a $K^0$ because of the value of $S$ but no $\overline{K}^0$ should be present, because the primary proton energy was chosen to be below the energy threshold for $\overline{K}^0$ production: for some reasons, $\overline{K}^0$ mesons have appeared.\\
+The $K_L^0$ was first observed in 1956 by Lande and collaboration with a cloud chamber. The path between the 3 GeV proton beam and the cloud chamber was 6 meters, long enough for the decay of all strange particles known at the time. They observed interactions with nuclei of He, producing a final state with $S\neq0$, like $\overline{K}^0 \text{He}\to\Sigma^-ppn\pi^+$. These final states cannot be generated by a $K^0$ because of the value of $S$ but no $\overline{K}^0$ should be present, because the primary proton energy was chosen to be below the energy threshold for $\overline{K}^0$ production: for some reasons, $\overline{K}^0$ mesons have appeared.\\
 Both $K^0$ and $\overline{K}^0$ are strong interactions and parity eigenstates but not C or CP eigenstates. We define $\ket{K_1^0}$ and $\ket{K_2^0}$ as linear combinations of $K^0$ and $\overline{K}^0$:
 \[
 \left\{
