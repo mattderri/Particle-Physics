@@ -100,7 +100,7 @@ In 1964, Gell-Mann and Zweig proposed that all the hadrons are composed of three
     \hline
     \cellcolor{yellow!50}Isospin $I$ & 1/2 & 1/2 & 0\\
     \hline
-    \cellcolor{yellow!50}3$^{\text{rd}}$ Isospin $I_3$ & 1/2 & -1/2 & 0\\
+    \cellcolor{yellow!50}\nth{3} Isospin $I_3$ & 1/2 & -1/2 & 0\\
     \hline
     \cellcolor{yellow!50}Strangeness $S$ & 0 & 0 & -1\\
     \hline
@@ -320,12 +320,14 @@ x_{\text{F}}=\frac{\Vec{p}_{\text{parton}}}{\Vec{p}_{\text{nucleon}}}=x_{\text{B
 \]
 The interaction electron-parton is so fast and violent that they behave like free particles, in \nth{1} approximation the other partons do not take part in the interaction.\\
 This model implies that $\sum_ix_i=1$ when the sum runs over all partons. At the time, there was no clue about the nature of the partons, nor if they were charged or neutral, therefore $\sum_i'x_i\le1$ when the sum runs over the partons which interacts with the electron. If partons are spin 1/2 particles, then the Callan-Gross relation holds, instead if they have spin 0, $F_1(x)=0$. At the end, they are measured to have spin 1/2.\\
-What is the dynamical meaning of $F_{1,2}$? In principle, proton and neutron have different structure functions. However, these functions are not independent: if they parametrize the actual structure of nucleons, they must be correlated. Assume now that the nucleons are made by three quarks, each of them described by a $x$ distribution identified with $f_j^p(x)$ (e.g. $u^p(x)$ denotes the $x$ distribution of up quarks in the proton, with $x$ in the interval $(x,x+dx)$). For short intervals, QM allows quark-anti-quark pairs to exist in the nucleons. Moreover, in the hadrons we have some neutral particles, called \textbf{gluons}. Therefore, in the nucleons there are three types of particles:
+What is the dynamical meaning of $F_{1,2}$? In principle, proton and neutron have different structure functions. However, these functions are not independent: if they parametrize the actual structure of nucleons, they must be correlated. Assume now that the nucleons are made by three quarks, each of them described by a $x$ distribution identified with $f_j^p(x)$ (e.g. $u^p(x)$ denotes the $x$ distribution of up quarks in the proton, with $x$ in the interval $(x,x+dx)$). For short intervals, QM allows quark-anti-quark pairs to exist in the nucleons. Moreover, in the hadrons we have some neutral particles, called \textbf{gluons}. Therefore, in the nucleons there are three types of particles.
+\beginbox{Particles in the Nucleons}
 \begin{itemize}
     \item \textbf{Valence quarks} with distribution $q_V(x)$
     \item \textbf{Sea quarks}, i.e. the quark-anti-quark pairs, described by distributions $q_S(x)$
     \item \textbf{Gluons} described by distributions $g^p(x)$ and $g^n(x)$
 \end{itemize}
+\endbox
 What can be measured are sums like $u^p(x):=u^p_V(x)+u^p_S(x)$ and so on.\\ 
 From the Callan-Gross relation we know that:
 \[
@@ -347,7 +349,7 @@ Then, it follows that:
 F_2^{\text{ep}}-F_2^{\text{en}}=\frac{1}{3}x[u_V(x)-d_V(x)]
 \]
 And if, from the naive quark model, $u_V(x)\approx2d_V(x)$ we get $F_2^{\text{ep}}-F_2^{\text{en}}=\frac{1}{3}xd_V(x)$.\\
-The integrals of $F_2(x)$ are calculable and measurable. By neglecting the small contribution of $s\overline{s}$:
+The integrals of $F_2(x)$ are calculable and measurable. By neglecting the small contribution of $s\overline{s}$, it is possible to obtain:
 \begin{align*}
 &\int_0^1dxF_2^{\text{ep}}=\frac{4}{9}f_u+\frac{1}{9}f_d\\
 &\int_0^1dxF_2^{\text{en}}=\frac{1}{9}f_u+\frac{4}{9}f_d
@@ -436,11 +438,13 @@ The top quark was directly searched in hadron ($Sp\overline{p}S$ at Fermilab) an
 \end{table}
 \section{Weak Interactions}
 In rare occasions, we see \textbf{violations} of those conservation laws valid for strong and EM interactions: these are known as \textbf{weak interactions} (WI), because of their small coupling. WI take place in almost all processes but they have a negligible effect, except in cases otherwise forbidden. Because of them, stable matter contains only $u,d,e^-$, the other quarks and charged leptons are unstable. All elementary particles but gluons and photons \textit{see} WI. Most of our knowledge about WI was obtained from decays of particles and neutrino beams.\\
-In the SM, those interactions are classified in two types, according to the charge of their carriers:
+In the SM, those interactions are classified in two types, according to the charge of their carriers.
+\beginbox{Types of Currents in the Weak Interactions}
 \begin{itemize}
     \item \textbf{Charged currents} (CC), $W^\pm$ exchange. In CC processes, the charge of quarks and leptons changes by $\pm1$ and at the same time there is a variation of flavour, according to the Cabibbo theory.
     \item \textbf{Neutral currents} (NC), $Z$ exchange. In the NC case, quark and lepton flavours remain unchanged (no FCNC).
 \end{itemize}
+\endbox
 In the '60s, Glashow, Salam, Weinberg and others developed a theory that unifies WI and EM, which is today part of the SM. The SM was conceived before the discovery of NC, so the existence of NC and its carrier, predicted by the SM in the '60s and directly observed at CERN in 1983, were among the first great success of the SM.
 \subsection{Charged Currents}
 The modern theory of CC interactions is a successor of the Fermi theory of $\beta$-decay, which describes a point-like interaction proportional to the coupling $G_F$. However, this theory has some intrinsic problems: it is not renormalizable, which means that the cross section violates unitarity at high energy. The SM expands the point-like interaction, introducing a \textbf{heavy charged mediator} $W^\pm$. The SM is mathematically consistent and, more important, reproduces the experimental data with unprecedented accuracy. Unlike $\alpha$, $G_F$ is not dimensionless. The EM coupling is proportional to $e^2$, similarly the intensity of the CC $G_F$ is proportional to $g^2$. The matrix elements of the transitions are proportional to the square of of the \textit{weak charge} $g$ and to the propagator:
@@ -452,8 +456,12 @@ The most precise value of the Fermi constant $G_F$ is measured by considering th
 \[
 \Gamma(\mu^-\to e^-\overline{\nu}_e\nu_\mu)=\frac{1}{\tau_\mu}\propto G_F^2m_\mu^5 \quad \text{Correct computations:}\,\Gamma(\mu^-\to e^-\overline{\nu}_e\nu_\mu)=\frac{G_F^2m_\mu^5}{192\pi^3}(1+\varepsilon)
 \]
-where $\varepsilon$ is small and depends on radiative corrections and the electron mass, neglected in this case. The mass of the muon and its lifetime are measured with great precision, giving us\\
-$G_F=(1.16637\pm0.00001)\cdot10^{-5}$\;GeV$^{-2}$.
+where $\varepsilon$ is small and depends on radiative corrections and the electron mass, neglected in this case. The mass of the muon and its lifetime are measured with great precision, giving us:
+\beginbox{Fermi Constant}
+\[
+G_F=(1.16637\pm0.00001)\cdot10^{-5}\;\text{GeV$^{-2}$}
+\]
+\endbox
 \subsection{Lepton Universality}
 Is the weak CC the same for all leptons and quarks? Do they share the same coupling constant for all the processes? This is true for leptons, but it needs some refinement for quarks.\\
 The $e-\mu$ universality is measured by analysing the leptonic decays of of the $\tau^\pm$:
@@ -538,7 +546,8 @@ For high mass quarks and at high $Q^2$, the structure V-A seems restored and qua
 \[
 G_F(\mu^-\to e^-\overline{\nu}_e\nu_\mu)\approx1.166\cdot10^{-5}\,\text{GeV$^{-2}$} \quad G_F(d\to ue^-\overline{\nu}_e)\approx1.136\cdot10^{-5}\,\text{GeV$^{-2}$}
 \]
-In 1963, Cabibbo came up with a theory to explain this effect, introducing the so-called \textbf{Cabibbo angle} $\theta_c$. The idea was the following: hadrons are built up with quarks $u,d,s$ ($c,b,t$ had not been discovered at the time). However, in the CC processes, the quarks $(ds)$ \textbf{mix together}, i.e. rotate by an angle $\theta_c$, in such a way the the CC process sees rotated quarks $(d's')$:
+In 1963, Cabibbo came up with a theory to explain this effect, introducing the so-called \textbf{Cabibbo angle} $\theta_c$. The idea was the following: hadrons are built up with quarks $u,d,s$ ($c,b,t$ had not been discovered at the time). However, in the CC processes, the quarks $(ds)$ \textbf{mix together}, i.e. rotate by an angle $\theta_c$, in such a way the the CC process sees rotated quarks $(d's')$.
+\beginbox{Cabibbo Theory}
 \[
 \begin{pmatrix}
     d'\\s'
@@ -549,6 +558,7 @@ In 1963, Cabibbo came up with a theory to explain this effect, introducing the s
     d\\s
 \end{pmatrix}
 \]
+\endbox
 Therefore, with respect to the strength of the leptonic process, the $ud$ coupling is reduced by a factor $\cos\theta_c$ and the $us$ coupling by a factor $\sin\theta_c$. Processes with $\Delta S=0$ are proportional to $\cos^2\theta_c$ and those with $\Delta S=1$ to $\sin^2\theta_c$. Even processes proportional to $\sin^4\theta_c$ may happen, but we say that they are Cabibbo doubly suppressed. All the anomalies come back under control if $\sin^2\theta_c\approx0.03$ and $\cos^2\theta_c\approx0.97$.\\
 In this context, the GIM mechanism was proposed to explain the absence of flavour changing neutral currents (FCNC). At the time, they knew that:
 \[
@@ -560,10 +570,11 @@ In this context, the GIM mechanism was proposed to explain the absence of flavou
 which means a factor $\sim10^{-8}$ between NC and CC decays. If the $Z$, the carrier of NC, sees the same quark mixture as the $W^\pm$ in the CC, then the CC decay would be suppressed only by a factor 5\%. The idea was to introduce a \textbf{fourth quark}, the charm $c$ with charge +2/3 to solve this problem.\\
 In the GIM mechanism, NC contains four hadronic terms coupled with the $Z$. Assuming the validity of Cabibbo theory and summing all terms we get:
 \begin{align*}
-u\overline{u}+d'\overline{d}'+c\overline{c}+s'\overline{s}'&=u\overline{u}+(d\cos\theta_c+s\sin\theta_c)(\overline{d}\cos\theta_c+\overline{s}\sin\theta_c)+c\overline{c}+(s\cos\theta_c-d\sin\theta_c)(\overline{s}\cos\theta_c-\overline{d}\sin\theta_c)\\
-&=u\overline{u}+d\overline{d}+c\overline{c}+s\overline{s}
+u\overline{u}+d'\overline{d}'+c\overline{c}+s'\overline{s}'=&u\overline{u}+(d\cos\theta_c+s\sin\theta_c)(\overline{d}\cos\theta_c+\overline{s}\sin\theta_c)\\
+&+c\overline{c}+(s\cos\theta_c-d\sin\theta_c)(\overline{s}\cos\theta_c-\overline{d}\sin\theta_c)\\
+=&u\overline{u}+d\overline{d}+c\overline{c}+s\overline{s}
 \end{align*}
-The non-diagonal terms, which induce FCNC, disappears. Why is $\text{BR}(K^0\to\mu^+\mu^-)$ small but not zero? Technically, it is a \nth{2} order CC, $\propto g^4\sin\theta_c\cos\theta_c$. The final state is the same as a \nth{1} order FCNC but it is incompatible with data. This is cured by introducing the $c$ quark, whose contribution cancels the ones coming from FCNC in the limit $m_c\to m_u$. The data on this process put limits on $m_c$ between 1 and 3 GeV.\\
+The non-diagonal terms, which induce FCNC, disappears. Why is $\text{BR}(K^0\to\mu^+\mu^-)$ small but not zero? Technically, it is a \nth{2} order CC, proportional to $g^4\sin\theta_c\cos\theta_c$. The final state is the same as a \nth{1} order FCNC but it is incompatible with data. This is cured by introducing the $c$ quark, whose contribution cancels the ones coming from FCNC in the limit $m_c\to m_u$. The data on this process put limits on $m_c$ between 1 and 3 GeV.\\
 In 1973, Kobayashi and Maskawa extended the Cabibbo scheme to the new generation of quarks. The new mixing matrix is a \textbf{three-dimension unitary matrix} with three real parameters and one imaginary phase:
 \beginbox{CKM Matrix}
 \[
@@ -619,6 +630,7 @@ Both $K^0$ and $\overline{K}^0$ are strong interaction and parity eigenstates bu
 \right.
 \]
 These are CP eigenstates, CP$\ket{K_1^0}=+\ket{K_1^0}$ and CP$\ket{K_2^0}=-\ket{K_2^0}$. Look now at the $2\pi$ and $3\pi$ states.
+\beginbox{CP Eigenstates}
 \begin{multicols}{2}
 \begin{itemize}
     \item Consider the $\ket{\pi^0\pi^0}$ state:
@@ -647,6 +659,7 @@ These are CP eigenstates, CP$\ket{K_1^0}=+\ket{K_1^0}$ and CP$\ket{K_2^0}=-\ket{
     \item CP($3\pi)=-1$ both for $\ket{\pi^0\pi^0\pi^0}$ and $\ket{\pi^+\pi^-\pi^0}$.
 \end{itemize}
 \end{multicols}
+\endbox
 Therefore, we identify $K_1^0$ with $K_S^0$ and $K_2^0$ with $K_L^0$.
 \subsection{$K^0$ Oscillations}
 While the $K^0$ and $\overline{K}^0$ masses are equal because of CPT, there is no symmetry regarding the masses of $K_S^0$ and $K_L^0$. The measurement gives
@@ -722,7 +735,7 @@ V_{\text{CKM}}&=\begin{pmatrix}
     s_{12}s_{23}-c_{12}c_{23}s_{13}e^{+i\delta} & -_{!2}s_{23}-s_{12}c_{23}s_{13}e^{+i\delta} & c_{23}c_{13}
 \end{pmatrix}
 \end{align*}
-where $c_{ij}:=\cos\alpha_{ij}$ and $s_{ij}:=\sin\alpha_{ij}$. The violation associated with the CKM matrix are usually studied with the Wolfenstein parametrization, which highlights the small terms and their physical meaning.
+where $c_{ij}:=\cos\alpha_{ij}$ and $s_{ij}:=\sin\alpha_{ij}$. The violation associated with the CKM matrix are usually studied with the \textbf{Wolfenstein parametrization}, which highlights the small terms and their physical meaning.
 \[
 V_{\text{CKM}}^{\text{W}}=\begin{pmatrix}
     1-\frac{\lambda^2}{2} & \lambda & A\lambda^3(\rho-i\eta)\\
@@ -730,14 +743,12 @@ V_{\text{CKM}}^{\text{W}}=\begin{pmatrix}
     A\lambda^3(1-\rho-i\eta) & A\lambda^2 & 1
 \end{pmatrix}
 \]
-where $\lambda\simeq s_{12}$, mixing \nth{1} and \nth{2} family, $A\lambda^2\simeq s_{23}$, mixing \nth{2} and \nth{3} family and\\
-$A\lambda^3(\rho+i\eta)\simeq s_{13}e^{+i\delta}$. If $\eta=0$, therefore $\delta=0$, the matrix is real and there is no CP violation.\\
-The CP violation in the $K^0$ system can be explained with the CKM formalism. For each of the $K^0\leftrightarrow\overline{K}^0$ diagram, look at the t-channel exchange, with 9 couples of diagrams $(uu,uc,ut,cu,cc,ct,\dots)$. Here we discuss only the $ct$ case.
+where $\lambda\simeq s_{12}$, $A\lambda^2\simeq s_{23}$ and $A\lambda^3(\rho+i\eta)\simeq s_{13}e^{+i\delta}$.\\
+If $\eta=0$, therefore $\delta=0$, the matrix is \textbf{real} and there is \textbf{no CP violation}. The CP violation in the $K^0$ system can be explained with the CKM formalism. For each of the $K^0\leftrightarrow\overline{K}^0$ diagram, look at the t-channel exchange, with 9 couples of diagrams $(uu,uc,ut,cu,cc,ct,\dots)$. Here we discuss only the $ct$ case.
 \[
 \pazocal{M}(K^0\to\overline{K}^0)\propto V_{cd}V_{ts}^*V_{cs}^*V_{td} \quad \pazocal{M}(\overline{K}^0\to K^0)\propto V_{cs}^*V_{ts}V_{cs}V_{td}^*
 \]
-If $V_{ij}$ is real, then $\pazocal{M}(K^0\to\overline{K}^0)=\pazocal{M}(\overline{K}^0\to K^0)$ and there is no CP violation, while if $V_{ij}$ is complex, then $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and we have CP violation.\\
-In this case, $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and their difference is proportional to $\mathfrak{Im}(V_{td})=iA\lambda^3\eta$.\\
+If $V_{ij}$ is real, then $\pazocal{M}(K^0\to\overline{K}^0)=\pazocal{M}(\overline{K}^0\to K^0)$ and there is no CP violation, while if $V_{ij}$ is complex, then $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and we have CP violation. In this case, $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and their difference is proportional to $\mathfrak{Im}(V_{td})=iA\lambda^3\eta$.\\
 In the SM, CP violation is expected to occur also in the $D^0-\overline{D}^0$ and $B^0-\overline{B}^0$ systems through the same dynamical mechanism. The importance of the phenomenon depends on the value of the CKM matrix, i.e. by the quark mixing: in the first case, the main contribution is from the $b$ quark exchange but the product $V_{cb}V_{ub}$ is very small. In the second case, it is dominated by the $t$ quark exchange and substantial levels of mixing are expected.
 \subsection{$\nu$ Oscillations}
 Quarks of same charge and different flavours mix together, with the CKM matrix parametrizing this process. What about the lepton sector? Do neutrinos oscillate? The answer is yes. Consider a simple toy model with only two families:
@@ -783,52 +794,52 @@ with an ambiguity about the hierarchy still not resolved.\\
 In the SM, there are three families, the neutrinos mixing matrix is a $3\times3$ with the same mathematical properties as the CKM one, it is called the \textbf{Pontecorvo-Maki-Nakagawa-Sakata matrix} (PMNS). 
 \section{The Standard Model}
 \subsection{The Electroweak Theory}
-Glashow, Salam and Weinberg provided the main ingredients for the unification of weak and EM interactions. Fundamental interactions are described by field theories, i.e. by a Lagrangian, invariant under appropriate symmetries which correspond to conservation laws of the theory. In the SM, EM and WI are related to the symmetry group SU(2)$\times$U(1). In mathematical terms, it has to be renormalizable which means that it must exist a mathematically consistent procedure that eliminates the infinities which arise in calculations of physical observables. As a consequence, the EW Lagrangian must not contain explicit mass terms so at the Lagrangian level both the gauge bosons and the fermions must be massless. The masses are then generated in the theory, without destroying the renormalizability, via the Higgs mechanism. This predicts the existence of one scalar, the Higgs boson $H$. The values of the fermion masses are left as free parameters but once they are fixed all the couplings are predicted by the theory.\\
+Glashow, Salam and Weinberg provided the main ingredients for the unification of weak and EM interactions. Fundamental interactions are described by field theories, i.e. by a Lagrangian, invariant under appropriate symmetries which correspond to conservation laws of the theory. In the SM, EM and WI are related to the symmetry group SU(2)$\times$U(1). In mathematical terms, it has to be \textbf{renormalizable} which means that it must exist a mathematically consistent procedure that eliminates the infinities which arise in calculations of physical observables. As a consequence, the EW Lagrangian must not contain explicit mass terms so at the Lagrangian level both the gauge bosons and the fermions must be massless. The masses are then generated in the theory, without destroying the renormalizability, via the \textbf{Higgs mechanism}. This predicts the existence of one scalar, the Higgs boson $H$. The values of the fermion masses are left as free parameters but once they are fixed all the couplings are predicted by the theory.\\
 The fundamental representation of SU(2)$\times$U(1) is given by three SU(2) and one U(1) gauge fields. In the SU(2) sector we have the \textbf{weak isospin} $I_W$ (here only isospin) and in the U(1) sector there is the \textbf{weak hypercharge} $Y_W$ (here only hypercharge). All the members of the same isospin multiplet have the same hypercharge, defined as $Y_W:=2(Q-I_{W3})$.\\
-The triplet of fields corresponding to SU(2) is called $W=(W_1,W_2,W_3)$ with $I_W=1$ and $Y_W=0$, they interact with the weak isospin of the particles. The field corresponding to U(1) is called $B$. It has isospin, electric charge and hypercharge equal to zero and it interacts with the weak hypercharge of the particle. These four fields are not the physical fields which mediate the interactions: the CC interactions are mediated by $W^\pm$, linear combinations of $W_1$ and $W_2$, while for EM and NC interactions the $\gamma$ and $Z$ are linear combinations of $W_3$ and $B$.\\
-The value of $I_W$ and $Y_W$ of the particles depends on the fact that the $W^\pm$ are coupled only to states with negative chirality. In each family of leptons, there are two left-handed leptons in a $I_W=\frac{1}{2}$ doublet. Unlike CC, NC also interact with the charged right-handed fermions but not with the right-handed neutrinos. The right-handed charged lepton of each family is an isospin singlet, $I_W=0$.\\
-The $W^\pm$ is universally coupled with the CKM-rotated states $d',s'$ and $b'$. Three isospin doublet times three colours equal to nine doublets, while there are 18 singlets in total. For NC, quark mixing is irrelevant.\\
-For each particle, there exists an anti-particle with opposite quantum numbers.
+The triplet of fields corresponding to SU(2) is called $W=(W_1,W_2,W_3)$ with $I_W=1$ and $Y_W=0$, they interact with the weak isospin of the particles.\\
+The field corresponding to U(1) is called $B$. It has isospin, electric charge and hypercharge equal to zero and it interacts with the weak hypercharge of the particle.\\
+These four fields are \textbf{not} the physical fields which mediate the interactions: the CC interactions are mediated by $W^\pm$, linear combinations of $W_1$ and $W_2$, while for EM and NC interactions $Z$ and the photon field $A_\mu$ are linear combinations of $W_3$ and $B$.\\
+The values of $I_W$ and $Y_W$ of the particles depends on the fact that the $W^\pm$ are coupled only to states with negative chirality. In each family of leptons, there are two left-handed leptons in a $I_W=\frac{1}{2}$ doublet. Unlike CC, NC also interact with the charged right-handed fermions but not with the right-handed neutrinos. The right-handed charged lepton of each family is an isospin singlet, $I_W=0$.\\
+The $W^\pm$ is universally coupled with the CKM-rotated states $d',s'$ and $b'$. Three isospin doublet times three colours equal to nine doublets, while there are 18 singlets in total. For NC, quark mixing is irrelevant.
 \begin{table}[h]
     \centering
     \begin{tabular}{l|ccccc}
     \hline
     \cellcolor{gray!50} & \cellcolor{yellow!50}Spin & \cellcolor{yellow!50}$I_W$ & \cellcolor{yellow!50}$I_{W3}$ & \cellcolor{yellow!50}$Y_W$ & \cellcolor{yellow!50}$Q$\\
     \hline\hline
-    \cellcolor{yellow!50}$\nu_{lL}$ & 1/2 & 1/2 & +1/2 & -1 & 0 \\
+    \cellcolor{orange!50}$\nu_{lL}$ & 1/2 & 1/2 & +1/2 & -1 & 0 \\
     \hline
-    \cellcolor{yellow!50}$l^-_L$ & 1/2 & 1/2 & -1/2 & -1 & -1 \\
+    \cellcolor{orange!50}$l^-_L$ & 1/2 & 1/2 & -1/2 & -1 & -1 \\
     \hline
-    \cellcolor{yellow!50}$l^-_R$ & 1/2 & 0 & 0 & -2 & -1 \\
+    \cellcolor{orange!50}$l^-_R$ & 1/2 & 0 & 0 & -2 & -1 \\
     \hline
-    \cellcolor{yellow!50}$\nu_{lL}$ & 1/2 & 1/2 & +1/2 & -1 & 0 \\
+    \cellcolor{orange!50}$u_{L}$ & 1/2 & 1/2 & +1/2 & +1/3 & +2/3 \\
     \hline
-    \cellcolor{yellow!50}$u_{L}$ & 1/2 & 1/2 & +1/2 & +1/3 & +2/3 \\
+    \cellcolor{orange!50}$d'_{L}$ & 1/2 & 1/2 & -1/2 & +1/3 & -1/3 \\
     \hline
-    \cellcolor{yellow!50}$d'_{L}$ & 1/2 & 1/2 & -1/2 & +1/3 & -1/3 \\
+    \cellcolor{orange!50}$u_{R}$ & 1/2 & 0 & 0 & +4/3 & +2/3 \\
     \hline
-    \cellcolor{yellow!50}$u_{R}$ & 1/2 & 0 & 0 & +4/3 & +2/3 \\
-    \hline
-    \cellcolor{yellow!50}$d_{R}$ & 1/2 & 0 & 0 & -2/3 & -1/3 \\
+    \cellcolor{orange!50}$d_{R}$ & 1/2 & 0 & 0 & -2/3 & -1/3 \\
     \hline\hline
-    \cellcolor{yellow!50}$W^+$ & 1 & 1 & +1 & 0 & +1 \\
+    \cellcolor{blue!50}$W^+$ & 1 & 1 & +1 & 0 & +1 \\
     \hline
-    \cellcolor{yellow!50}$W^-$ & 1 & 1 & -1 & 0 & -1 \\
+    \cellcolor{blue!50}$W^-$ & 1 & 1 & -1 & 0 & -1 \\
     \hline
-    \cellcolor{yellow!50}$Z$ & 1 & 1,0 & 0 & 0 & 0 \\
+    \cellcolor{blue!50}$Z$ & 1 & 1,0 & 0 & 0 & 0 \\
     \hline
-    \cellcolor{yellow!50}$\gamma$ & 1/2 & 1/2 & +1/2 & -1 & 0 \\
+    \cellcolor{blue!50}$\gamma$ & 1 & 1,0 & 0 & 0 & 0 \\
     \hline\hline
-    \cellcolor{yellow!50}$H$ & 0 & 0 & 0 & 0 & 0\\
+    \cellcolor{purple!50}$H$ & 0 & 0 & 0 & 0 & 0\\
     \hline
     \end{tabular}
-    \caption*{}
-    \label{tab:my_label}
+    \caption{Quantum numbers of the fields in the Standard Model}
+    \label{aaa}
 \end{table}\newline
-$I_W$ and $Y_W$ are conserved in all known interactions. Left components of the spinors have $I_W=0$, they emit and absorb $W^\pm$ while right components have $I_W\neq0$ and they do not emit or absorb $W^\pm$. Both components have $Y_W\neq0$, they emit and absorb $Z$. $\nu_R$ have $I_W=Y_W=0$, they do not exist or are not observable (in the massless limit).\\
-The field $W_\mu=(W_\mu^1,W_\mu^2,W_\mu^3)$ is a 4-vector in space-time and a vector in SU(2). The fields of the physical charged bosons are $W^\pm=\frac{1}{\sqrt{2}}(W_1\mp iW_2)$. For each doublet of fermions there is a 4-vector which represent the weak current $J_\mu:=(J_\mu^1,J_\mu^2,J_\mu^3)$. $W_\mu$ is coupled to $J_\mu$ through the dimensionless coupling constant $g$.\\
+$I_W$ and $Y_W$ are conserved in all known interactions. Left components of the spinors have $I_W\neq0$, they emit and absorb $W^\pm$ while right components have $I_W=0$ and they do not emit or absorb $W^\pm$. Both components have $Y_W\neq0$, they emit and absorb $Z$.\\
+The field $W_\mu=(W_\mu^1,W_\mu^2,W_\mu^3)$ is a 4-vector in space-time and a vector in SU(2). The fields of the physical charged bosons are $W^\pm=\frac{1}{\sqrt{2}}(W_1\mp iW_2)$. For each doublet of fermions there is a 4-vector which represents the weak current $J_\mu:=(J_\mu^1,J_\mu^2,J_\mu^3)$. $W_\mu$ is coupled to $J_\mu$ through the dimensionless coupling constant $g$.\\
 The field $B_\mu$ is a 4-vector in space-time and a scalar in SU(2) and it interacts with the neutral currents of the leptons through the coupling $g'$. The current generated by the hypercharge is twice the difference between the EM current and the neutral component of the NC.\\
-Denote now with $A$ and $Z$ the physical fields that mediate, respectively, the EM and neutral currents. These are two orthogonal linear overlap of $W_3$ and $B$, which can be determined by requiring that the photon does not couple to the neutral particles. This transformation is given by a function of the two couplings $g$ and $g'$, i.e. of the rotation angle $\theta_w$:
+Denote now with $A$ and $Z$ the physical fields that mediate, respectively, the EM and neutral currents. These are two orthogonal linear overlap of $W_3$ and $B$, which can be determined by requiring that the photon does not couple to the neutral particles. This transformation is given by a function of the two couplings $g$ and $g'$, i.e. of the rotation angle $\theta_w$.
+\beginbox{Mixing Angle $\theta_w$}
 \[
 \begin{pmatrix}
     Z\\A
@@ -844,6 +855,7 @@ Denote now with $A$ and $Z$ the physical fields that mediate, respectively, the 
     W_3\\B
 \end{pmatrix}
 \]
+\endbox
 The mixing angle is quite large, $\theta_w\approx29^\circ$. The interaction Lagrangian is an isoscalar:
 \[
 \pazocal{L}=g(J_\mu^1W_\mu^1+J_\mu^2W_\mu^2+J_\mu^3W_\mu^3)+\frac{1}{2}g'J_\mu^YB_\mu=\frac{1}{\sqrt{2}}(J_\mu^-W_\mu^++J_\mu^+W_\mu^-)+J_\mu^3(g_\mu^3+g'B_\mu)+g'J_\mu^{\text{EM}}B_\mu
@@ -852,33 +864,37 @@ Introducing the neutral physical fields $A$ and $Z$, this becomes:
 \[
 \pazocal{L}=\underbrace{\frac{1}{\sqrt{2}}g(J_\mu^-W_\mu^++J_\mu^+W_\mu^-)}_{\text{CC}}+\underbrace{\frac{g}{\cos\theta_w}(J_\mu^3-\sin\theta_wJ_\mu^{\text{EM}})Z_\mu}_{\text{NC}}+\underbrace{g\sin\theta_wJ_\mu^{\text{EM}}A_\mu}_{\text{EM}}
 \]
-The constant which multiplies the last term has to be proportional to the electric charge, to ensure that the photon is not coupled to neutral particles:
+The constant which multiplies the last term has to be proportional to the electric charge, to ensure that the photon is not coupled to neutral particles, therefore:
 \[
 g\sin\theta_w=q_e=\sqrt{4\pi\alpha}
 \]
-All the interactions mediated by the four vector bosons are expressed in terms of two constants, the electric charge $q$ and the weak angle $\theta_w$. However, the model does not predict the values of the two fundamental constants, which must be determined experimentally. The relations between the fundamental constants, obtained from the low-energy value of $\alpha\approx\frac{1}{137}$ and the best measurement of $\theta_w$ ($\sin\theta_w\approx0.232$, are:
+All the interactions mediated by the four vector bosons are expressed in terms of two constants, the electric charge $q$ and the weak angle $\theta_w$. However, the model does not predict the values of the two fundamental constants, which must be determined experimentally. The relations between the fundamental constants, obtained from the low-energy value of $\alpha\approx\frac{1}{137}$ and the best measurement of $\theta_w$ ($\sin\theta_w\approx0.232$), are:
+\beginbox{Coupling Constants}
 \[
 \frac{1}{\alpha}=\frac{4\pi}{g^2}+\frac{4\pi}{g'^2} \qquad \frac{4\pi}{g^2}=31.8 \qquad \frac{4\pi}{g'^2}=105.2
 \]
-NC have important differences compared to CC. For example, there is no FCNC, i.e. fermions are only coupled with themselves. They do not have the simple V-A coupling $\gamma_\mu(1-\gamma_5)$ but are a mixture of both left and right couplings. In the SM, the 7 couplings $(g_L^{\nu_l}, g_L^l, g_R^l, g_L^u, g_R^u, g_L^d, g_R^d)$ are equal for the 3 families and are functions of only two parameters $\alpha_{\text{EM}}$ and $\theta_w$. 
+\endbox
+NC have important differences compared to CC. For example, there is no FCNC, i.e. fermions are only coupled with themselves. They do not have the simple V-A coupling $\gamma_\mu(1-\gamma_5)$ but are a mixture of both left and right couplings. In the SM, the 7 couplings $(g_L^{\nu_l}, g_L^l, g_R^l, g_L^u, g_R^u, g_L^d, g_R^d)$ are equal for the 3 families and are functions of only two parameters $\alpha_{\text{EM}}$ and $\theta_w$.\\
+The experiments measure observables like cross sections or decay rates and compare calculated quantities to measured ones. This calculation is based on a perturbative series, where the lowest order is the tree-level and higher orders correspond to radiative corrections. 
 \subsection{QCD}
-The \textbf{colour} quantum number was introduced to avoid Pauli principle violation for the $\Delta^{++}$. Moreover, it is necessary to explain the value of $R$ in the $e^+e^-$ interactions which shows an excess of a factor 3. Similarly, it is necessary to explain the decay rate $\pi^0\gamma\gamma$. The theory must also explain confinement (no free quarks) and asymptotic freedom (quarks almost free at high $Q^2$). Modern QCD is a gauge theory based on the symmetry SU(3)$_{\text{colour}}$, mathematically equivalent to SU(3)$_{\text{flavour}}$ but based on a different dynamics. The carriers of the force are 8 coloured massless spin-1 vector bosons called \textbf{gluons}.\\
+The \textbf{colour} quantum number was introduced to avoid Pauli principle violation for the $\Delta^{++}$. Moreover, it is necessary to explain the value of $R$ in the $e^+e^-$ interactions which shows an excess of a factor 3. Similarly, it is necessary to explain the decay rate $\pi^0\gamma\gamma$. The theory must also explain confinement (no free quarks) and asymptotic freedom (quarks almost free at high $Q^2$).\\
+Modern QCD is a gauge theory based on the symmetry SU(3)$_{\text{colour}}$, mathematically equivalent to SU(3)$_{\text{flavour}}$ but based on a different dynamics. The carriers of the force are 8 coloured massless spin-1 vector bosons called \textbf{gluons}.\\
 The $\pi^0$ decay is an EM process but we discuss it here because it critically depends on the number of colours. Compute the decay amplitude by introducing an a-priori unknown normalization factor $N_c$:
 \[
 \braket{\gamma\gamma|H_{\text{EM}}|\pi^0}\propto f_\pi\frac{N_c}{\sqrt{2}}\left(\frac{4}{9}e^2-\frac{1}{9}e^2\right)
 \]
 where $f_\pi$ is the decay constant of $\pi^0$, related to the wave-function overlap of the quarks and anti-quarks. The full computation, compared with the experimental measure, gives a value compatible with the QCD prediction $N_c=3$.\\
 The colour is a charge, equivalent to the electric one, it is exactly conserved in strong interactions. Gluons carry two colours and are therefore self-coupled: vertices with three or four gluons are allowed in QCD, while for example in QED it happens only on higher orders with a triangle of fermions. The number of gluons comes from the Gell-Mann matrices, the generators of SU(3).The colour does not manifest directly in an observable property of the particle. The standard explanation of this fact requires that only \textit{white}, i.e. colour singlets, states can be physically existent. Quarks and gluons themselves cannot be observed as free states (\textbf{confinement}), they exist only as hadrons.\\
-The study of the DIS shows that at high $Q^2$ the projectile \textit{sees} smaller objects inside the nucleon. At small distances, the force between quarks and gluons is apparently smaller and smaller, the quarks behave as free objects. Scattering onto free quarks is the origin of the Bjorken scaling. This effect is called \textbf{asymptotic freedom}. With increasing distance among the quarks (lower $Q^2$), the intensity of the strong force increases, keeping the quarks confined in the nucleon. On the other hand, at some distance the available energy becomes sufficient to create a new quark-anti-quark pair, leading to the production of new hadrons but preventing the emission of quarks as free particles. Mesons are colour singlets, a $q\overline{q}$ with symmetric wave-function while baryons are colour singlets $qqq$ with anti-symmetric wave-function.\\
+The study of the DIS shows that at high $Q^2$ the projectile \textit{sees} smaller objects inside the nucleon. At small distances, the force between quarks and gluons is apparently smaller and smaller, the quarks behave as free objects. Scattering onto free quarks is the origin of the Bjorken scaling. This effect is called \textbf{asymptotic freedom}. With increasing distance among the quarks (lower $Q^2$), the intensity of the strong force increases, keeping the quarks confined in the nucleon. On the other hand, at some distance the available energy becomes sufficient to create a new quark-anti-quark pair, leading to the production of new hadrons but preventing the emission of quarks as free particles. Mesons are colour singlets, a $q\overline{q}$ pair with symmetric wave-function while baryons are colour singlets $qqq$ with anti-symmetric wave-function.\\
 A semi-classical approach tells us that for small distances, the potential has a Coulomb shape with a coupling $\alpha_{\text{S}}$. At large distances, it has a linearly increasing function responsible for the confinement.
 \[
 V(r)=\underbrace{-\frac{4\alpha_{\text{S}}}{3r}}_{\text{small $r$}}+\underbrace{kr}_{\text{large $r$}}
 \]
 Consider a two-body process at high $Q^2$, $q\overline{q}\to q\overline{q}$. There are 8 possible cases, according to $q\overline{q}g$ and it is basically impossible to disentangle on an event-by-event basis. A more effective approach for scattering processes is to reabsorb higher orders into an effective coupling $\alpha_{\text{S}}$. The loops increase with $Q^2$, but since the gluons are self-interacting there will be mainly gluon loops, hence $\alpha_{\text{S}}$ decreases with $Q^2$. This explains the nucleons and the DIS.
 \section{High Energy $\nu$ Interactions}
-After 1960, the accelerator production of $\nu$-beams of high intensity and high energy has led to a dramatic development of our understanding of weak interactions. Neutrinos cross sections are very small, beams, detectors and experimental setups have to compensate for this. For example, statistically we need 3o billions $\nu$ of energy 1 GeV to get one interaction in 10 meters of iron.
+After 1960, the accelerator production of $\nu$-beams of high intensity and high energy has led to a dramatic development of our understanding of weak interactions. Neutrinos cross sections are very small, beams, detectors and experimental setups have to compensate for this. For example, statistically we need 30 billions $\nu$ of energy 1 GeV to get one interaction in 10 meters of iron.
 \subsection{The $\nu$ Beam}
-The relevant observables the cross section and in order to measure it, the experiments need the flux of incoming $\nu$. A neutrino cannot be observed before its interaction, therefore the flux can only be computed statistically. The ingredients are:
+The relevant observable is the cross section and in order to measure it, the experiments need the flux of incoming $\nu$. A neutrino cannot be observed before its interaction, therefore the flux can only be computed statistically. The ingredients are:
 \begin{enumerate}
     \item the inclusive differential cross sections of the $\pi^\pm$ and $K^\pm$ production in the target
     \item the collection and collimation of $\pi^\pm$ and $K^\pm$
@@ -888,25 +904,27 @@ The relevant observables the cross section and in order to measure it, the exper
 Using all these elements, the flux is numerically computed, usually with MonteCarlo simulations and used in the analysis.\\
 The statistical distribution of (1) and (2) can be directly measured, the momentum distribution of $\mu^\pm$ from $\pi^\pm/K^\pm$ decay can be computed and checked using their measurement in the decay and absorber tunnels. Collection and collimation (2) may use different strategies:
 \begin{itemize}
-    \item wide band beam (WBB): intense beam, not monochromatic
-    \item narrow band beam (NBB): less intense but more monochromatic
+    \item \textbf{wide band beam} (WBB): intense beam, not monochromatic
+    \item \textbf{narrow band beam} (NBB): less intense but more monochromatic
 \end{itemize}
 In practice, both beams are optimized for different measurements.\\
-As an example, the SPS at CERN accelerates $\sim5\cdot10^{13}$ protons per cycle to an energy $E_p=450$\;GeV. The proton beam is extracted and sent to a target (copper, beryllium, graphite), the average secondary multiplicity is $\sim10$ charged, with energies from 10 to 100 GeV. The secondaries are then focused and let decay. The focusing process is a compromise between resolution (ideally monochromatic) and intensity (as many neutrinos as possible). A good solution is the WBB beam where a Van der Meer horn selects with good acceptance $\pi^\pm$ and $K^\pm$. $\pi^\pm$ and $K^\pm$ decay in the decay tunnel. Again, the length of the tunnel is a compromise between cost and intensity, it should be about the average decay length. In the laboratory frame, the average $d_m$ is $d_M=\beta c\tau$ which, for $\pi^\pm$ of 50 GeV is approximately 2800\,m. In reality, tunnels are only a few hundreds meters long. In these decays, only beams of $\nu_\mu$ can be created, electron neutrinos are small contaminations. Neutrinos cannot be directly measured, some information about their four-momentum comes from the kinematics of the decay $\pi^\pm/K^\pm\to\mu^\pm\nu_\mu$. $\pi^\pm/K^\pm$ have spin 0 and in the center of mass the decay is isotropic. Moreover, in the CM we have:
+As an example, the SPS at CERN accelerates $\sim5\cdot10^{13}$ protons per cycle to an energy\\
+$E_p=450$\;GeV. The proton beam is extracted and sent to a target (copper, beryllium, graphite), the average secondary multiplicity is $\sim10$ charged, with energies from 10 to 100 GeV. The secondaries are then focused and let decay. The focusing process is a compromise between resolution (ideally monochromatic) and intensity (as many neutrinos as possible).\\
+A good solution is the WBB beam where a Van der Meer horn selects with good acceptance $\pi^\pm$ and $K^\pm$. $\pi^\pm$ and $K^\pm$ decay in the decay tunnel. Again, the length of the tunnel is a compromise between cost and intensity, it should be about the average decay length. In the laboratory frame, the average $d_m$ is $d_m=\beta c\tau$ which, for $\pi^\pm$ of 50 GeV, is approximately 2800\,m. In reality, tunnels are only a few hundreds meters long. In these decays, only beams of $\nu_\mu$ can be created, electron neutrinos are small contaminations. Neutrinos cannot be directly measured, some information about their four-momentum comes from the kinematics of the decay $\pi^\pm/K^\pm\to\mu^\pm\nu_\mu$. $\pi^\pm/K^\pm$ have spin 0 and in the center of mass the decay is isotropic. Moreover, in the CM we have:
 \[
-\pi^\pm=(m_\pi,0,0) \quad \nu=(p*,p*\cos\theta*, p*\sin\theta*) \quad \mu^\pm=(m_\pi-p*,-p*\cos\theta*.-p*\sin\theta*)
+\pi^\pm=(m_\pi,0,0) \quad \nu=(p^*,p^*\cos\theta^*, p^*\sin\theta^*) \quad \mu^\pm=(m_\pi-p^*,-p^*\cos\theta^*,-p^*\sin\theta^*)
 \]
 Kinematics tells us that:
 \[
-p*=\frac{m_\pi^2-m_\mu^2}{2m_\pi} \quad E_\mu*=m_\pi-p*=\frac{m_\pi^2+m_\mu^2}{2m_\pi}
+p^*=\frac{m_\pi^2-m_\mu^2}{2m_\pi} \quad E_\mu^*=m_\pi-p^*=\frac{m_\pi^2+m_\mu^2}{2m_\pi}
 \]
 The longitudinal momentum in the laboratory frame is obtained by a boost:
 \[
-p_\nu^\parallel\bigr|_{\substack{\text{LAB}}}=p\cos\theta=\gamma p*\cos\theta*+\beta\gamma p*
+p_\nu^\parallel\bigr|_{\substack{\text{LAB}}}=p\cos\theta=\gamma p^*\cos\theta^*+\beta\gamma p^*
 \]
-This has a minimum for $\cos\theta*=-1$, corresponding to $p_\nu^\parallel\bigr|^{{\min}}_{\substack{\text{LAB}}}=\gamma p*(\beta-1)\approx0$ and a maximum for $\cos\theta*=1$:
+This has a minimum for $\cos\theta^*=-1$, corresponding to $p_\nu^\parallel\bigr|^{{\min}}_{\substack{\text{LAB}}}=\gamma p^*(\beta-1)\approx0$ and a maximum for $\cos\theta^*=1$:
 \[
-p_\nu^\parallel\bigr|^{{\max}}_{\substack{\text{LAB}}}=\gamma p*(\beta+1)\approx2\gamma p*=2\frac{E_\pi}{m_\pi}\frac{m_\pi^2-m_\mu^2}{2m_\pi}=E_\pi\left(1-\frac{m_\mu^2}{m_\pi^2}\right)=0.43E_\pi
+p_\nu^\parallel\bigr|^{{\max}}_{\substack{\text{LAB}}}=\gamma p^*(\beta+1)\approx2\gamma p^*=2\frac{E_\pi}{m_\pi}\frac{m_\pi^2-m_\mu^2}{2m_\pi}=E_\pi\left(1-\frac{m_\mu^2}{m_\pi^2}\right)=0.43E_\pi
 \]
 For $K^\pm$, the maximum is higher around 0.96$E_K$. The angular distribution of a $\nu$ with respect to a $\pi^\pm$ is:
 \[
@@ -930,8 +948,8 @@ In Fermi theory, with $p$ and $n$ point-like and a threshold $s=2m_NE_\nu$, we g
 \[
 \frac{\sigma(\nu\to N)}{\sigma(\nu\to e)}=\frac{m_N}{m_E}\approx2000
 \]
-In the V-A theory, $f_V(Q^2)$ and $f_A(Q^2)$ makes $\sigma$ not independent on $E_\nu$. At high $Q^2$, as expected, the nucleons \textit{break} and the interactions \textit{see} quarks instead of nucleons: quasi-elastic essentially disappears. At high $Q^2$, the quark model is expected to describe well the neutrinos interactions. 
-\subsection{Neutral Currents}
+In the V-A theory, $f_V(Q^2)$ and $f_A(Q^2)$ makes $\sigma$ not dependent on $E_\nu$. At high $Q^2$, as expected, the nucleons \textit{break} and the interactions \textit{see} quarks instead of nucleons: quasi-elastic essentially disappears. At high $Q^2$, the quark model is expected to describe well the neutrinos interactions. 
+\subsection{NC $\nu$ Processes}
 The search for NC events began in the early '60s, when the EW theory was still thought to be not renormalizable. The searches were limited by FCNC, decays like $K^+\to\pi^+e^+e^-$ and $K^0\to\mu^+\mu^-$ were searched but not found. The only escape from this difficulty is to make use of neutral particles which are not affected by EW interactions, the neutrinos. The signature for this process is given by the absence in the final state of a charged lepton, which is unavoidable in the CC coupling. The events were of the type:
 \[
 \begin{aligned}
@@ -939,7 +957,7 @@ The search for NC events began in the early '60s, when the EW theory was still t
 &\nu_\mu+e^-\to\nu_\mu+e^- &&\overline{\nu}_\mu+e^-\to\overline{\nu}_\mu+e^-
 \end{aligned}
 \]
-where $X$ is an hadronic system without leptons. Events are defined as NC if no $\mu^\pm$ is present and if no charged track escapes the fiducial volume. Instead, events are CC if a clearly $\mu^\pm$ is present and the $\mu^\pm$ has to exit out of the chamber. For $\nu$ beams, there were 102 NC and 428 CC while for $\overline{\nu}$ beam they had 64 NC and 148 CC, results consistent with the presence of NC.\\
+where $X$ is an hadronic system without leptons. Events are defined as NC if no $\mu^\pm$ is present and if no charged track escapes the fiducial volume. Instead, events are CC if a clearly visible $\mu^\pm$ is present and the $\mu^\pm$ has to exit out of the chamber. For $\nu$ beams, there were 102 NC and 428 CC while for $\overline{\nu}$ beam they had 64 NC and 148 CC, results consistent with the presence of NC.\\
 To measure these processes, the strategy is the same as in the CC case, with a simplification due to the absence of FCNC.
 \[
 R_\nu:=\frac{\sigma_{\text{NC}}(\nu N)}{\sigma_{\text{CC}}(\nu N)}\approx\frac{1}{2}-\sin^2\theta_w+\frac{20}{27}\sin^4\theta_w \quad R_{\overline{\nu}}:=\frac{\sigma_{\text{NC}}(\overline{\nu} N)}{\sigma_{\text{CC}}(\overline{\nu} N)}\approx\frac{1}{2}-\sin^2\theta_w+\frac{20}{9}\sin^4\theta_w
@@ -957,7 +975,9 @@ These values are well-defined and, in principle, easy to measure. CC are easy to
 \right.
 \]
 The last two results differ because of some definitions of higher order parameters.\\
-The cleanest NC leptonic processes are $\nu_\mu e^-\to\nu_\mu e^-$ (and same with anti-neutrino). The problem with these processes is that the cross section is very small and we need to select the tiny number of signal events from the overwhelming NC hadronic events. The extraction of the signal requires the rejection of the background. The main one is due to NC hadronic interactions, without $\mu^\pm$ in the final state, with one or more $\pi^0$: the photons due to $\pi^0$ decays mimic the EM shower. To reject those events, the deposit of energy in the early scintillators is used. Since $\pi^0\to2\gamma\to4e^\pm$, a scintillator sees 4 minimum ionizing particles instead of one. In this way, by using only the part of the detector immediately upstream of the scintillator, a much better isolation of the signal is obtained, at the price of a reduced statistics. 
+Due to the presence of a charged $\mu^\pm$, CC events are easy to detect and relatively background free. NC instead are hardly distinguishable from cosmics and low-energy CC.\\
+The cleanest NC leptonic processes are $\nu_\mu e^-\to\nu_\mu e^-$ and $\overline{\nu}_\mu e^-\to\overline{\nu}_\mu e^-$.\\
+The problem with these processes is that the cross section is very small and we need to select the tiny number of signal events from the overwhelming NC hadronic events. The extraction of the signal requires the rejection of the background. The main one is due to NC hadronic interactions, without $\mu^\pm$ in the final state, with one or more $\pi^0$: the photons due to $\pi^0$ decays mimic the EM shower. To reject those events, the deposit of energy in the early scintillators is used. Since $\pi^0\to2\gamma\to4e^\pm$, a scintillator sees 4 minimum ionizing particles instead of one. In this way, by using only the part of the detector immediately upstream of the scintillator, a much better isolation of the signal is obtained, at the price of a reduced statistics. 
 \[
 R_{\text{NC}}^{\nu_\mu e}=\frac{\sigma_{\text{NC}}(\nu_\mu e^-)}{\sigma_{\text{NC}}(\overline{\nu}_\mu e^-)}=3\frac{1-4\sin^2\theta_w+\frac{16}{3}\sin^4\theta_w}{1-4\sin^2\theta_w+16\sin^4\theta_w}
 \]
