@@ -30,7 +30,15 @@
 \DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{multicol}
+\usepackage{physics}
 \usepackage[super]{nth}
+\usepackage{bbm}
+\usepackage{tikz}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usetikzlibrary{positioning}
+\usepackage{circuitikz}
+\usetikzlibrary{arrows,shapes,positioning}
+\usepackage{subfig}
 \newcommand{\beginbox}[1]{\begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={#1},colbacktitle={gray!50},coltitle=black]}
 \renewcommand{\endbox}{\end{tcolorbox}\noindent}
 % \begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Rosenbluth Cross Section},colbacktitle={gray!50},coltitle=black]
@@ -68,7 +76,51 @@
 \end{itemize}
 \subsection{Hadrons}
 Overt time, the concept of \textit{elementary particle} entered a deep crisis. The existence of many hadrons was seen as a contradiction with the elementary nature of the fundamental component of matter and it became natural to interpret hadrons as resonances of elementary components.\\
-Gell-Mann and Ne'eman proposed a new classification, the \textbf{Eightfold Way} based on the symmetry group SU(3). Hadrons are classified in the $(I_3,Y)$ plane, where $I_3$ is the third component of the isospin and $Y$ is the strong hypercharge given by $Y=B+S$, with $B$ baryon number and $S$ strangeness. The strangeness enlarges the isospin symmetry group from SU(2) to SU(3). The Gell-Mann-Nishijima formula tells us that:
+Gell-Mann and Ne'eman proposed a new classification, the \textbf{Eightfold Way} based on the symmetry group SU(3).
+\begin{center}
+\begin{tikzpicture}
+  %\draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+%x+1/2y=-1-->y=-2-2x
+  \draw[->] (0,0) -- (6,0) node[right] {$I_3$};
+  \draw[->] (0,0) -- (0,6) node[above] {$Y$};
+  \fill[color=red] (1,3) circle[radius=2pt] node[left] {$\pi^-$};
+  \fill[color=red] (2,1) circle[radius=2pt] node[left] {$K^-$};
+  \fill[color=red] (4,1) circle[radius=2pt] node[right] {$\overline{K}^0$};
+  \fill[color=red] (2,5) circle[radius=2pt] node[left] {$K^0$};
+  \fill[color=red] (4,5) circle[radius=2pt] node[right] {$K^+$};
+  \fill[color=red] (5,3) circle[radius=2pt] node[right] {$\pi^+$};
+  \fill[color=red] (3,3) circle[radius=2pt] node[above] {$\pi^0,\eta^0,\eta'$};
+  \draw[color=black] (0.1,5) -- (-0.1,5) node[left] {$+1$};
+  \draw[color=black] (0.1,3) -- (-0.1,3) node[left] {$0$};
+  \draw[color=black] (0.1,1) -- (-0.1,1) node[left] {$-1$};
+  \draw[color=black] (1,0.1) -- (1,-0.1) node[below] {$-1$};
+  \draw[color=black] (3,0.1) -- (3,-0.1) node[below] {$0$};
+  \draw[color=black] (5,0.1) -- (5,-0.1) node[below] {$+1$};
+  \draw[color=blue] (4.5,0) -- (1.5,6)  node[right] {$Q=0$};
+  \draw[color=blue] (2.5,0) -- (0.65,3.7)  node[above] {$Q=-1$};
+  \draw[color=blue] (6,1) -- (3.5,6)  node[right] {$Q=+1$};
+  \draw[color=red] (1,3) -- (2,1);
+  \draw[color=red] (1,3) -- (2,5);
+  \draw[color=red] (2,5) -- (4,5);
+  \draw[color=red] (4,5) -- (5,3);
+  \draw[color=red] (5,3) -- (4,1);
+  \draw[color=red] (4,1) -- (2,1);
+  %(y-0)/(4-0)=(x-2.5)/(0.5-2.5)-->(y-0)/4=(2.5-x)/2-->y=5-2x-->y=13-2x
+  %\draw[color=blue] [domain=0:3.2] plot (\x,-2-2*\x) node[right] {$\nu$};
+  % \draw[color=black] [domain=0:1.25] plot (\x,-\x+3);
+  % \draw[color=red] [domain=1.25:2.8] plot(\x,-\x+4) node[right] {$\gamma$};
+  % \draw[color=red] (1.25,1.75) -- (1.25, 2.75);
+  % \draw[dashed, color=black] (1.25,1.75) -- (0,1.75) node[left] {$T_1\sim1$\,MeV};
+  % \draw[dashed, color=black] (1.25,2.75) -- (0,2.75) node[left] {$T_2$};
+  % \draw[dashed, color=black] (2.8, 1.2) -- (2.8,0) node[below] {today};
+  % \draw[dashed, color=black] (2.8, 1.2) -- (0,1.2) node[left] {$T_{0,\gamma}=2.7\,\text{K}$};
+  % \draw[dashed, color=black] (2.8, 0.2) -- (0,0.2) node[left] {$T_{0,\nu}=?$};
+  % \x r means to convert '\x' from degrees to _r_adians:
+  % \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+  % \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+\end{tikzpicture}
+\end{center}
+Hadrons are classified in the $(I_3,Y)$ plane, where $I_3$ is the third component of the isospin and $Y$ is the strong hypercharge given by $Y=\pazocal{B}+S$, with $\pazocal{B}$ baryon number and $S$ strangeness. The strangeness enlarges the isospin symmetry group from SU(2) to SU(3). The Gell-Mann-Nishijima formula tells us that:
 \begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Gell-Mann-Nishijima Formula},colbacktitle={gray!50},coltitle=black]
 \[
 Q=I_3+\frac{1}{2}Y
@@ -76,8 +128,109 @@ Q=I_3+\frac{1}{2}Y
 \end{tcolorbox}
 \noindent
 This symmetry is called flavour SU(3), or SU(3)$_\text{F}$, to distinguish it from color SU(3), or SU(3)$_\text{C}$.\\
-Particles form multiplets of SU(3)$_\text{F}$. Each multiplet contains particles with the same spin and intrinsic parity. For \textbf{mesons}, we have an octet+singlet while for \textbf{baryons} octet+decuplet. Notice that for mesons, because of $\mathbb{CPT}$ the masses of the octet are symmetric with respect to $S=0$ and $I_3=0$ while for baryons the masses increase with $-S$.\\
-When the Eightfold Way was proposed, only 9 members of the decuplet were known and the last one was initially predicted: it needed to have $Y=-2$ and $I_3=0$, hence $Q=-1$, $S=-3$ and $B=1$. It was called $\Omega^-$ with a predicted mass of $m_{\Omega^-}\approx1680$\,MeV. This $\Omega^-$ can only decay to a $S=-2$ state: since EM and strong interaction conserve strangeness, the lightest $S$ and $B$ conserving decay is:
+Particles form multiplets of SU(3)$_\text{F}$. Each multiplet contains particles with the same spin and intrinsic parity.\\
+For \textbf{mesons}, we have an octet+singlet while for \textbf{baryons} octet+decuplet. Notice that for mesons, because of $\mathbb{CPT}$ the masses of the octet are symmetric with respect to $S=0$ and $I_3=0$ while for baryons the masses increase with $-S$.\\
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  %\draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+%x+1/2y=-1-->y=-2-2x
+  \draw[->] (0,0) -- (6,0) node[right] {$I_3$};
+  \draw[->] (0,0) -- (0,6) node[above] {$Y$};
+  \fill[color=red] (1,3) circle[radius=2pt] node[left] {$\Sigma^-$};
+  \fill[color=red] (2,1) circle[radius=2pt] node[left] {$\Xi^-$};
+  \fill[color=red] (4,1) circle[radius=2pt] node[right] {$\Xi^0$};
+  \fill[color=red] (2,5) circle[radius=2pt] node[left] {$n$};
+  \fill[color=red] (4,5) circle[radius=2pt] node[right] {$p$};
+  \fill[color=red] (5,3) circle[radius=2pt] node[right] {$\Sigma^+$};
+  \fill[color=red] (3,3) circle[radius=2pt] node[above] {$\Sigma^0,\Lambda$};
+  \draw[color=black] (0.1,5) -- (-0.1,5) node[left] {$+1$};
+  \draw[color=black] (0.1,3) -- (-0.1,3) node[left] {$0$};
+  \draw[color=black] (0.1,1) -- (-0.1,1) node[left] {$-1$};
+  \draw[color=black] (1,0.1) -- (1,-0.1) node[below] {$-1$};
+  \draw[color=black] (3,0.1) -- (3,-0.1) node[below] {$0$};
+  \draw[color=black] (5,0.1) -- (5,-0.1) node[below] {$+1$};
+  \draw[color=blue] (4.5,0) -- (1.5,6)  node[right] {$Q=0$};
+  \draw[color=blue] (2.5,0) -- (0.65,3.7)  node[above] {$Q=-1$};
+  \draw[color=blue] (6,1) -- (3.5,6)  node[right] {$Q=+1$};
+  \draw[color=red] (1,3) -- (2,1);
+  \draw[color=red] (1,3) -- (2,5);
+  \draw[color=red] (2,5) -- (4,5);
+  \draw[color=red] (4,5) -- (5,3);
+  \draw[color=red] (5,3) -- (4,1);
+  \draw[color=red] (4,1) -- (2,1);
+  %(y-0)/(4-0)=(x-2.5)/(0.5-2.5)-->(y-0)/4=(2.5-x)/2-->y=5-2x-->y=13-2x
+  %\draw[color=blue] [domain=0:3.2] plot (\x,-2-2*\x) node[right] {$\nu$};
+  % \draw[color=black] [domain=0:1.25] plot (\x,-\x+3);
+  % \draw[color=red] [domain=1.25:2.8] plot(\x,-\x+4) node[right] {$\gamma$};
+  % \draw[color=red] (1.25,1.75) -- (1.25, 2.75);
+  % \draw[dashed, color=black] (1.25,1.75) -- (0,1.75) node[left] {$T_1\sim1$\,MeV};
+  % \draw[dashed, color=black] (1.25,2.75) -- (0,2.75) node[left] {$T_2$};
+  % \draw[dashed, color=black] (2.8, 1.2) -- (2.8,0) node[below] {today};
+  % \draw[dashed, color=black] (2.8, 1.2) -- (0,1.2) node[left] {$T_{0,\gamma}=2.7\,\text{K}$};
+  % \draw[dashed, color=black] (2.8, 0.2) -- (0,0.2) node[left] {$T_{0,\nu}=?$};
+  % \x r means to convert '\x' from degrees to _r_adians:
+  % \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+  % \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  %\draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+%x+1/2y=-1-->y=-2-2x
+  \draw[->] (0,0) -- (6,0) node[right] {$I_3$};
+  \draw[->] (0,0) -- (0,8) node[above] {$Y$};
+  \fill[color=red] (0.5,7) circle[radius=2pt] node[above] {$\Delta^-$};
+  \fill[color=red] (2,7) circle[radius=2pt] node[above] {$\Delta^0$};
+  \fill[color=red] (4,7) circle[radius=2pt] node[above] {$\Delta^+$};
+  \fill[color=red] (5.5,7) circle[radius=2pt] node[above] {$\Delta^{++}$};
+  \fill[color=red] (1.35,5) circle[radius=2pt] node[above right] {$\Sigma^{*-}$};
+  \fill[color=red] (3,5) circle[radius=2pt] node[above] {$\Sigma^{*0}$};
+  \fill[color=red] (4.65,5) circle[radius=2pt] node[above right] {$\Sigma^{*+}$};
+  \fill[color=red] (2.2,3) circle[radius=2pt] node[above right] {$\Xi^{*+}$};
+  \fill[color=red] (3.8,3) circle[radius=2pt] node[above right] {$\Xi^{*0}$};
+  \fill[color=red] (3,1) circle[radius=2pt] node[below] {$\Omega^-$};
+  \draw[color=black] (0.1,7) -- (-0.1,7) node[left] {$+1$};
+  \draw[color=black] (0.1,5) -- (-0.1,5) node[left] {$0$};
+  \draw[color=black] (0.1,3) -- (-0.1,3) node[left] {$-1$};
+  \draw[color=black] (0.1,1) -- (-0.1,1) node[left] {$-2$};
+  \draw[color=black] (1.35,0.1) -- (1.35,-0.1) node[below] {$-1$};
+  \draw[color=black] (3,0.1) -- (3,-0.1) node[below] {$0$};
+  \draw[color=black] (4.65,0.1) -- (4.65,-0.1) node[below] {$+1$};
+  \draw[color=black] (5.5,7) -- (6,7) node[right] {$m\approx1232\,\text{MeV}$};
+  \draw[color=black] (1.35,5) -- (6,5) node[right] {$m\approx1385\,\text{MeV}$};
+  \draw[color=black] (2.2,3) -- (6,3) node[right] {$m\approx1533\,\text{MeV}$};
+  \draw[color=black] (3,1) -- (6,1) node[right] {$m\approx1680\,\text{MeV}$};
+  % \draw[color=blue] (4.5,0) -- (1.5,6)  node[right] {$Q=0$};
+  % \draw[color=blue] (2.5,0) -- (0.65,3.7)  node[above] {$Q=-1$};
+  % \draw[color=blue] (6,1) -- (3.5,6)  node[right] {$Q=+1$};
+  \draw[color=red] (0.5,7) -- (5.5,7);
+  \draw[color=red] (0.5,7) -- (3,1);
+  \draw[color=red] (5.5,7) -- (3,1);
+  %(y-1)/(7-1)=(x-3)/(5.5-3)-->(y-1)/7=(x-3)/2.5-->y-1=2.8x-8.4-->y=2.8x-7.4
+  %5+7.4=12.4=2.8x-->x=4.43
+  % \draw[color=red] (4,5) -- (5,3);
+  % \draw[color=red] (5,3) -- (4,1);
+  % \draw[color=red] (4,1) -- (2,1);
+  %(y-0)/(4-0)=(x-2.5)/(0.5-2.5)-->(y-0)/4=(2.5-x)/2-->y=5-2x-->y=13-2x
+  %\draw[color=blue] [domain=0:3.2] plot (\x,-2-2*\x) node[right] {$\nu$};
+  % \draw[color=black] [domain=0:1.25] plot (\x,-\x+3);
+  % \draw[color=red] [domain=1.25:2.8] plot(\x,-\x+4) node[right] {$\gamma$};
+  % \draw[color=red] (1.25,1.75) -- (1.25, 2.75);
+  % \draw[dashed, color=black] (1.25,1.75) -- (0,1.75) node[left] {$T_1\sim1$\,MeV};
+  % \draw[dashed, color=black] (1.25,2.75) -- (0,2.75) node[left] {$T_2$};
+  % \draw[dashed, color=black] (2.8, 1.2) -- (2.8,0) node[below] {today};
+  % \draw[dashed, color=black] (2.8, 1.2) -- (0,1.2) node[left] {$T_{0,\gamma}=2.7\,\text{K}$};
+  % \draw[dashed, color=black] (2.8, 0.2) -- (0,0.2) node[left] {$T_{0,\nu}=?$};
+  % \x r means to convert '\x' from degrees to _r_adians:
+  % \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+  % \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+When the Eightfold Way was proposed, only 9 members of the decuplet were known and the last one was initially predicted: it needed to have $Y=-2$ and $I_3=0$, hence $Q=-1$, $S=-3$ and $\pazocal{B}=1$. It was called $\Omega^-$ with a predicted mass of $m_{\Omega^-}\approx1680$\,MeV. This $\Omega^-$ can only decay to a $S=-2$ state: since EM and strong interaction conserve strangeness, the lightest $S$ and $\pazocal{B}$ conserving decay is:
 \begin{align*}
 \Omega^-&\to\Xi^0K^-\\
 S:-3&\to-2-1\\
@@ -148,8 +301,8 @@ Assuming there are no EM interaction but only nuclear ones, we have $N=Z=\frac{A
 n_{n,\Uparrow}=n_{n,\Downarrow}=n_{p,\Uparrow}=n_{p,\Downarrow}=\frac{N}{2}=\frac{Z}{2}=\frac{A}{4}=\frac{\frac{4}{3}\pi r_0^3A\frac{4}{3}\pi p_F^3}{(2\pi\hbar)^3}=\frac{2Ar_0^3p_F^3}{9\pi\hbar^3}\Rightarrow N=Z=\frac{A}{2}=\frac{4Ar_0^3p_F^3}{9\pi\hbar^3}
 \]
 \subsection{Scattering Experiments}
-Rutherford used $\alpha$ particles $(Z=2,A=4)$ as probes and gold as fixed target $(Z=79, A=197)$. The kinetic energy of the $\alpha$ particles was a few MeV and sometimes he observed a particle scattered by an angle $\theta>90^\circ$: this is impossible if matter is soft and homogeneous. The only explanation was that matter concentrates in small heavy bodies, the nuclei. How could he model this scattering? He tried with a two-body scattering, with only Coulomb interaction, non-relativistic and no QM.\\
-Energy and momentum are conserved, because of symmetry the only important thing is $\Delta p_y$:
+Rutherford used $\alpha$ particles $(Z=2,A=4)$ as probes and gold as fixed target $(Z=79, A=197)$. The kinetic energy of the $\alpha$ particles was a few MeV and sometimes he observed a particle scattered by an angle $\theta>90^\circ$: this is impossible if matter is soft and homogeneous. The only explanation was that matter concentrates in small heavy bodies, the \textbf{nuclei}. How could he model this scattering? He tried with a two-body scattering, with only Coulomb interaction, non-relativistic and no QM.\\
+Energy and angular momentum are conserved, because of symmetry the only important thing is $\Delta p_y$:
 \[
 \Delta p=|\Vec{p}-\Vec{p}'|=2p\sin(\theta/2)=\Delta p_y=\int_{-\infty}^{+\infty}dtF_y=\int_{-\infty}^{+\infty}dt\frac{zZe^2}{4\pi\varepsilon_0}\frac{\cos(\beta)}{r^2(t)}
 \]
@@ -198,13 +351,13 @@ E_{\text{N}}^2-p_{\text{N}}^2=\cancel{M^2}=E^2+\cancel{M^2}+E'^2+2EM-2EE'-2ME'-p
 \]
 In the ultra-relativistic approximation, it is assumed that $p\approx E$ and $p'\approx E'$. Neglecting the mass of the probe (usually an electron), the expression above now becomes:
 \[
-0=\cancel{E^2+E'^2}+2EM-2ME'\cancel{-E^2-E'^2}+2EE'\cos\theta\Rightarrow EM=E'[E(1-\cos\theta)+M]
+0=\cancel{E^2+E'^2}+2EM-2EE'-2ME'\cancel{-E^2-E'^2}+2EE'\cos\theta\Rightarrow EM=E'[E(1-\cos\theta)+M]
 \]
 Finally, we get:
 \[
 E'=\frac{EM}{M+E(1-\cos\theta)}=\frac{EM}{M+2E\sin^2(\theta/2)}
 \]
-A useful quantity is the \textbf{momentum transfer} $\Vec{q}:=\Vec{p}-\Vec{p}'$. In terms of this new variable, one gets:
+A useful quantity is the \textbf{momentum transfer} $\Vec{q}:=\Vec{p}-\Vec{p}'$. The relativistic equivalent is obtained considering the four-momenta:
 \[
 q^2=2m^2-2EE'+2pp'\cos\theta\approx-4EE'\sin^2(\theta/2)=-Q^2
 \]
@@ -222,17 +375,21 @@ In the inelastic case, kinematics is the same but we usually work with the follo
 \noindent
 $\nu$ is the energy lost by the probe, usually an electron, $x$ is the fraction of the hadron 4-momentum carried by the interacting parton, $y$ is the fraction of the energy lost by the lepton in the target frame and $W^2$ is the mass squared of the hadron system in the final state ($W=M$ if the scattering is elastic).\\
 In the elastic case, $\nu$ and $Q$ are not independent, therefore there is only one independent parameter. On the other hand, in the inelastic case they are independent and there are two independent variables.\\
-It is possible to redefine the kinematics of scattering processes in the plane $(2M\nu,Q^2)$: the bisector $x=1$, i.e. $W^2=M^2$, defines the elastic scattering. At higher distance from the bisector we have the \textbf{deep inelastic scattering} (DIS) and, possibly, new physics.
+It is possible to redefine the kinematics of scattering processes in the plane $(2M\nu,Q^2)$: the bisector $x=1$, i.e. $W^2=M^2$, defines the elastic scattering. For $x<1$ and at higher distance from the bisector we have the \textbf{deep inelastic scattering} (DIS) and, possibly, new physics.
 \subsection{Electron-Nucleus Scattering}
 In the '20s, QM entered the game. Rutherford formula still works in QM, using non-relativistic QM and Born approximation. However, the $\alpha$-nucleus scattering takes place between two nuclei so it is not suitable for measuring the nucleus structure. It was needed to replace the $\alpha$ with something point-like, an electron $e^-$. The dynamics of electron-nucleus scattering can be described by the Rutherford formula with an adjustment due to Mott:
 \[
 \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott*}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}\left(1-\beta^2\sin^2(\theta/2)\right)\approx\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}\cos^2(\theta/2)=\frac{4Z^2\alpha^2E'^2}{|\Vec{q}|^4}\cos^2(\theta/2)
 \]
-The Mott* cross-section neglects the nucleus dimension and its recoil (that's why the *), but it takes into account the spin of the electron with the factor $\cos^2(\theta/2)$. For relativistic particles, what is conserved is the \textbf{helicity}, the projection of the spin along the momentum. This conservation requires the spin flip of the electron between initial and final state. The angular momentum is not conserved if the nucleus does not absorb the spin variation. Therefore, the scattering for $\theta\simeq180^\circ$ is forbidden.
+The Mott* cross-section neglects the nucleus dimension and its recoil (that's why the *), but it takes into account the spin of the electron with the factor $\cos^2(\theta/2)$. For relativistic particles, what is conserved is the \textbf{helicity} $h$, the projection of the spin along the momentum. 
+\[
+h=\frac{\Vec{s}\cdot\Vec{p}}{|\Vec{s}|\cdot|\Vec{p}|}
+\]
+This conservation requires the spin flip of the electron between initial and final state because the momentum also flips at $\theta=180^\circ$. The angular momentum is not conserved if the nucleus does not absorb the spin variation. Therefore, the scattering for $\theta\simeq180^\circ$ is forbidden.
 \subsection{Form Factors}
 Experiments agrees with Mott* cross section only for small $|\Vec{q}|$, otherwise the experimental cross section is smaller. Possibly, the reason of this disagreement is the structure of the nucleus which results in a smaller electric charge seen by the projectile. The \textbf{form factor} $\pazocal{F}(\Vec{q})$ is defined as the Fourier transform of the charge distribution $\rho(\Vec{x})=Zef(\Vec{x})$:
 \[
-\pazocal{F}(\Vec{q})=\int d^3xf(\Vec{x})\exp\left(i\frac{\Vec{q}\cdot\Vec{x}}{\hbar}\right)
+\pazocal{F}(\Vec{q})=\int d^3xf(\Vec{x})\exp{i\frac{\Vec{q}\cdot\Vec{x}}{\hbar}}
 \]
 If $\rho(\Vec{x})$ depends only on $|\Vec{x}|$, then:
 \[
@@ -247,15 +404,20 @@ Consider for example a homogeneous sphere with unit charge, $\rho(r)=\rho_0=\fra
 By comparing the first minimum of this function with the experiments for $^{12}$C ($q/\hbar\approx1.8$\,fm$^{-1}$), we get $R\approx4.5 r_{\min}\approx2.5$\,fm, i.e. $^{12}$C is approximately a sphere of radius 2.5 fm.\\
 For $q\to0$, we can write:
 \[
-\pazocal{F}(q^2)\simeq1-\frac{1}{6}q^2\braket{r^2}+\cdots \quad \braket{r^2}:=\int d^3xf(\Vec{x})r^2
+\pazocal{F}(q^2)\simeq1-\frac{1}{6}q^2\Braket{r^2}+\cdots \quad \Braket{r^2}:=\int d^3xf(\Vec{x})r^2
 \]
 Both the limit $q\to0$ and $q\to\infty$ have a deep meaning. $q$ is approximately the conjugate variable of the impact parameter $b$:
 \begin{itemize}
     \item for very small $q$, i.e. $b$ very large, the target behaves as a point-like object
-    \item for quite small $q$, the target behaves as a coherent homogeneous charged sphere with radius $\sqrt{\braket{r^2}}$
+    \item for quite small $q$, the target behaves as a coherent homogeneous charged sphere with radius $\sqrt{\Braket{r^2}}$
     \item large $q$ probes the nucleus at small $b$. New physics requires very large $q$
 \end{itemize}
-Heavy nuclei are not homogeneous spheres with a sharp edge, rather spheres with a soft edge. Light nuclei are more Gaussian-like.
+Heavy nuclei are not homogeneous spheres with a sharp edge, rather spheres with a soft edge, with a charge distribution well reproduced by a Fermi function:
+\[
+\rho(r)=\frac{\rho_0}{1+\exp{\frac{r-c}{a}}}
+\]
+For large values of $A$, we get $c\approx1.07\,\text{fm}A^{1/3}$ and $a\approx0.54$\,fm.
+Light nuclei, for example $^4$He, $^{6,7}$Li, $^9$Be, are more Gaussian-like.
 \subsection{Nucleons Structure}
 Probing smaller scales requires larger energies and we have to take into account the magnetic moment of the nucleons, by introducing the parameter $\tau=Q^2/4M^2$. For point-like particles of mass $m$, charge $e$ and spin 1/2 the Dirac equation assigns them an intrinsic magnetic dipole moment $\mu_C=\frac{ge\hbar}{4m}$, where $g$ is the gyromagnetic ratio. An ideal electron has $g=2$, the first measurements roughly confirmed this value. This effect adds to the cross section a term corresponding to the spin flip probability.
 \[
@@ -267,7 +429,7 @@ For the nucleons, we define $\mu_{\text{N}}=e\hbar/4m_{\text{N}}$. If $p$ and $n
 \mu_p=2\mu_{\text{N}} \quad \mu_n=0
 \]
 Instead, experimental measurements disagree with these values: there are other effects which contribute to the magnetic moment, $p$ and $n$ are not ideal Dirac particles, \textit{maybe} they are not point-like.\\
-In an electron-nucleon scattering, the main contribution is from single photon exchange. The $ee\gamma*$ vertex is well understood, while the $NN'\gamma*$ is unknown. The strategy is to assume a simpler process, compare it with experiments and opportunely modify the theory. The cross section is generalized by defining the Rosenbluth cross section, introducing two form factors $G_{\text{E}}(Q^2)$ for the electric part and $G_{\text{M}}(Q^2)$ for the magnetic part.
+In an electron-nucleon scattering, the main contribution is from single photon exchange. The $ee\gamma^*$ vertex is well understood, while the $NN'\gamma^*$ is unknown. The strategy is to assume a simpler process, compare it with experiments and opportunely modify the theory. The cross section is generalized by defining the \textbf{Rosenbluth cross section}, introducing two form factors $G_{\text{E}}(Q^2)$ for the electric part and $G_{\text{M}}(Q^2)$ for the magnetic part.
 \begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Rosenbluth Cross Section},colbacktitle={gray!50},coltitle=black]
 \[
 \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(\frac{G_{\text{E}}^2+\tau G_{\text{M}}^2}{1+\tau}+2\tau G_{\text{M}}^2\tan^2(\theta/2)\right)
@@ -283,7 +445,8 @@ At small $\theta$, i.e. small $Q^2$, all formulas agree, $G_{\text{E}}(Q^2\simeq
 \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}\Bigr/\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}=\left({\color{blue}\frac{G_{\text{E}}^2+\tau G_{\text{M}}^2}{1+\tau}}+{\color{green}2\tau G_{\text{M}}^2}\tan^2(\theta/2)\right)={\color{blue}A}+{\color{green}B}\tan^2(\theta/2)
 \]
 It is possible to measure $A$ and $B$ from which one gets $G_{\text{E}}$ and $G_{\text{M}}$ for both protons and neutrons. By repeating this process varying $Q^2$, it is possible to obtain the full dependence on the form factors. Results show that electric and magnetic form factors tend to a universal function of $Q^2$: the nucleons do not look like point-like particles or homogeneous spheres but like \textbf{diffused non-homogeneous systems}.\\
-For $Q^2\ll m_p$, hence small $\tau$, G$_{\text{E}}$ dominates the cross section. In this range, we measure the average radius of electric charge, $\braket{r_{\text{E}}}=0.85\pm0.02$\,fm. In the range $0.02\le Q^2\le3$\, GeV$^2$, G$_{\text{E}}$ and G$_{\text{M}}$ are equally important while for $Q^2>3$\,GeV$^2$, the dominant contribution comes from G$_{\text{M}}$. Notice that if the proton was point-like, one would find both form factors equal to 1 and independent on $Q^2$.\\
+For $Q^2\ll m_p$, hence small $\tau$, G$_{\text{E}}$ dominates the cross section. In this range, we measure the average radius of electric charge, $\Braket{r_{\text{E}}}=0.85\pm0.02$\,fm.\\
+In the range $0.02\le Q^2\le3$\, GeV$^2$, G$_{\text{E}}$ and G$_{\text{M}}$ are equally important while for $Q^2>3$\,GeV$^2$, the dominant contribution comes from G$_{\text{M}}$. Notice that if the proton was point-like, one would find both form factors equal to 1 and independent on $Q^2$.\\
 At this level, it is unclear whether the nucleons have substructures, experiments at larger $Q^2$ are required: at higher $Q^2$, one can expect a variety of phenomena. 
 \subsection{Deep Inelastic Scattering}
 The usual parametrization of the cross section in the Deep Inelastic Scattering (DIS) region is:
@@ -306,9 +469,9 @@ W_2\cos^2(\theta/2)+2W_1\sin^2(\theta/2)=\frac{3}{E}[\cos^2(\theta/2)+2\tau\sin^
 \]
 From the kinematics of elastic scattering of point-like constituents of mass $m$, one gets:
 \[
-Q^2=2m\nu=2M\nu x\to m=Mx \quad \frac{F_1(x)}{F_2(x)}=\frac{Q^2}{4m^2}\frac{M}{\nu}=\frac{2m\nu}{4m}\frac{M}{\nu}=\frac{M}{2m}=\frac{1}{2x}
+Q^2=2m\nu=2M\nu x\to m=Mx \quad \frac{F_1(x)}{F_2(x)}=\frac{Q^2}{4m^2}\frac{M}{\nu}=\frac{2m\nu}{4m^2}\frac{M}{\nu}=\frac{M}{2m}=\frac{1}{2x}
 \]
-This is known as the Callan-Gross relation, $F_2(x)=2xF_1(x)$.
+This is known as the \textbf{Callan-Gross relation}, $F_2(x)=2xF_1(x)$.
 \subsection{Parton Model}
 Assume now that nucleons are made up of \textbf{partons}, later identified with \textbf{quarks}. Partons are spin 1/2 point-like fermions with a certain mass $m_i$  which scatter elastically in the $ep$ process. The DIS cross section reduces to an incoherent sum of constituents cross sections. For such partons, we have:
 \[
@@ -317,11 +480,12 @@ F_1(x)=MW_1(Q^2,\nu)=\frac{1}{2}\sum_je_j^2f_j(x) \quad F_2(x)=\nu W_2(Q^2,\nu)=
 They do not depend on $Q^2$ and $\nu$ separately but only on their ratio. This mechanism called \textbf{Bjorken scaling} was interpreted by Feynman in 1969 as the dominance of partons in the nucleon dynamics. 
 Define now:
 \[
-x_{\text{F}}=\frac{\Vec{p}_{\text{parton}}}{\Vec{p}_{\text{nucleon}}}=x_{\text{B}}=x
+x_{\text{F}}=\frac{\Vec{p}_{\text{parton}}}{\Vec{p}_{\text{nucleon}}}=x_{\text{B}}=x=\frac{Q^2}{2M\nu}=\frac{m}{M}
 \]
 The interaction electron-parton is so fast and violent that they behave like free particles, in \nth{1} approximation the other partons do not take part in the interaction.\\
 This model implies that $\sum_ix_i=1$ when the sum runs over all partons. At the time, there was no clue about the nature of the partons, nor if they were charged or neutral, therefore $\sum_i'x_i\le1$ when the sum runs over the partons which interacts with the electron. If partons are spin 1/2 particles, then the Callan-Gross relation holds, instead if they have spin 0, $F_1(x)=0$. At the end, they are measured to have spin 1/2.\\
-What is the dynamical meaning of $F_{1,2}$? In principle, proton and neutron have different structure functions. However, these functions are not independent: if they parametrize the actual structure of nucleons, they must be correlated. Assume now that the nucleons are made by three quarks, each of them described by a $x$ distribution identified with $f_j^p(x)$ (e.g. $u^p(x)$ denotes the $x$ distribution of up quarks in the proton, with $x$ in the interval $(x,x+dx)$). For short intervals, QM allows quark-anti-quark pairs to exist in the nucleons. Moreover, in the hadrons we have some neutral particles, called \textbf{gluons}. Therefore, in the nucleons there are three types of particles.
+What is the dynamical meaning of $F_{1,2}$? In principle, proton and neutron have different structure functions. However, these functions are not independent: if they parametrize the actual structure of nucleons, they must be correlated. Assume now that the nucleons are made by three quarks, each of them described by a $x$ distribution identified with $f_j^p(x)$ (e.g. $u^p(x)$ denotes the $x$ distribution of up quarks in the proton, with $x$ in the interval $(x,x+dx)$).\\
+For short intervals, QM allows quark-anti-quark pairs to exist in the nucleons. Moreover, in the hadrons we have some neutral particles, called \textbf{gluons}. Therefore, in the nucleons there are three types of particles.
 \beginbox{Particles in the Nucleons}
 \begin{itemize}
     \item \textbf{Valence quarks} with distribution $q_V(x)$
@@ -365,9 +529,41 @@ Modern experiments have probed the nucleus to very high values of $Q^2$, up to $
 \newpage
 \section{Heavy Flavours}
 \subsection{$e^+e^-$ Collisions}
-At low energy, the main process is an annihilation into a virtual photon $\gamma*$. The initial state is neutral, has lepton number equal to zero and spin 1. In the center of mass, the kinematics can be schematized as follows:
+At low energy, the main process is an annihilation into a virtual photon $\gamma^*$. 
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a);
+    \vertex [above left=of a] (b) {$e^-$};
+    \vertex [below left=of a] (c) {$e^+$};
+    \vertex [right=of a] (d) {$\gamma^*$};
+    % \vertex [below left=1cm and 0.4cm of c] (d);
+    % \vertex [above left=1cm and 0.4cm of b] (a);
+    % \vertex [left=of a] (i1) {$n$};
+    % \vertex [left=of d] (i2) {$n$};
+    % \vertex[above right of=a] (f1) {$p$};
+    % \vertex[right of=b] (f2) {$e^-$};
+    % \vertex[right of=c] (f3) {$e^-$};
+    % \vertex[below right of=d] (f4) {$p$};
+
+    \diagram* {
+    (b) -- [fermion] (a),
+    (a) -- [fermion] (c),
+    (a) -- [photon] (d),
+      % (a) -- [photon, edge label=$W$] (b) -- [majorana, insertion=0.5, edge label=$\nu_M$] (c) -- [photon, edge label=$W$] (d) ,
+      % (i1) -- [fermion] (a),
+      % (i2) -- [fermion] (d),
+      % (a) -- [fermion] (f1),
+      % (b) -- [fermion] (f2),
+      % (c) -- [fermion] (f3),
+      % (d) -- [fermion] (f4),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{center}
+The initial state is neutral, has lepton number equal to zero and spin 1. In the center of mass, the kinematics can be schematized as follows:
 \[
-e^+=(E,p,0,0) \quad e^-=(E,-p,0,0) \quad \gamma*=(2E,0,0,0)
+e^+=(E,p,0,0) \quad e^-=(E,-p,0,0) \quad \gamma^*=(2E,0,0,0)
 \]
 At higher energies, it is possible to have $e^-e^+\to\mu^-\mu^+$. Still in the center of mass, we have:
 \[
@@ -393,17 +589,71 @@ The sum is extended over all the quarks produced at energy $\sqrt{s}$, i.e. $2m_
 However, reality is more complicated. $q\overline{q}$ resonances are formed at $\sqrt{s}\approx2m_q$ and their decay modes affect the value of $R$. At $\sqrt{s}\approx m_Z$ the \textbf{weak interactions} completely change the scenario.
 \subsection{The November Revolution}
 The $u,d,s$ quarks have not been predicted. In fact, mesons and baryons have been discovered and later interpreted in terms of their quark content. In November 1974, the group of Richter (SLAC) and Ting (Brookhaven), simultaneously discovered a new state with mass $\approx3.1$\;GeV and a width much smaller than their respective resolution. The width was measured to be $0.087$\;MeV and this was called $J/\Psi$.\\
-The group of Ting measured the inclusive production of $e^+e^-$ pairs in interactions of 30 GeV protons on a plate of beryllium. The experiment was searching for mass reasonances with\\
-$J^P=1^-$  decaying into $e^+e^-$ pairs. They used a two arm magnetic spectrometer to measure separately the electrons and the positrons.\\
-In 1974, up to the highest available energies, $R\approx2$. Instead, at the Cambridge Electron Accelerator measurements found $R\simeq6$. The scanning in energy was performed in steps of 200 MeV and the measured cross section appeared to be constant, not with the expected trend $1/s$. Decreasing the step from 200 MeV to 2.5 MeV increased the resolving power: a resonance appeared. This particle was called $\Psi$.
-\subsection{Charmonium}
+The group of Ting measured the inclusive production of $e^+e^-$ pairs in interactions of 30 GeV protons on a plate of beryllium.
+\[
+p+\text{Be}\to e^+e^-X
+\]
+The experiment was searching for mass reasonances with $J^P=1^-$  decaying into $e^+e^-$ pairs with the Drell-Yan process.
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a);
+    \vertex [above left=1cm of a] (v1);
+    \vertex [left=of v1] (i1);
+    \vertex [above=0.125cm of i1] (i2);
+    \vertex [above=0.125cm of i2] (i3);
+    \vertex [above=0.125cm of i3] (s1);
+    \vertex [below left=1cm of a] (v2);
+    \vertex [left=of v2] (i4);
+    \vertex [below=0.125cm of i4] (i5);
+    \vertex [below=0.125cm of i5] (i6);
+    \vertex [below=0.125cm of i6] (s2);
+    \vertex [right=of a] (b);
+    \vertex [above right=0.6cm and 1.5cm of b] (c) {$e^+,\mu^+$};
+    \vertex [below right=0.6cm and 1.5cm of b] (d) {$e^-,\mu^-$};
+    \vertex [above=0.7cm of b] (f1);
+    \vertex [above=0.125cm of f1] (f2);
+    \vertex [above=0.125cm of f2] (f3);
+    \vertex [above=0.125cm of f3] (sf1);
+    \vertex [below=0.7cm of b] (f4);
+    \vertex [below=0.125cm of f4] (f5);
+    \vertex [below=0.125cm of f5] (f6);
+    \vertex [below=0.125cm of f6] (sf2);
+
+    \diagram* {
+    (a) -- [photon, edge label=$\gamma^*$] (b),
+    (c) -- [fermion] (b),
+    (b) -- [fermion] (d),
+    (i1) -- [plain] (v1),
+    (i4) -- [plain] (v2),
+    (v1) -- [fermion] (a),
+    (v2) -- [fermion] (a),
+    (i2) -- [fermion] (f2),
+    (i3) -- [fermion] (f3),
+    (i5) -- [fermion] (f5),
+    (i6) -- [fermion] (f6),
+    (s1) -> [scalar] (sf1),
+    (s2) -> [scalar] (sf2),
+    };
+    \draw [decoration={brace}, decorate] 
+    (i1.south west) -- (s1.north west) node [left] {$p$};
+    \draw [decoration={brace}, decorate] 
+    (s2.south west) -- (i4.north west) node [left] {$N$};
+    \draw [decoration={brace}, decorate] 
+    (sf1.north east) -- (f2.south east) node [above right] {\scriptsize{spectators}};
+    \draw [decoration={brace}, decorate] 
+    (f5. north east) -- (sf2.south east) node [below right] {\scriptsize{spectators}};
+  \end{feynman}
+\end{tikzpicture}    
+\end{center}
+They used a two arm magnetic spectrometer to measure separately the electrons and the positrons. Leptonic events are rare, so they used very intense beams in order to have an high rejection power to reject hadrons that can fake $e^+e^-$ or $\mu^+\mu^-$.\\ In 1974, up to the highest available energies, $R\approx2$. Instead, at the Cambridge Electron Accelerator measurements found $R\simeq6$. The scanning in energy was performed in steps of 200 MeV and the measured cross section appeared to be constant, not with the expected trend $1/s$. Decreasing the step from 200 MeV to 2.5 MeV increased the resolving power and a resonance appeared. This particle was called $\Psi$.\\
 After some discussion, the correct interpretation emerged: the resonance is a bound state of a \textbf{new quark} $c$ and its anti-quark. The \textbf{charm} quark had been proposed in 1970 to exclude flavour changing neutral currents (FCNC). After 1974, many decays have been precisely measured, the present most precise one gives the mass and width:
 \[
 m(J/\Psi)=3097\;\text{MeV} \quad \Gamma(J/\Psi)=93\;\text{keV}
 \]
-It was possible to measure many of the $J/\Psi$ quantum numbers. The resonance is asymmetric, therefore there is interference between $J/\Psi$ formation and the usual $\gamma*$ exchange in the s-channel, hence $J^P=1^-$. The equality BR$(J/\Psi\to\rho^0\pi^0)=$BR$(J/\Psi\to\rho^\pm\pi^\pm)$ implies isospin $I=0$. The $J/\Psi$ decays into an odd number of $\pi$: the G-parity is conserved, therefore $J/\Psi$ decays via strong interaction.\\
+It was possible to measure many of the $J/\Psi$ quantum numbers. The resonance is asymmetric, therefore there is interference between $J/\Psi$ formation and the usual $\gamma^*$ exchange in the s-channel, hence $J^P=1^-$. The equality BR$(J/\Psi\to\rho^0\pi^0)=$BR$(J/\Psi\to\rho^\pm\pi^\pm)$ implies isospin $I=0$. The $J/\Psi$ decays into an odd number of $\pi$: the G-parity is conserved, therefore $J/\Psi$ decays via strong interaction.\\
 The weak neutral current processes between quarks of different flavour (FCNC) are strongly suppressed, e.g. $\Gamma(K_L^0\to\mu^+\mu^-)\ll\Gamma(K^\pm\to\mu^\pm\nu)$. This was explained in 1970 by Glashow, Iliopoulos and Maiani by introducing the charm quark. They predicted a fourth quark identical to the up quark, but with larger mass, $m_c\gg m_u$, carrying a new quantum number $C$, the charm. As for strangeness, $C$ is conserved in strong and EM interactions and violated in weak interactions. The lightest charmed mesons are $c\overline{q}$ or $\overline{c}q$, with $q=uds$, and have a mass of 1500-2000 MeV and $J^P=0^-$. These mesons decay weakly because of their larger mass.\\
-Now, $Q=s,c$ and $q=u,d$. The \textbf{Zweig rule} was set empirically before the advent of QCD. It says that in the decay of a bound state of heavy quarks $Q$ the final states without $Q$ (disconnected decays) have suppressed amplitude with respect to connected decays. If the only decays allowed are the disconnected ones, then the total width is small and the bound state is narrow.\\
+Now, let $Q=s,c$ and $q=u,d$. The \textbf{Zweig rule} was set empirically before the advent of QCD. It says that in the decay of a bound state of heavy quarks $Q$ the final states without $Q$ (disconnected decays) have suppressed amplitude with respect to connected decays. If the only decays allowed are the disconnected ones, then the total width is small and the bound state is narrow.\\
 A $Q\overline{Q}$ state decays preferentially into $(Q\overline{q})(\overline{Q}q)$. Then $c\overline{c}$ annihilates into gluons: one gluon is forbidden by colour, two gluons is forbidden by C-parity, 3 gluons are allowed. The latter amplitude is proportional to the strong coupling constant $\alpha_S^3$ and its value produces a smaller width for larger masses, i.e. we say that there is the phenomenon of \textbf{running coupling}.\\
 If the $J/\Psi$ is a bound state $c\overline{c}$ then mesons $c\overline{q}$ and $\overline{c}q$ must exist. In 1976, the Mark I detector started the search for charmed pseudoscalar mesons $D^0$ and $\overline{D}^0$. According to theory, $D$-mesons have a short lifetime therefore the detection strategy was the presence of narrow peaks in the combined mass of the decay products. A first bump at 1865 MeV with a width compatible with the experimental resolution was observed in the combined mass $K^\pm\pi^\pm$, corresponding to $D^0$ and $\overline{D}^0$ decay. Also, the mass $K^\mp\pi^\pm\pi^\pm$ had a bump at 1875 MeV, corresponding to the $D^+$ and $D^-$ decays. Moreover, in agreement with the GIM predictions, no bump was found in $K^\pm\pi^+\pi^-$, which is forbidden.
 \subsection{The \nth{3} Family}
@@ -440,7 +690,7 @@ The top quark was directly searched in hadron ($Sp\overline{p}S$ at Fermilab) an
 \end{table}
 \newpage
 \section{Weak Interactions}
-In rare occasions, we see \textbf{violations} of those conservation laws valid for strong and EM interactions: these are known as \textbf{weak interactions} (WI), because of their small coupling. WI take place in almost all processes but they have a negligible effect, except in cases otherwise forbidden. Because of them, stable matter contains only $u,d,e^-$, the other quarks and charged leptons are unstable. All elementary particles but gluons and photons \textit{see} WI. Most of our knowledge about WI was obtained from decays of particles and neutrino beams.\\
+In rare occasions, we see \textbf{violations} of those conservation laws valid for strong and EM interactions: these are known as \textbf{weak interactions} (WI), because of their small coupling. WI take place in almost all processes but they have a negligible effect, except in cases otherwise forbidden. Because of them, stable matter contains only $u,d,e^-$, the other quarks and charged leptons are unstable with respect to WI decays. All elementary particles but gluons and photons \textit{see} WI. Most of our knowledge about WI was obtained from decays of particles and neutrino beams.\\
 In the SM, those interactions are classified in two types, according to the charge of their carriers.
 \beginbox{Types of Currents in the Weak Interactions}
 \begin{itemize}
@@ -450,7 +700,50 @@ In the SM, those interactions are classified in two types, according to the char
 \endbox
 In the '60s, Glashow, Salam, Weinberg and others developed a theory that unifies WI and EM, which is today part of the SM. The SM was conceived before the discovery of NC, so the existence of NC and its carrier, predicted by the SM in the '60s and directly observed at CERN in 1983, were among the first great success of the SM.
 \subsection{Charged Currents}
-The modern theory of CC interactions is a successor of the Fermi theory of $\beta$-decay, which describes a point-like interaction proportional to the coupling $G_F$. However, this theory has some intrinsic problems: it is not renormalizable, which means that the cross section violates unitarity at high energy. The SM expands the point-like interaction, introducing a \textbf{heavy charged mediator} $W^\pm$. The SM is mathematically consistent and, more important, reproduces the experimental data with unprecedented accuracy. Unlike $\alpha$, $G_F$ is not dimensionless. The EM coupling is proportional to $e^2$, similarly the intensity of the CC $G_F$ is proportional to $g^2$. The matrix elements of the transitions are proportional to the square of of the \textit{weak charge} $g$ and to the propagator:
+The modern theory of CC interactions is a successor of the Fermi theory of $\beta$-decay, which describes a point-like interaction proportional to the coupling $G_F$. However, this theory has some intrinsic problems: it is not renormalizable, which means that the cross section violates unitarity at high energy. The SM expands the point-like interaction, introducing a \textbf{heavy charged mediator} $W^\pm$.\\
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex [dot] (v) {};
+    \vertex [left=of v] (n) {$n$};
+    \vertex [above right=of v] (p) {$p$};
+    \vertex [right=of v] (e) {$e^-$};
+    \vertex [below right=of v] (nu) {$\overline{\nu}_e$};
+    \vertex [above left=0.75em and 0.5em of v] {$G_F$};
+    \diagram* {
+    (n) -- [fermion] (v),
+    (v) -- [fermion] (p),
+    (v) -- [fermion] (e),
+    (v) -- [fermion] (nu),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{center}    
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (v);
+    \vertex [left=of v] (d) {$d$};
+    \vertex [right=of v] (u) {$u$};
+    \vertex [below right=of v] (v1);
+    \vertex [right=of v1] (e) {$e^-$};
+    \vertex [below right=of v1] (nu) {$\overline{\nu}_e$};
+
+    \diagram* {
+    (d) -- [fermion] (v),
+    (v) -- [photon, edge label'=$W^-$] (v1),
+    (v) -- [fermion] (u)
+    (v1) -- [fermion] (e),
+    (v1) -- [fermion] (nu),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{center}    
+\end{minipage}
+The SM is mathematically consistent and, more important, reproduces the experimental data with unprecedented accuracy. Unlike $\alpha$, $G_F$ is not dimensionless. The EM coupling is proportional to $e^2$, similarly the intensity of the CC $G_F$ is proportional to $g^2$. The matrix elements of the transitions are proportional to the square of of the \textit{weak charge} $g$ and to the propagator:
 \[
 \pazocal{M}\propto g\frac{1}{Q^2+m_W^2}g\approx\frac{g^2}{m_W^2}\approx G_F\Rightarrow\frac{G_F}{\sqrt{2}}=\frac{g^2}{8m_W^2}
 \]
@@ -562,7 +855,101 @@ In 1963, Cabibbo came up with a theory to explain this effect, introducing the s
 \end{pmatrix}
 \]
 \endbox
-Therefore, with respect to the strength of the leptonic process, the $ud$ coupling is reduced by a factor $\cos\theta_c$ and the $us$ coupling by a factor $\sin\theta_c$. Processes with $\Delta S=0$ are proportional to $\cos^2\theta_c$ and those with $\Delta S=1$ to $\sin^2\theta_c$. Even processes proportional to $\sin^4\theta_c$ may happen, but we say that they are Cabibbo doubly suppressed. All the anomalies come back under control if $\sin^2\theta_c\approx0.03$ and $\cos^2\theta_c\approx0.97$.\\
+Therefore, with respect to the strength of the leptonic process, the $ud$ coupling is reduced by a factor $\cos\theta_c$ and the $us$ coupling by a factor $\sin\theta_c$.\\
+\begin{minipage}{0.3\textwidth}
+ \begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a);
+    \vertex [above left=of a] (b) {$l^-$};
+    \vertex [below left=of a] (c) {$\overline{\nu}_l$};
+    \vertex [right=of a] (d) {$\propto 1$};
+    % \vertex [below left=1cm and 0.4cm of c] (d);
+    % \vertex [above left=1cm and 0.4cm of b] (a);
+    % \vertex [left=of a] (i1) {$n$};
+    % \vertex [left=of d] (i2) {$n$};
+    % \vertex[above right of=a] (f1) {$p$};
+    % \vertex[right of=b] (f2) {$e^-$};
+    % \vertex[right of=c] (f3) {$e^-$};
+    % \vertex[below right of=d] (f4) {$p$};
+
+    \diagram* {
+    (b) -- [fermion] (a),
+    (c) -- [anti fermion] (a),
+    (a) -- [photon, edge label'=$W^\pm$] (d),
+      % (a) -- [photon, edge label=$W$] (b) -- [majorana, insertion=0.5, edge label=$\nu_M$] (c) -- [photon, edge label=$W$] (d) ,
+      % (i1) -- [fermion] (a),
+      % (i2) -- [fermion] (d),
+      % (a) -- [fermion] (f1),
+      % (b) -- [fermion] (f2),
+      % (c) -- [fermion] (f3),
+      % (d) -- [fermion] (f4),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+ \begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a);
+    \vertex [above left=of a] (b) {$u$};
+    \vertex [below left=of a] (c) {$d$};
+    \vertex [right=of a] (d) {$\propto \cos\theta_c$};
+    % \vertex [below left=1cm and 0.4cm of c] (d);
+    % \vertex [above left=1cm and 0.4cm of b] (a);
+    % \vertex [left=of a] (i1) {$n$};
+    % \vertex [left=of d] (i2) {$n$};
+    % \vertex[above right of=a] (f1) {$p$};
+    % \vertex[right of=b] (f2) {$e^-$};
+    % \vertex[right of=c] (f3) {$e^-$};
+    % \vertex[below right of=d] (f4) {$p$};
+
+    \diagram* {
+    (b) -- [fermion] (a),
+    (c) -- [anti fermion] (a),
+    (a) -- [photon, edge label'=$W^\pm$] (d),
+      % (a) -- [photon, edge label=$W$] (b) -- [majorana, insertion=0.5, edge label=$\nu_M$] (c) -- [photon, edge label=$W$] (d) ,
+      % (i1) -- [fermion] (a),
+      % (i2) -- [fermion] (d),
+      % (a) -- [fermion] (f1),
+      % (b) -- [fermion] (f2),
+      % (c) -- [fermion] (f3),
+      % (d) -- [fermion] (f4),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+ \begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a);
+    \vertex [above left=of a] (b) {$u$};
+    \vertex [below left=of a] (c) {$s$};
+    \vertex [right=of a] (d) {$\propto \sin\theta_c$};
+    % \vertex [below left=1cm and 0.4cm of c] (d);
+    % \vertex [above left=1cm and 0.4cm of b] (a);
+    % \vertex [left=of a] (i1) {$n$};
+    % \vertex [left=of d] (i2) {$n$};
+    % \vertex[above right of=a] (f1) {$p$};
+    % \vertex[right of=b] (f2) {$e^-$};
+    % \vertex[right of=c] (f3) {$e^-$};
+    % \vertex[below right of=d] (f4) {$p$};
+
+    \diagram* {
+    (b) -- [fermion] (a),
+    (c) -- [anti fermion] (a),
+    (a) -- [photon, edge label'=$W^\pm$] (d),
+      % (a) -- [photon, edge label=$W$] (b) -- [majorana, insertion=0.5, edge label=$\nu_M$] (c) -- [photon, edge label=$W$] (d) ,
+      % (i1) -- [fermion] (a),
+      % (i2) -- [fermion] (d),
+      % (a) -- [fermion] (f1),
+      % (b) -- [fermion] (f2),
+      % (c) -- [fermion] (f3),
+      % (d) -- [fermion] (f4),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{minipage}\\
+Processes with $\Delta S=0$ are proportional to $\cos^2\theta_c$ and those with $\Delta S=1$ to $\sin^2\theta_c$. Even processes proportional to $\sin^4\theta_c$ may happen, but we say that they are Cabibbo doubly suppressed. All the anomalies come back under control if $\sin^2\theta_c\approx0.03$ and $\cos^2\theta_c\approx0.97$.\\
 In this context, the GIM mechanism was proposed to explain the absence of flavour changing neutral currents (FCNC). At the time, they knew that:
 \[
 \begin{aligned}
@@ -571,13 +958,29 @@ In this context, the GIM mechanism was proposed to explain the absence of flavou
 \end{aligned}
 \]
 which means a factor $\sim10^{-8}$ between NC and CC decays. If the $Z$, the carrier of NC, sees the same quark mixture as the $W^\pm$ in the CC, then the CC decay would be suppressed only by a factor 5\%. The idea was to introduce a \textbf{fourth quark}, the charm $c$ with charge +2/3 to solve this problem.\\
-In the GIM mechanism, NC contains four hadronic terms coupled with the $Z$. Assuming the validity of Cabibbo theory and summing all terms we get:
+In the GIM mechanism, NC contains four hadronic terms coupled with the $Z$.\\
+\begin{center}
+    \begin{tikzpicture}
+    \begin{feynman}
+    \vertex (a);
+    \vertex [left=of a] (b);
+    \vertex [above right=of a] (c) {$q=u,d',c,s'$};
+    \vertex [below right=of a] (d) {$\overline{q}=\overline{u},\overline{d}',\overline{c},\overline{s}'$};
+    \diagram*{
+    (a) -- [photon, edge label'=$Z$] (b),
+    (a) -- [anti fermion] (c),
+    (a) -- [fermion] (d),
+    };
+    \end{feynman}
+    \end{tikzpicture}
+\end{center}\\
+Assuming the validity of Cabibbo theory and summing all terms we get:
 \begin{align*}
 u\overline{u}+d'\overline{d}'+c\overline{c}+s'\overline{s}'=&u\overline{u}+(d\cos\theta_c+s\sin\theta_c)(\overline{d}\cos\theta_c+\overline{s}\sin\theta_c)\\
 &+c\overline{c}+(s\cos\theta_c-d\sin\theta_c)(\overline{s}\cos\theta_c-\overline{d}\sin\theta_c)\\
 =&u\overline{u}+d\overline{d}+c\overline{c}+s\overline{s}
 \end{align*}
-The non-diagonal terms, which induce FCNC, disappears. Why is $\text{BR}(K^0\to\mu^+\mu^-)$ small but not zero? Technically, it is a \nth{2} order CC, proportional to $g^4\sin\theta_c\cos\theta_c$. The final state is the same as a \nth{1} order FCNC but it is incompatible with data. This is cured by introducing the $c$ quark, whose contribution cancels the ones coming from FCNC in the limit $m_c\to m_u$. The data on this process put limits on $m_c$ between 1 and 3 GeV.\\
+The non-diagonal terms, which induce FCNC, disappear. Why is $\text{BR}(K^0\to\mu^+\mu^-)$ small but not zero? Technically, it is a \nth{2} order CC, proportional to $g^4\sin\theta_c\cos\theta_c$. The final state is the same as a \nth{1} order FCNC but it is incompatible with data. This is cured by introducing the $c$ quark, whose contribution cancels the ones coming from FCNC in the limit $m_c\to m_u$. The data on this process put limits on $m_c$ between 1 and 3 GeV.\\
 In 1973, Kobayashi and Maskawa extended the Cabibbo scheme to the new generation of quarks. The new mixing matrix is a \textbf{three-dimension unitary matrix} with three real parameters and one imaginary phase:
 \beginbox{CKM Matrix}
 \[
@@ -653,7 +1056,7 @@ These are CP eigenstates, CP$\ket{K_1^0}=+\ket{K_1^0}$ and CP$\ket{K_2^0}=-\ket{
         \item P$\ket{\pi^0\pi^0\pi^0}=-\ket{\pi^0\pi^0\pi^0}$
         \item C$\ket{\pi^0\pi^0\pi^0}=+\ket{\pi^0\pi^0\pi^0}$
     \end{itemize}
-    Hence, $\ket{\pi^0\pi^0\pi^0}$ has CP=-1
+    Hence, $\ket{\pi^0\pi^0\pi^0}$ has CP=$-$1
     \item For the $\ket{\pi^+\pi^-\pi^0}$ state now:
     \begin{itemize}
         \item P$\ket{\pi^+\pi^-\pi^0}=-\ket{\pi^+\pi^-\pi^0}$
@@ -666,7 +1069,7 @@ These are CP eigenstates, CP$\ket{K_1^0}=+\ket{K_1^0}$ and CP$\ket{K_2^0}=-\ket{
 \endbox
 Therefore, we identify $K_1^0$ with $K_S^0$ and $K_2^0$ with $K_L^0$.
 \subsection{$K^0$ Oscillations}
-While the $K^0$ and $\overline{K}^0$ masses are equal because of CPT, there is no symmetry regarding the masses of $K_S^0$ and $K_L^0$. The measurement gives
+While the $K^0$ and $\overline{K}^0$ masses are equal because of CPT, there is no symmetry regarding the masses of $K_S^0$ and $K_L^0$. The measurement gives:
 \[
 \Delta m_K=m(K_L^0)-m(K_S^0)=3.510\pm0.018\;\text{$\mu$eV}
 \]
@@ -712,7 +1115,7 @@ If CP were conserved, the rate with positive and negative charge would be the sa
 \]
 This is measured to be $\delta_L=(3.32\pm0.06)\cdot10^{-3}$.
 \subsection{CKM Matrix}
-It is possible to reinterpret the CP violation using the CKM matrix previously introduced. In a scheme with 3 families, the matrix requires 3 real rotation angles $\alpha_{ij}$ and 1 imaginary phase $\delta$.
+It is possible to reinterpret the CP violation using the CKM matrix previously introduced. In a scheme with 3 families, the matrix requires 3 real rotation angles $\theta_{ij}$ and 1 imaginary phase $\delta$.
 \begin{align*}
 V_{\text{CKM}}&=\begin{pmatrix}
     V_{ud} & V_{us} & V_{ub}\\
@@ -739,7 +1142,7 @@ V_{\text{CKM}}&=\begin{pmatrix}
     s_{12}s_{23}-c_{12}c_{23}s_{13}e^{+i\delta} & -_{!2}s_{23}-s_{12}c_{23}s_{13}e^{+i\delta} & c_{23}c_{13}
 \end{pmatrix}
 \end{align*}
-where $c_{ij}:=\cos\alpha_{ij}$ and $s_{ij}:=\sin\alpha_{ij}$. The violation associated with the CKM matrix are usually studied with the \textbf{Wolfenstein parametrization}, which highlights the small terms and their physical meaning.
+where $c_{ij}:=\cos\theta_{ij}$ and $s_{ij}:=\sin\theta_{ij}$. The violation associated with the CKM matrix are usually studied with the \textbf{Wolfenstein parametrization}, which highlights the small terms and their physical meaning.
 \[
 V_{\text{CKM}}^{\text{W}}=\begin{pmatrix}
     1-\frac{\lambda^2}{2} & \lambda & A\lambda^3(\rho-i\eta)\\
@@ -777,18 +1180,18 @@ The free parameters are the masses and the mixing angle $\theta_\nu$. The formal
 \]
 The oscillation probability is given by:
 \[
-\pazocal{P}(\nu_e\to\nu_\mu)=1-|\braket{\nu_e(t)|\nu_e(0)}|^2
+\pazocal{P}(\nu_e\to\nu_\mu)=1-|\Braket{\nu_e(t)|\nu_e(0)}|^2
 \]
 where the matrix element is computed as:
 \begin{align*}
-|\braket{\nu_e(t)|\nu_e(0)}|^2=&|(\cos\theta_\nu e^{-iE_1t}\bra{\nu_1}+\sin\theta_\nu e^{-iE_2t}\bra{\nu_2})(\cos\theta_\nu\ket{\nu_1}+\sin\theta_\nu\ket{\nu_2})|^2\\
+|\Braket{\nu_e(t)|\nu_e(0)}|^2=&|(\cos\theta_\nu e^{-iE_1t}\bra{\nu_1}+\sin\theta_\nu e^{-iE_2t}\bra{\nu_2})(\cos\theta_\nu\ket{\nu_1}+\sin\theta_\nu\ket{\nu_2})|^2\\
 =&|\cos^2\theta_\nu e^{-iE_1t}+\sin^2\theta_\nu e^{-iE_2t}|^2\\
 =&|\cos^2\theta_\nu\cos(E_1t)-i\cos^2\theta_\nu\sin(E_1t)+\sin^2\theta_\nu\cos(E_2t)-i\sin^2\theta_\nu\sin(E_2t)|^2\\
 =&\cos^4\theta_\nu\cos^2(E_1t)+\sin^4\theta_\nu\cos^2(E_2t)+2\sin^2\theta_\nu\cos^2\theta_\nu\cos(E_1t)\cos(E_2t)\\
 &+\cos^4\theta_\nu\sin^2(E_1t)+\sin^4\theta_\nu\sin^2(E_2t)+2\sin^2\theta_\nu\cos^2\theta_\nu\sin(E_1t)\sin(E_2t)\\
 =&\cos^4\theta_\nu+\sin^4\theta_\nu+2\sin^2\theta_\nu\cos^2\theta_\nu\cos[(E_2-E_1)t]\\
-=&1-2\sin^2\theta_\nu\cos^2\theta_\nu\{1-\cos[(E_2-E_1)t]\}=1-4\sin^2\theta_\nu\cos^2\theta_\nu\sin^2[(E_2-E_1)t]\\
-\approx&1-\sin^2(2\theta_\nu)\sin^2\left(\frac{\Delta m^2L}{E}\right)\Rightarrow\pazocal{P}(\nu_e\to\nu_\mu)=\sin^2(2\theta_\nu)\sin^2\left(\frac{\Delta m^2L}{E}\right)
+=&1-2\sin^2\theta_\nu\cos^2\theta_\nu\{1-\cos[(E_2-E_1)t]\}=1-4\sin^2\theta_\nu\cos^2\theta_\nu\sin^2\left[\frac{(E_2-E_1)}{2}t\right]\\
+\approx&1-\sin^2(2\theta_\nu)\sin^2\left(\frac{\Delta m^2L}{4E}\right)\Rightarrow\pazocal{P}(\nu_e\to\nu_\mu)=\sin^2(2\theta_\nu)\sin^2\left(\frac{\Delta m^2L}{4E}\right)
 \end{align*}
 Current oscillation experiments measure:
 \[
@@ -796,6 +1199,13 @@ Current oscillation experiments measure:
 \]
 with an ambiguity about the hierarchy still not resolved.\\
 In the SM, there are three families, the neutrinos mixing matrix is a $3\times3$ with the same mathematical properties as the CKM one, it is called the \textbf{Pontecorvo-Maki-Nakagawa-Sakata matrix} (PMNS). 
+\[
+\begin{pmatrix}
+    \nu_e\\ \nu_\mu\\ \nu_\tau
+\end{pmatrix}=V_{\text{PMNS}}\begin{pmatrix}
+    \nu_1\\ \nu_2\\ \nu_3
+\end{pmatrix}
+\]
 \newpage
 \section{The Standard Model}
 \subsection{The Electroweak Theory}
@@ -812,23 +1222,23 @@ The values of $I_W$ and $Y_W$ of the particles depends on the fact that the $W^\
     \hline
     \cellcolor{gray!50} & \cellcolor{yellow!50}Spin & \cellcolor{yellow!50}$I_W$ & \cellcolor{yellow!50}$I_{W3}$ & \cellcolor{yellow!50}$Y_W$ & \cellcolor{yellow!50}$Q$\\
     \hline\hline
-    \cellcolor{orange!50}$\nu_{lL}$ & 1/2 & 1/2 & +1/2 & -1 & 0 \\
+    \cellcolor{orange!50}$\nu_{lL}$ & 1/2 & 1/2 & +1/2 & $-$1 & 0 \\
     \hline
-    \cellcolor{orange!50}$l^-_L$ & 1/2 & 1/2 & -1/2 & -1 & -1 \\
+    \cellcolor{orange!50}$l^-_L$ & 1/2 & 1/2 & $-$1/2 & $-$1 & $-$1 \\
     \hline
-    \cellcolor{orange!50}$l^-_R$ & 1/2 & 0 & 0 & -2 & -1 \\
+    \cellcolor{orange!50}$l^-_R$ & 1/2 & 0 & 0 & $-$2 & $-$1 \\
     \hline
     \cellcolor{orange!50}$u_{L}$ & 1/2 & 1/2 & +1/2 & +1/3 & +2/3 \\
     \hline
-    \cellcolor{orange!50}$d'_{L}$ & 1/2 & 1/2 & -1/2 & +1/3 & -1/3 \\
+    \cellcolor{orange!50}$d'_{L}$ & 1/2 & 1/2 & $-$1/2 & +1/3 & $-$1/3 \\
     \hline
     \cellcolor{orange!50}$u_{R}$ & 1/2 & 0 & 0 & +4/3 & +2/3 \\
     \hline
-    \cellcolor{orange!50}$d_{R}$ & 1/2 & 0 & 0 & -2/3 & -1/3 \\
+    \cellcolor{orange!50}$d_{R}$ & 1/2 & 0 & 0 & $-$2/3 & $-$1/3 \\
     \hline\hline
     \cellcolor{blue!50}$W^+$ & 1 & 1 & +1 & 0 & +1 \\
     \hline
-    \cellcolor{blue!50}$W^-$ & 1 & 1 & -1 & 0 & -1 \\
+    \cellcolor{blue!50}$W^-$ & 1 & 1 & $-$1 & 0 & $-$1 \\
     \hline
     \cellcolor{blue!50}$Z$ & 1 & 1,0 & 0 & 0 & 0 \\
     \hline
