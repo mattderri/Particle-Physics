@@ -39,6 +39,7 @@
 \usepackage{circuitikz}
 \usetikzlibrary{arrows,shapes,positioning}
 \usetikzlibrary {arrows.meta} 
+\usetikzlibrary{angles,quotes}
 \usepackage{subfig}
 \newcommand{\beginbox}[1]{\begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={#1},colbacktitle={gray!50},coltitle=black]}
 \renewcommand{\endbox}{\end{tcolorbox}\noindent}
@@ -292,15 +293,15 @@ By applying $T_3$ and $T_8$ to them, one obtains the correct quantum numbers.\\
 Consider now the $\Delta^{++}$ resonance. The wave function associated is the product of spatial wave function, spin wave function and flavour wave function. $\Delta^{++}$ is the lightest $uuu$ state and by symmetry consideration we obtain that its wave function is symmetric. However, it is a fermion, so its wave function must be anti-symmetric. The solution to this problem was proposed by Greenberg, Han and Nambu by introducing a new quantum number for strongly interacting particles, the \textbf{colour}. The idea is that quarks exist in three colours, say red, green and blue. They sum like in a TV screen, so when they are all present the screen is white. The \textit{anti-color} is brought by anti-quarks and it is such that color+anti-color=white. Mesons and baryons are white and have no colour: they are a \textbf{colour singlet}. Therefore, when including colour in the wave function of $\Delta^{++}$ we recover its anti-symmetric nature.
 \newpage
 \section{Hadron Structure}
-\subsection{Fermi Gas Model}
-Nuclei are bound states of protons $p$ and neutrons $n$. In the Fermi gas model, they are assumed to be identical except for their charge: they are little spheres of radius $r=r_0$ and mass $m$, with spin 1/2 and bound inside the nucleus. We define with $N$ the number of neutrons, $Z$ the number of protons and $A$ as $A=N+Z$. The volume of the nucleus, is given by:
-\[
-V=\frac{4}{3}\pi r_0^3A
-\]
-Assuming there are no EM interaction but only nuclear ones, we have $N=Z=\frac{A}{2}$. Due to uncertainty principle, each proton/neutron fills a volume equal to $(2\pi\hbar)^3$. Protons and neutrons are confined in a well-shaped potential, being them fermions there are two protons/neutrons per energy level, with opposite spin $\Uparrow\Downarrow$. From these approximations, one can compute:
-\[
-n_{n,\Uparrow}=n_{n,\Downarrow}=n_{p,\Uparrow}=n_{p,\Downarrow}=\frac{N}{2}=\frac{Z}{2}=\frac{A}{4}=\frac{\frac{4}{3}\pi r_0^3A\frac{4}{3}\pi p_F^3}{(2\pi\hbar)^3}=\frac{2Ar_0^3p_F^3}{9\pi\hbar^3}\Rightarrow N=Z=\frac{A}{2}=\frac{4Ar_0^3p_F^3}{9\pi\hbar^3}
-\]
+% \subsection{Fermi Gas Model}
+% Nuclei are bound states of protons $p$ and neutrons $n$. In the Fermi gas model, they are assumed to be identical except for their charge: they are little spheres of radius $r=r_0$ and mass $m$, with spin 1/2 and bound inside the nucleus. We define with $N$ the number of neutrons, $Z$ the number of protons and $A$ as $A=N+Z$. The volume of the nucleus, is given by:
+% \[
+% V=\frac{4}{3}\pi r_0^3A
+% \]
+% Assuming there are no EM interaction but only nuclear ones, we have $N=Z=\frac{A}{2}$. Due to uncertainty principle, each proton/neutron fills a volume equal to $(2\pi\hbar)^3$. Protons and neutrons are confined in a well-shaped potential, being them fermions there are two protons/neutrons per energy level, with opposite spin $\Uparrow\Downarrow$. From these approximations, one can compute:
+% \[
+% n_{n,\Uparrow}=n_{n,\Downarrow}=n_{p,\Uparrow}=n_{p,\Downarrow}=\frac{N}{2}=\frac{Z}{2}=\frac{A}{4}=\frac{\frac{4}{3}\pi r_0^3A\frac{4}{3}\pi p_F^3}{(2\pi\hbar)^3}=\frac{2Ar_0^3p_F^3}{9\pi\hbar^3}\Rightarrow N=Z=\frac{A}{2}=\frac{4Ar_0^3p_F^3}{9\pi\hbar^3}
+% \]
 \subsection{Scattering Experiments}
 Rutherford used $\alpha$ particles $(Z=2,A=4)$ as probes and gold as fixed target $(Z=79, A=197)$. The kinetic energy of the $\alpha$ particles was a few MeV and sometimes he observed a particle scattered by an angle $\theta>90^\circ$: this is impossible if matter is soft and homogeneous. The only explanation was that matter concentrates in small heavy bodies, the \textbf{nuclei}. How could he model this scattering? He tried with a two-body scattering, with only Coulomb interaction, non-relativistic and no QM.\\
 Energy and angular momentum are conserved, because of symmetry the only important thing is $\Delta p_y$:
@@ -348,7 +349,7 @@ We now look at the kinematics of this type of processes. The 4-momentum conserva
 \]
 It follows that:
 \[
-E_{\text{N}}^2-p_{\text{N}}^2=\cancel{M^2}=E^2+\cancel{M^2}+E'^2+2EM-2EE'-2ME'-p^2-p'^2-2pp'\cos\theta
+E_{\text{N}}^2-p_{\text{N}}^2=\cancel{M^2}=E^2+\cancel{M^2}+E'^2+2EM-2EE'-2ME'-p^2-p'^2+2pp'\cos\theta
 \]
 In the ultra-relativistic approximation, it is assumed that $p\approx E$ and $p'\approx E'$. Neglecting the mass of the probe (usually an electron), the expression above now becomes:
 \[
@@ -386,11 +387,15 @@ The momentum transfer represents the scale of the scattering, structures smaller
 In the \textbf{inelastic} case, e.g a process of the type $lN\to l'H$, kinematics is the same if the energies of the leptons $l$ and $l'$ is much larger than their masses. Despite this, we usually work with the following Lorentz-invariant variables:
 \begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Lorentz-Invariant Variables},colbacktitle={gray!50},coltitle=black]
 \[
-\nu:=\frac{q\cdot P}{M}=E-E' \quad x:=\frac{Q^2}{2M\nu} \quad y:=\frac{q\cdot P}{p\cdot P}=\frac{\nu}{E} \quad W^2:=M^2-Q^2+2M\nu
+\begin{aligned}
+&\nu:=\frac{q\cdot P}{M}=E-E' &&\text{energy lost by the probe}\\
+&x:=\frac{Q^2}{2M\nu} &&\text{fraction of the 4-momentum carried by the interacting parton}\\
+&y:=\frac{q\cdot P}{p\cdot P}=\frac{\nu}{E} &&\text{fraction of the energy lost by the lepton}\\
+&W^2:=M^2-Q^2+2M\nu &&\text{(mass)$^2$ of the hadron system in the final state}
+\end{aligned}
 \]
 \end{tcolorbox}
 \noindent
-$\nu$ is the energy lost by the probe, usually an electron, $x$ is the fraction of the hadron 4-momentum carried by the interacting parton, $y$ is the fraction of the energy lost by the lepton in the target frame and $W^2$ is the mass squared of the hadron system in the final state ($W=M$ if the scattering is elastic).\\
 In the elastic case, $\nu$ and $Q^2$ are not independent:
 \[
 Q^2=2M(E-E')=2M\nu\Rightarrow x=1
@@ -419,10 +424,14 @@ It is possible to redefine the kinematics of scattering processes in the plane $
 Again, the regions shaded in gray denotes the kinematically forbidden areas. The bisector $x=1$, i.e. $W^2=M^2$, defines the elastic scattering. For $x<1$ and at higher distance from the bisector we have the \textbf{deep inelastic scattering} (DIS) and, possibly, new physics.
 \subsection{Electron-Nucleus Scattering}
 In the '20s, QM entered the game. Rutherford formula still works in QM, using non-relativistic QM and Born approximation. However, the $\alpha$-nucleus scattering takes place between two nuclei so it is not suitable for measuring the nucleus structure. It was needed to replace the $\alpha$ with something point-like, an electron $e^-$. The dynamics of electron-nucleus scattering can be described by the Rutherford formula with an adjustment due to Mott:
-\[
-\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott*}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}\left(1-\beta^2\sin^2(\theta/2)\right)\approx\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}\cos^2(\theta/2)=\frac{4Z^2\alpha^2E'^2}{|\Vec{q}|^4}\cos^2(\theta/2)
-\]
-The Mott* cross-section neglects the nucleus dimension and its recoil (that's why the *), but it takes into account the spin of the electron with the factor $\cos^2(\theta/2)$. For relativistic particles, what is conserved is the \textbf{helicity} $h$, the projection of the spin along the momentum. 
+\beginbox{Mott Cross Section}
+\begin{align*}
+\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott*}}}&=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}\left(1-\beta^2\sin^2(\theta/2)\right)\approx\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}\cos^2(\theta/2)\\
+&=\frac{4Z^2\alpha^2E'^2}{|\Vec{q}|^4}\cos^2(\theta/2)
+\end{align*}
+\endbox
+The Mott* cross-section neglects the nucleus dimension and its recoil (that's why the *), but it takes into account the spin of the electron with the factor $\cos^2(\theta/2)$.\\
+For relativistic particles, what is conserved is the \textbf{helicity} $h$, the projection of the spin along the momentum. 
 \[
 h=\frac{\Vec{s}\cdot\Vec{p}}{|\Vec{s}|\cdot|\Vec{p}|}
 \]
@@ -460,28 +469,89 @@ Heavy nuclei are not homogeneous spheres with a sharp edge, rather spheres with 
 For large values of $A$, we get $c\approx1.07\,\text{fm}A^{1/3}$ and $a\approx0.54$\,fm.
 Light nuclei, for example $^4$He, $^{6,7}$Li, $^9$Be, are more Gaussian-like.
 \subsection{Nucleons Structure}
-Probing smaller scales requires larger energies and we have to take into account the magnetic moment of the nucleons, by introducing the parameter $\tau=Q^2/4M^2$. For point-like particles of mass $m$, charge $e$ and spin 1/2 the Dirac equation assigns them an intrinsic magnetic dipole moment $\mu_C=\frac{ge\hbar}{4m}$, where $g$ is the gyromagnetic ratio. An ideal electron has $g=2$, the first measurements roughly confirmed this value. This effect adds to the cross section a term corresponding to the spin flip probability.
+Probing smaller scales requires larger energies both in the initial and final state. For electron-nucleon scattering, take into account also the magnetic moment of the nucleons, by introducing the parameter $\tau=Q^2/4M^2$.\\
+For point-like particles of mass $m$, charge $e$ and spin 1/2 the Dirac equation assigns them an intrinsic magnetic dipole moment: 
 \[
-\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{spin 1/2}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(1+2\frac{Q^2}{4M^2}\tan^2(\theta/2)\right)
+\mu_C=\frac{ge\hbar}{4m}
+\]
+where $g$ is the \textbf{gyromagnetic ratio}. An ideal electron has $g=2$ and the first measurements roughly confirmed this value. This effect adds to the cross section a term corresponding to the spin flip probability.
+\[
+\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{spin 1/2}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(1+2\frac{Q^2}{4M^2}\tan^2(\theta/2)\right)=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(1+2\tau\tan^2(\theta/2)\right)
 \]
 The spin flip is particularly relevant for large $Q^2$ and large $\theta$.\\
-For the nucleons, we define $\mu_{\text{N}}=e\hbar/4m_{\text{N}}$. If $p$ and $n$ were ideal Dirac particles, they should have:
+\beginbox{Scattering Summary}
+\begin{itemize}
+    \item Rutherford, no electron spin, no nucleus recoil and no magnetic moment:
+    \[
+    \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}=\frac{4Z^2\alpha^2E'^2}{|\Vec{q}|^4}
+    \]
+    \item Mott*, considering the electron spin:
+    \[
+    \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott*}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rutherford}}}\left(1-\beta^2\sin^2(\theta/2)\right)
+    \]
+    \item Mott, considering the nucleus recoil:
+    \[
+    \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott*}}}\frac{E'}{E}
+    \]
+    \item Adding the magnetic moment:
+    \[
+    \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{spin 1/2}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(1+2\frac{Q^2}{4M^2}\tan^2(\theta/2)\right)
+    \]
+\end{itemize}
+\endbox
+For the nucleons, we define:
 \[
-\mu_p=2\mu_{\text{N}} \quad \mu_n=0
+\mu_{\text{N}}=\frac{e\hbar}{4m_{\text{N}}}
+\]
+If protons and neutrons were ideal Dirac particles, they should have:
+\[
+\mu_p=2\mu_{\text{N}} \quad \mu_n=0\longleftrightarrow\frac{g_p}{2}=\frac{\mu_p}{\mu_{\text{N}}}=1 \quad \frac{g_n}{2}=0
 \]
 Instead, experimental measurements disagree with these values: there are other effects which contribute to the magnetic moment, $p$ and $n$ are not ideal Dirac particles, \textit{maybe} they are not point-like.\\
-In an electron-nucleon scattering, the main contribution is from single photon exchange. The $ee\gamma^*$ vertex is well understood, while the $NN'\gamma^*$ is unknown. The strategy is to assume a simpler process, compare it with experiments and opportunely modify the theory. The cross section is generalized by defining the \textbf{Rosenbluth cross section}, introducing two form factors $G_{\text{E}}(Q^2)$ for the electric part and $G_{\text{M}}(Q^2)$ for the magnetic part.
+In an electron-nucleon scattering, the main contribution is from single photon exchange.\\
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex [dot] (v1) {};
+    \vertex [dot, below=of v1] (v2) {};
+    \vertex [left=of v1] (e1) {$e^-$};
+    \vertex [above right=of v1] (e2) {$e^-$};
+    \vertex [right=of v1] (a);
+    \vertex [left=of v2] (N1) {$N$};
+    \vertex [right=of v2] (N2) {$N$};
+    \diagram* {
+    (v1) -- [photon, edge label=$\gamma^*$] (v2),
+    (e1) -- [fermion] (v1),
+    (v1) -- [fermion] (e2),
+    (v1) -- [scalar] (a),
+    (N1) -- [fermion] (v2),
+    (v2) -- [fermion] (N2),
+    };
+    \draw pic[draw,angle radius=0.6cm,"$\theta$" shift={(4mm,2mm)}] {angle=a--v1--e2};
+  \end{feynman}
+\end{tikzpicture}
+\end{center}   
+The $ee\gamma^*$ vertex is well understood, while the $NN'\gamma^*$ is unknown. The strategy is to assume a simpler process, compare it with experiments and opportunely modify the theory inserting parameters which model the nucleon structure.\\
+The cross section is generalized by defining the \textbf{Rosenbluth cross section}, introducing two form factors $G_{\text{E}}(Q^2)$ for the electric part and $G_{\text{M}}(Q^2)$ for the magnetic part.
 \begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Rosenbluth Cross Section},colbacktitle={gray!50},coltitle=black]
 \[
 \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}\left(\frac{G_{\text{E}}^2+\tau G_{\text{M}}^2}{1+\tau}+2\tau G_{\text{M}}^2\tan^2(\theta/2)\right)
 \]
 \end{tcolorbox}
 \noindent
+For a charged Dirac fermion $f$, a proton $p$ and a neutron $n$ we have:
+\[
+\begin{aligned}
+&f: &&G_{\text{E}}(\text{any $Q^2$})=1 &&G_{\text{M}}(\text{any $Q^2$})=1\\
+&p: &&G_{\text{E}}(Q^2=0)=1 &&G_{\text{M}}(Q^2=0)\approx2.79\\
+&n: &&G_{\text{E}}(Q^2=0)=0 &&G_{\text{M}}(Q^2=0)\approx-1.91
+\end{aligned}
+\]
 In 1956, the Hofstadter spectrometer measured the elastic process $ep\to ep$. It measured $\theta$ in the range $[35^\circ,138^\circ]$ and therefore $Q^2$.
 \[
-E'=\frac{E}{1+\frac{E}{M}(1-\cos\theta)}\leftrightarrow Q^2=2EE'(1-\cos\theta)
+E'=\frac{E}{1+\frac{E}{M}(1-\cos\theta)}\longleftrightarrow Q^2=2EE'(1-\cos\theta)
 \]
-At small $\theta$, i.e. small $Q^2$, all formulas agree, $G_{\text{E}}(Q^2\simeq0)\approx1$. However, at large $\theta$, i.e. large $Q^2$, the results disagree with any theoretical prediction. Consider the Rosenbluth formula at fixed $Q^2$:
+At small $\theta$, i.e. small $Q^2$, all formulas agree, $G_{\text{E}}(Q^2\simeq0)\approx1$. However, at large $\theta$, i.e. large $Q^2$, the results disagree with any theoretical prediction.\\ Consider the Rosenbluth formula at fixed $Q^2$:
 \[
 \frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}\Bigr/\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}=\left({\color{blue}\frac{G_{\text{E}}^2+\tau G_{\text{M}}^2}{1+\tau}}+{\color{green}2\tau G_{\text{M}}^2}\tan^2(\theta/2)\right)={\color{blue}A}+{\color{green}B}\tan^2(\theta/2)
 \]
@@ -497,24 +567,36 @@ The usual parametrization of the cross section in the Deep Inelastic Scattering 
 &=\frac{4\alpha^2E'^2}{Q^4}[W_2(Q^2,\nu)\cos^2(\theta/2)+2W_1(Q^2,\nu)\sin^2(\theta/2)]
 \end{align*}
 The inelastic cross section requires two final-state variables, since $Q^2$ and $\nu$ are Lorentz-invariant they are more convenient. $W_1$ and $W_2$ are combinations of $G_{\text{E}}$ and $G_{\text{M}}$:
-\beginbox{Lorentz Invariant Variables}
+\beginbox{Structure Functions}
 \[
-W_1(Q^2,\nu)=\frac{F_1(x,y)}{M}=\frac{3}{E}\tau G^2_{\text{M}} \quad W_2(Q^2,\nu)=\frac{F_2(x,y)}{\nu}=\frac{3}{E}\left(\frac{G^2_{\text{E}}+\tau G_{\text{M}}^2}{1+\tau}\right)
+W_1(Q^2,\nu)=\frac{F_1(x,Q^2)}{M}=\frac{3}{E}\tau G^2_{\text{M}} \quad W_2(Q^2,\nu)=\frac{F_2(x,Q^2)}{\nu}=\frac{3}{E}\left(\frac{G^2_{\text{E}}+\tau G_{\text{M}}^2}{1+\tau}\right)
 \]
 \endbox
 They are known as \textbf{structure functions} and must be measured. The dynamics of the scattering depend on the structure of the target: $W_1$ and $W_2$ contain this information. Notice that there is no deep difference between $W_{1,2}$ and $F_{1,2}$, just use the more convenient ones.\\
 From results, one observes that the structure functions appear to be nearly independent of $Q^2$. On the other hand, the elastic scattering for a non-point-like target has a strong dependence on $Q^2$. This means that for DIS the target behaves like a \textbf{point-like particle}: this $Q^2$ independence is another confirmation that DIS \textit{breaks} the proton, the scattering happens with its constituents.\\
-Consider now the cross section of spin 1/2 particle of mass $m$, à la Rosenbluth with $G_{\text{E}}=G_{\text{M}}=1$:
+Consider now the cross section of spin 1/2 particle of mass $m$, à la Rosenbluth with $G_{\text{E}}=G_{\text{M}}=1$, i.e. point-like particles:
 \[
-W_2\cos^2(\theta/2)+2W_1\sin^2(\theta/2)=\frac{3}{E}[\cos^2(\theta/2)+2\tau\sin^2(\theta/2)]
+\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Rosenbluth}}}=\frac{d\sigma}{d\Omega}\Bigr|_{\substack{\text{Mott}}}(1+2\tau\tan^2(\theta/2))
 \]
-From the kinematics of elastic scattering of point-like constituents of mass $m$, one gets:
+Take now the ratio of the magnetic and electric component both in the Rosenbluth cross section and in the DIS cross section:
 \[
-Q^2=2m\nu=2M\nu x\to m=Mx \quad \frac{F_1(x)}{F_2(x)}=\frac{Q^2}{4m^2}\frac{M}{\nu}=\frac{2m\nu}{4m^2}\frac{M}{\nu}=\frac{M}{2m}=\frac{1}{2x}
+\begin{aligned}
+&\text{DIS}: &&\frac{2W_1(Q^2,\nu)\sin^2(\theta/2)}{W_2(Q^2,\nu)\cos^2(\theta/2)}=\frac{2\nu F_1(x,Q^2)\tan^2(\theta/2)}{MF_2(x,Q^2)}\\
+&\text{Rosenbluth}: &&2\tau\tan^2(\theta/2)=\frac{Q^2}{2M^2}\tan^2(\theta/2)=\frac{2\nu^2}{Q^2}\tan^2(\theta/2)
+\end{aligned}
+\]
+where in the last step for the Rosenbluth part we used the fact that for the elastic scattering case $x=1$, hence $Q^2=2M\nu$. We can finally set these two relations equal to each other:
+\[
+\frac{2\nu F_1(x,Q^2)\tan^2(\theta/2)}{MF_2(x,Q^2)}=\frac{2\nu^2}{Q^2}\tan^2(\theta/2)\to\frac{F_1(x,Q^2)}{MF_2(x,Q^2)}=\frac{\nu}{Q^2}=\frac{1}{2Mx}\Rightarrow F_2(x,Q^2)=2xF_1(x,Q^2)
 \]
 This is known as the \textbf{Callan-Gross relation}, $F_2(x)=2xF_1(x)$.
 \subsection{Parton Model}
-Assume now that nucleons are made up of \textbf{partons}, later identified with \textbf{quarks}. Partons are spin 1/2 point-like fermions with a certain mass $m_i$  which scatter elastically in the $ep$ process. The DIS cross section reduces to an incoherent sum of constituents cross sections. For such partons, we have:
+Assume now that nucleons are made up of \textbf{partons}, later identified with \textbf{quarks}. Partons are spin 1/2 point-like fermions with a certain mass $m_i$  which scatter elastically in the $ep$ process. The DIS cross section reduces to an incoherent sum of constituents cross sections.
+\[
+\frac{d^2\sigma}{d\Omega dE'}\Bigr|_{\substack{m_i}}=\frac{4\alpha^2E'^2}{Q^4}\sum_i\left[e_i^2\left(\cos^2(\theta/2)+\frac{Q^2}{2m_i^2}\sin^2(\theta/2)\right)\delta\left(\nu-\frac{Q^2}{2m_i}\right)\right]
+\]
+where the charge of each of them are $qe_i$ and the delta function means that, at the constituent level, the scattering is elastic.\\
+For such partons, we have:
 \[
 F_1(x)=MW_1(Q^2,\nu)=\frac{1}{2}\sum_je_j^2f_j(x) \quad F_2(x)=\nu W_2(Q^2,\nu)=x\sum_je_j^2f_j(x)
 \]
@@ -529,8 +611,8 @@ What is the dynamical meaning of $F_{1,2}$? In principle, proton and neutron hav
 For short intervals, QM allows quark-anti-quark pairs to exist in the nucleons. Moreover, in the hadrons we have some neutral particles, called \textbf{gluons}. Therefore, in the nucleons there are three types of particles.
 \beginbox{Particles in the Nucleons}
 \begin{itemize}
-    \item \textbf{Valence quarks} with distribution $q_V(x)$
-    \item \textbf{Sea quarks}, i.e. the quark-anti-quark pairs, described by distributions $q_S(x)$
+    \item \textbf{Valence quarks} with distribution $q_V(x)$, e.g. $u_V^p(x)$
+    \item \textbf{Sea quarks}, i.e. the quark-anti-quark pairs, described by distributions $q_S(x)$, e.g. $u_S^p(x)$
     \item \textbf{Gluons} described by distributions $g^p(x)$ and $g^n(x)$
 \end{itemize}
 \endbox
@@ -550,7 +632,7 @@ Then, it follows that:
 \frac{F_2^{\text{en}}}{F_2^{\text{ep}}}=R_{\text{np}}=\left\{\begin{aligned}&1 &&(a)\\
 &\frac{4d_V(x)+u_V(x)}{4u_V(x)+d_V(x)} &&(b)\end{aligned}\right.
 \]
-(a) corresponds to the case in which sea dominates, while (b) corresponds to when valence dominates. Measurements show that (a) happens at low $x$ while (b) dominates at high $x$. In other words, there are plenty of $q\overline{q}$ pairs at low momentum, while valence is important at high $x$. Moreover, one obtains:
+(a) corresponds to the case in which sea dominates, while (b) corresponds to the case in which valence dominates. Measurements show that (a) happens at low $x$ while (b) dominates at high $x$. In other words, there are plenty of $q\overline{q}$ pairs at low momentum, while valence is important at high $x$. Moreover, one obtains:
 \[
 F_2^{\text{ep}}-F_2^{\text{en}}=\frac{1}{3}x[u_V(x)-d_V(x)]
 \]
@@ -565,8 +647,8 @@ where $f_{u,d}$ are the fractions of proton and neutron momentum carried by the 
 &\int_0^1dxF_2^{\text{ep}}=\frac{4}{9}f_u+\frac{1}{9}f_d\approx0.18\\
 &\int_0^1dxF_2^{\text{en}}=\frac{1}{9}f_u+\frac{4}{9}f_d\approx0.12
 \end{align*}
-Hence it follows $f_u\approx0.36$ and $f_d\approx0.18$. Note that $f_u+f_d\approx0.54$: only roughly a half of the nucleon momentum is carried by quarks and anti-quarks, the rest is invisible in the DIS by a charged lepton. This was one of the first evidences for the existence of gluons, they are neutral and do not see the EM interactions.\\
-Modern experiments have probed the nucleus to very high values of $Q^2$, up to $Q^2\approx10^5$\,Gev$^2$. When plotting $F_2$ as a function of $Q^2$ at fixed $x$, some $Q^2$ dependence appears, incompatible with Bjorken scaling. However, this effect is not attributed to sub-structures or other new physics, but to a dynamical change in $F_2$ well understood in QCD.
+Hence it follows $f_u\approx0.36$ and $f_d\approx0.18$. Note that $f_u+f_d\approx0.54$: only roughly a half of the nucleon momentum is carried by quarks and anti-quarks, the rest is \textit{invisible} in the DIS by a charged lepton. This was one of the first evidences for the existence of gluons, they are neutral and do not \textit{see} the EM interactions.
+% Modern experiments have probed the nucleus to very high values of $Q^2$, up to $Q^2\approx10^5$\,Gev$^2$. When plotting $F_2$ as a function of $Q^2$ at fixed $x$, some $Q^2$ dependence appears, incompatible with Bjorken scaling. However, this effect is not attributed to sub-structures or other new physics, but to a dynamical change in $F_2$ well understood in QCD.
 \newpage
 \section{Heavy Flavours}
 \subsection{$e^+e^-$ Collisions}
