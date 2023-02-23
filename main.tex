@@ -38,6 +38,7 @@
 \usetikzlibrary{positioning}
 \usepackage{circuitikz}
 \usetikzlibrary{arrows,shapes,positioning}
+\usetikzlibrary {arrows.meta} 
 \usepackage{subfig}
 \newcommand{\beginbox}[1]{\begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={#1},colbacktitle={gray!50},coltitle=black]}
 \renewcommand{\endbox}{\end{tcolorbox}\noindent}
@@ -359,14 +360,30 @@ E'=\frac{EM}{M+E(1-\cos\theta)}=\frac{EM}{M+2E\sin^2(\theta/2)}
 \]
 A useful quantity is the \textbf{momentum transfer} $\Vec{q}:=\Vec{p}-\Vec{p}'$. The relativistic equivalent is obtained considering the four-momenta:
 \[
-q^2=2m^2-2EE'+2pp'\cos\theta\approx-4EE'\sin^2(\theta/2)=-Q^2
+q^2=2m^2-2EE'+2pp'\cos\theta\approx-4EE'\sin^2(\theta/2):=-Q^2
 \]
 The relation for $E'$ becomes now:
 \[
 E'=\frac{EM}{M+\frac{Q^2}{2E'}}=\frac{2EME'}{2ME'+Q^2}\Rightarrow 2EM=2ME'+Q^2\to Q^2=2M(E-E')
 \]
-The momentum transfer represents the scale of the scattering, structures smaller than $\sim1/|\Vec{q}|$ are not visible to the probe.\\
-In the inelastic case, kinematics is the same but we usually work with the following Lorentz-invariant variables:
+Kinematical limits tell us that for $\theta=0^\circ$ we have $E'=E$ and $Q^2=0$ while for $\theta=180^\circ$ $E'\approx0$ and $Q^2$ is maximum. Since $E'$ cannot be smaller than zero, $Q^2$ cannot be larger than $2ME$. The shaded region in the figure below represents this constraint.\\
+\begin{center}
+\begin{tikzpicture}
+  %\draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+%x+1/2y=-1-->y=-2-2x
+    \draw[fill=gray!10, color=gray!10] (5.3,5.3)--(5.3,0)--(6.5,0)--(6.5,5.3);
+  \draw[->] (0,0) -- (6,0) node[below right] {$2M(E-E')$};
+  \draw[->] (0,0) -- (0,6) node[above left] {$Q^2$};
+  \draw[->, color=red] (0,0) -- (5,5);
+  \draw [color=black] (5.25,0) -- (5.25,5.25);
+  \draw [{Stealth}-, color=black] (5.25,3) -- (4.5,3) node[left] {$2ME$};
+  \draw [{Stealth}-, color=black] (0,0) -- (1,3) node[above] {$E'=E$};
+  \draw [{Stealth}-, color=red] (2.5,2.5) -- (2.5,1) node [below] {elastic scattering};
+  \draw [{Stealth}-, color=black] (5.125,5.125) -- (4,5.125) node[left] {$E'\approx0$};
+\end{tikzpicture}
+\end{center}
+The momentum transfer represents the scale of the scattering, structures smaller than $\sim1/|\Vec{q}|$ are not visible to the probe. For large values of $|\overline{q}|$ we have large $E$ but the opposite is not necessarily true: it is possible to have processes at high energy and large distance. The quest for smaller scales leads obviously to larger values of $Q^2$ and, therefore, larger energy.\\
+In the \textbf{inelastic} case, e.g a process of the type $lN\to l'H$, kinematics is the same if the energies of the leptons $l$ and $l'$ is much larger than their masses. Despite this, we usually work with the following Lorentz-invariant variables:
 \begin{tcolorbox}[width=\textwidth,colback={yellow!50},title={Lorentz-Invariant Variables},colbacktitle={gray!50},coltitle=black]
 \[
 \nu:=\frac{q\cdot P}{M}=E-E' \quad x:=\frac{Q^2}{2M\nu} \quad y:=\frac{q\cdot P}{p\cdot P}=\frac{\nu}{E} \quad W^2:=M^2-Q^2+2M\nu
@@ -374,8 +391,32 @@ In the inelastic case, kinematics is the same but we usually work with the follo
 \end{tcolorbox}
 \noindent
 $\nu$ is the energy lost by the probe, usually an electron, $x$ is the fraction of the hadron 4-momentum carried by the interacting parton, $y$ is the fraction of the energy lost by the lepton in the target frame and $W^2$ is the mass squared of the hadron system in the final state ($W=M$ if the scattering is elastic).\\
-In the elastic case, $\nu$ and $Q$ are not independent, therefore there is only one independent parameter. On the other hand, in the inelastic case they are independent and there are two independent variables.\\
-It is possible to redefine the kinematics of scattering processes in the plane $(2M\nu,Q^2)$: the bisector $x=1$, i.e. $W^2=M^2$, defines the elastic scattering. For $x<1$ and at higher distance from the bisector we have the \textbf{deep inelastic scattering} (DIS) and, possibly, new physics.
+In the elastic case, $\nu$ and $Q^2$ are not independent:
+\[
+Q^2=2M(E-E')=2M\nu\Rightarrow x=1
+\]
+Therefore there is only one independent parameter, $E'$ or $\theta$, according to the measurements.\\
+On the other hand, in the inelastic case we have:
+\[
+Q^2=M^2-W^2+2M\nu\le2M\nu\Rightarrow x\le1
+\]
+If $W$ is not fixed, $Q^2$ and $\nu$ are independent and we have two variables.\\
+It is possible to redefine the kinematics of scattering processes in the plane $(2M\nu,Q^2)$, two Lorentz invariant variables usually used in the laboratory frame where the initial state hadron is at rest.\\
+\begin{center}
+\begin{tikzpicture}
+  \draw[fill=gray!10, color=gray!10] (5.3,5.6)--(5.3,0)--(6.5,0)--(6.5,5.6);
+  \draw[fill=gray!10, color=gray!10] (0,0)--(5.6,5.6)--(0,5.6);
+  \draw[->] (0,0) -- (6,0) node[below right] {$2M\nu$};
+  \draw[->] (0,0) -- (0,6) node[above left] {$Q^2$};
+  \draw[color=red] (0,0) -- (5.25,5.25);
+  \draw[color=blue] (0,0) -- (5.25,2.625);
+  \draw [color=black] (5.25,0) -- (5.25,5.5);
+  \draw [{Stealth}-, color=red] (2.5,2.5) -- (1.5,2.5) node [left] {$x=1$};
+  \draw [{Stealth}-, color=blue] (3,1.5) -- (3,1) node [below] {$x<1$};
+  \draw [{Stealth}-, color=black] (5.25,5.3) -- (4,5.3) node[left] {$\nu\approx E$};
+\end{tikzpicture}
+\end{center}
+Again, the regions shaded in gray denotes the kinematically forbidden areas. The bisector $x=1$, i.e. $W^2=M^2$, defines the elastic scattering. For $x<1$ and at higher distance from the bisector we have the \textbf{deep inelastic scattering} (DIS) and, possibly, new physics.
 \subsection{Electron-Nucleus Scattering}
 In the '20s, QM entered the game. Rutherford formula still works in QM, using non-relativistic QM and Born approximation. However, the $\alpha$-nucleus scattering takes place between two nuclei so it is not suitable for measuring the nucleus structure. It was needed to replace the $\alpha$ with something point-like, an electron $e^-$. The dynamics of electron-nucleus scattering can be described by the Rutherford formula with an adjustment due to Mott:
 \[
@@ -1253,7 +1294,7 @@ The values of $I_W$ and $Y_W$ of the particles depends on the fact that the $W^\
 $I_W$ and $Y_W$ are conserved in all known interactions. Left components of the spinors have $I_W\neq0$, they emit and absorb $W^\pm$ while right components have $I_W=0$ and they do not emit or absorb $W^\pm$. Both components have $Y_W\neq0$, they emit and absorb $Z$.\\
 The field $W_\mu=(W_\mu^1,W_\mu^2,W_\mu^3)$ is a 4-vector in space-time and a vector in SU(2). The fields of the physical charged bosons are $W^\pm=\frac{1}{\sqrt{2}}(W_1\mp iW_2)$. For each doublet of fermions there is a 4-vector which represents the weak current $J_\mu:=(J_\mu^1,J_\mu^2,J_\mu^3)$. $W_\mu$ is coupled to $J_\mu$ through the dimensionless coupling constant $g$.\\
 The field $B_\mu$ is a 4-vector in space-time and a scalar in SU(2) and it interacts with the neutral currents of the leptons through the coupling $g'$. The current generated by the hypercharge is twice the difference between the EM current and the neutral component of the NC.\\
-Denote now with $A$ and $Z$ the physical fields that mediate, respectively, the EM and neutral currents. These are two orthogonal linear overlap of $W_3$ and $B$, which can be determined by requiring that the photon does not couple to the neutral particles. This transformation is given by a function of the two couplings $g$ and $g'$, i.e. of the rotation angle $\theta_w$.
+Denote now with $A$ and $Z$ the physical fields that mediate, respectively, the EM and neutral currents. These are two orthogonal linear overlap of $W_3$ and $B$, which can be determined by requiring that the photon does not couple to the neutral particles. This transformation is given by a function of the two couplings $g$ and $g'$, i.e. of the rotation angle $\theta_w$ known as the \textbf{Weinberg angle}.
 \beginbox{Mixing Angle $\theta_w$}
 \[
 \begin{pmatrix}
@@ -1292,14 +1333,14 @@ All the interactions mediated by the four vector bosons are expressed in terms o
 NC have important differences compared to CC. For example, there is no FCNC, i.e. fermions are only coupled with themselves. They do not have the simple V-A coupling $\gamma_\mu(1-\gamma_5)$ but are a mixture of both left and right couplings. In the SM, the 7 couplings $(g_L^{\nu_l}, g_L^l, g_R^l, g_L^u, g_R^u, g_L^d, g_R^d)$ are equal for the 3 families and are functions of only two parameters $\alpha_{\text{EM}}$ and $\theta_w$.\\
 The experiments measure observables like cross sections or decay rates and compare calculated quantities to measured ones. This calculation is based on a perturbative series, where the lowest order is the tree-level and higher orders correspond to radiative corrections. 
 \subsection{QCD}
-The \textbf{colour} quantum number was introduced to avoid Pauli principle violation for the $\Delta^{++}$. Moreover, it is necessary to explain the value of $R$ in the $e^+e^-$ interactions which shows an excess of a factor 3. Similarly, it is necessary to explain the decay rate $\pi^0\gamma\gamma$. The theory must also explain confinement (no free quarks) and asymptotic freedom (quarks almost free at high $Q^2$).\\
+The \textbf{colour} quantum number was introduced to avoid Pauli principle violation for the $\Delta^{++}$. Moreover, it is necessary to explain the value of $R$ in the $e^+e^-$ interactions which shows an excess of a factor 3. Similarly, it is necessary to explain the decay rate $\pi^0\to\gamma\gamma$. The theory must also explain confinement (no free quarks) and asymptotic freedom (quarks almost free at high $Q^2$).\\
 Modern QCD is a gauge theory based on the symmetry SU(3)$_{\text{colour}}$, mathematically equivalent to SU(3)$_{\text{flavour}}$ but based on a different dynamics. The carriers of the force are 8 coloured massless spin-1 vector bosons called \textbf{gluons}.\\
 The $\pi^0$ decay is an EM process but we discuss it here because it critically depends on the number of colours. Compute the decay amplitude by introducing an a-priori unknown normalization factor $N_c$:
 \[
-\braket{\gamma\gamma|H_{\text{EM}}|\pi^0}\propto f_\pi\frac{N_c}{\sqrt{2}}\left(\frac{4}{9}e^2-\frac{1}{9}e^2\right)
+\Braket{\gamma\gamma|H_{\text{EM}}|\pi^0}\propto f_\pi\frac{N_c}{\sqrt{2}}\left(\frac{4}{9}e^2-\frac{1}{9}e^2\right)
 \]
 where $f_\pi$ is the decay constant of $\pi^0$, related to the wave-function overlap of the quarks and anti-quarks. The full computation, compared with the experimental measure, gives a value compatible with the QCD prediction $N_c=3$.\\
-The colour is a charge, equivalent to the electric one, it is exactly conserved in strong interactions. Gluons carry two colours and are therefore self-coupled: vertices with three or four gluons are allowed in QCD, while for example in QED it happens only on higher orders with a triangle of fermions. The number of gluons comes from the Gell-Mann matrices, the generators of SU(3).The colour does not manifest directly in an observable property of the particle. The standard explanation of this fact requires that only \textit{white}, i.e. colour singlets, states can be physically existent. Quarks and gluons themselves cannot be observed as free states (\textbf{confinement}), they exist only as hadrons.\\
+The colour is a charge, equivalent to the electric one, it is exactly conserved in strong interactions. Gluons carry two colours and are therefore self-coupled: vertices with three or four gluons are allowed in QCD, while for example in QED it happens only on higher orders with a triangle of fermions. The number of gluons comes from the Gell-Mann matrices, the generators of SU(3). The colour does not manifest directly in an observable property of the particle. The standard explanation of this fact requires that only \textit{white}, i.e. colour singlets, states can be physically existent. Quarks and gluons themselves cannot be observed as free states (\textbf{confinement}), they exist only as hadrons.\\
 The study of the DIS shows that at high $Q^2$ the projectile \textit{sees} smaller objects inside the nucleon. At small distances, the force between quarks and gluons is apparently smaller and smaller, the quarks behave as free objects. Scattering onto free quarks is the origin of the Bjorken scaling. This effect is called \textbf{asymptotic freedom}. With increasing distance among the quarks (lower $Q^2$), the intensity of the strong force increases, keeping the quarks confined in the nucleon. On the other hand, at some distance the available energy becomes sufficient to create a new quark-anti-quark pair, leading to the production of new hadrons but preventing the emission of quarks as free particles. Mesons are colour singlets, a $q\overline{q}$ pair with symmetric wave-function while baryons are colour singlets $qqq$ with anti-symmetric wave-function.\\
 A semi-classical approach tells us that for small distances, the potential has a Coulomb shape with a coupling $\alpha_{\text{S}}$. At large distances, it has a linearly increasing function responsible for the confinement.
 \[
