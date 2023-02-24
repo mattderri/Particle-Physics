@@ -684,6 +684,7 @@ At low energy, the main process is an annihilation into a virtual photon $\gamma
   \end{feynman}
 \end{tikzpicture}
 \end{center}
+Low energy means that $m_f\ll\sqrt{s}=E_{CM}=2E=m_{\gamma^*}\ll m_Z$, where $m_f$ are the masses of all fermions. The process $e^-e^+\to Z$ resonates at $\sqrt{s}=m_Z$ and becomes dominant.\\
 The initial state is neutral, has lepton number equal to zero and spin 1. In the center of mass, the kinematics can be schematized as follows:
 \[
 e^+=(E,p,0,0) \quad e^-=(E,-p,0,0) \quad \gamma^*=(2E,0,0,0)
@@ -698,7 +699,7 @@ The cross section is given by:
 \]
 For $0.5\le\sqrt{s}\le50$\,GeV the measurements agree with the predicted $1/s$ behaviour plus some resonances corresponding to $q\overline{q}$. For $\sqrt{s}>50$\;GeV (e.g. LEP) the process is dominated by the $Z$ formation in the s-channel. Define now the quantity $R$:
 \[
-R=\frac{\sigma(e^+e^-\to\text{hadrons})}{\sigma(e^+e^-\to\mu^+\mu^-}=3\sum_{\text{quarks}}e_i^2=R(\sqrt{s})
+R=\frac{\sigma(e^+e^-\to\text{hadrons})}{\sigma(e^+e^-\to\mu^+\mu^-)}=3\sum_{\text{quarks}}e_i^2=R(\sqrt{s})
 \]
 The sum is extended over all the quarks produced at energy $\sqrt{s}$, i.e. $2m_q<\sqrt{s}$.
 \[
@@ -711,7 +712,7 @@ The sum is extended over all the quarks produced at energy $\sqrt{s}$, i.e. $2m_
 \]
 However, reality is more complicated. $q\overline{q}$ resonances are formed at $\sqrt{s}\approx2m_q$ and their decay modes affect the value of $R$. At $\sqrt{s}\approx m_Z$ the \textbf{weak interactions} completely change the scenario.
 \subsection{The November Revolution}
-The $u,d,s$ quarks have not been predicted. In fact, mesons and baryons have been discovered and later interpreted in terms of their quark content. In November 1974, the group of Richter (SLAC) and Ting (Brookhaven), simultaneously discovered a new state with mass $\approx3.1$\;GeV and a width much smaller than their respective resolution. The width was measured to be $0.087$\;MeV and this was called $J/\Psi$.\\
+The $u,d,s$ quarks have not been predicted. In fact, mesons and baryons have been discovered and later interpreted in terms of their quark content. In November 1974, the groups of Richter (SLAC) and Ting (Brookhaven) simultaneously discovered a new state with mass $\approx3.1$\;GeV and a width much smaller than their respective resolution. The width was measured to be $0.087$\;MeV and this was called $J/\Psi$.\\
 The group of Ting measured the inclusive production of $e^+e^-$ pairs in interactions of 30 GeV protons on a plate of beryllium.
 \[
 p+\text{Be}\to e^+e^-X
@@ -775,42 +776,103 @@ After some discussion, the correct interpretation emerged: the resonance is a bo
 m(J/\Psi)=3097\;\text{MeV} \quad \Gamma(J/\Psi)=93\;\text{keV}
 \]
 It was possible to measure many of the $J/\Psi$ quantum numbers. The resonance is asymmetric, therefore there is interference between $J/\Psi$ formation and the usual $\gamma^*$ exchange in the s-channel, hence $J^P=1^-$. The equality BR$(J/\Psi\to\rho^0\pi^0)=$BR$(J/\Psi\to\rho^\pm\pi^\pm)$ implies isospin $I=0$. The $J/\Psi$ decays into an odd number of $\pi$: the G-parity is conserved, therefore $J/\Psi$ decays via strong interaction.\\
-The weak neutral current processes between quarks of different flavour (FCNC) are strongly suppressed, e.g. $\Gamma(K_L^0\to\mu^+\mu^-)\ll\Gamma(K^\pm\to\mu^\pm\nu)$. This was explained in 1970 by Glashow, Iliopoulos and Maiani by introducing the charm quark. They predicted a fourth quark identical to the up quark, but with larger mass, $m_c\gg m_u$, carrying a new quantum number $C$, the charm. As for strangeness, $C$ is conserved in strong and EM interactions and violated in weak interactions. The lightest charmed mesons are $c\overline{q}$ or $\overline{c}q$, with $q=uds$, and have a mass of 1500-2000 MeV and $J^P=0^-$. These mesons decay weakly because of their larger mass.\\
-Now, let $Q=s,c$ and $q=u,d$. The \textbf{Zweig rule} was set empirically before the advent of QCD. It says that in the decay of a bound state of heavy quarks $Q$ the final states without $Q$ (disconnected decays) have suppressed amplitude with respect to connected decays. If the only decays allowed are the disconnected ones, then the total width is small and the bound state is narrow.\\
-A $Q\overline{Q}$ state decays preferentially into $(Q\overline{q})(\overline{Q}q)$. Then $c\overline{c}$ annihilates into gluons: one gluon is forbidden by colour, two gluons is forbidden by C-parity, 3 gluons are allowed. The latter amplitude is proportional to the strong coupling constant $\alpha_S^3$ and its value produces a smaller width for larger masses, i.e. we say that there is the phenomenon of \textbf{running coupling}.\\
+The weak neutral current processes between quarks of different flavour (FCNC) are strongly suppressed, e.g. $\Gamma(K_L^0\to\mu^+\mu^-)\ll\Gamma(K^\pm\to\mu^\pm\nu)$. This was explained in 1970 by Glashow, Iliopoulos and Maiani by introducing the charm quark.\\
+They predicted a fourth quark identical to the up quark, but with larger mass, $m_c\gg m_u$, carrying a new quantum number $C$, the charm. As for strangeness, $C$ is conserved in strong and EM interactions and violated in weak interactions. The lightest charmed mesons are $c\overline{q}$ or $\overline{c}q$, with $q=uds$, and have a mass of 1500-2000 MeV and $J^P=0^-$. These mesons decay weakly because of their larger mass.\\
+Now, let $Q=s,c$ and $q=u,d$. The \textbf{Zweig (OZI) rule} was set empirically before the advent of QCD and it explains why certain decay modes appear less frequently than otherwise might be expected.
+\beginbox{Zweig (OZI) Rule}
+In the decay of a bound state of heavy quarks $Q$, the final states without $Q$ (\textit{decays with disconnected diagrams}) have suppressed amplitude with respect to \textit{connected decays}. If the only decays allowed are the disconnected ones, the total width is small and the bound state is narrow.
+\endbox
+An example of such suppressed decays is $\phi(s\overline{s})\to\pi^+\pi^-\pi^0$. It would be expected that this decay mode would dominate over other decays such as $\phi\to K^+K^-$ which have lower Q-values. Instead, the decay into kaons is seen 84\% of the time, suggesting that the decay into pions is suppressed.\\
+A $Q\overline{Q}$ state decays preferentially into $(Q\overline{q})(\overline{Q}q)$, for example:
+\[
+J/\Psi\to D^+D^- \longleftrightarrow (c\overline{c})\to(\overline{d}c)(d\overline{c})
+\]
+($c\overline{c}$) then annihilates into gluons: one gluon is forbidden by colour, two gluons is forbidden by C-parity, 3 gluons are allowed. The latter amplitude is proportional to the strong coupling constant $\alpha_S^3$ and its value produces a smaller width for larger masses, i.e. we say that there is the phenomenon of \textbf{running coupling}.\\
+An explanation of the OZI rule can be seen from this decrease of the coupling constant with increasing energy. For the OZI suppressed channels, the gluons must have high $q^2$ (at least as much as the rest mass energies of the quarks into which they decay) and so the coupling constant will appear small to these gluons.\\
 If the $J/\Psi$ is a bound state $c\overline{c}$ then mesons $c\overline{q}$ and $\overline{c}q$ must exist. In 1976, the Mark I detector started the search for charmed pseudoscalar mesons $D^0$ and $\overline{D}^0$. According to theory, $D$-mesons have a short lifetime therefore the detection strategy was the presence of narrow peaks in the combined mass of the decay products. A first bump at 1865 MeV with a width compatible with the experimental resolution was observed in the combined mass $K^\pm\pi^\pm$, corresponding to $D^0$ and $\overline{D}^0$ decay. Also, the mass $K^\mp\pi^\pm\pi^\pm$ had a bump at 1875 MeV, corresponding to the $D^+$ and $D^-$ decays. Moreover, in agreement with the GIM predictions, no bump was found in $K^\pm\pi^+\pi^-$, which is forbidden.
 \subsection{The \nth{3} Family}
-Why do we have consecutive families of quarks/leptons differing only in mass? How do they mix? The answer is that nobody knows: the number of families and the mixing matrix are free parameters of the Standard Model. The Standard Model has some non-QCD constraints: families must be complete, the $Z$ full width constrains the number of light neutrinos and at least three families are necessary to generate a natural mechanism of CP violation in the quark decays.\\
-The analysis of Mark I data produced another beautiful discovery, the $\tau$ lepton. The selection followed a well-known method, the unbalanced pairs $e^\pm\mu^\mp$. The unbalanced pairs are only used to cross-check the sample. The yield of $e^\pm\mu^\mp$ pairs vs $\sqrt{s}$ immediately points to the threshold $\sqrt{s}=2m_\tau$. This gives $m_\tau\approx1780$\;MeV. Why is it a lepton? At the time, the evidence came from the lack of any other plausible explanation. Today instead, the evidence is solid: the $Z$ and $W$ decay into $(e,\mu,\tau)$ with the same branching ratio, the $\tau$ lifetime and decays have been measured and found in agreement with predictions.\\
+Why do we have consecutive families of quarks/leptons differing only in mass? How do they mix? The answer is that nobody knows: the number of families and the mixing matrix are free parameters of the Standard Model.\\
+The Standard Model has some non-QCD constraints:
+\begin{itemize}
+    \item Families must be complete. The existence of a single member, e.g. the $\nu$ or the $l^-$, implies the existence of all the others to avoid anomalies. It requires $\sum_ie_i=0$ where the sum runs on all members $i$ and colors $c$ of the family.
+    \item The $Z$ full width constrains the number of light neutrinos.
+    \item At least 3 families are necessary to generate a natural mechanism of CP violation.
+    \item The number of flavour $n_f$ is free but the number of colours $n_c$ must be 3.
+\end{itemize}
+The analysis of Mark I data produced another beautiful discovery, the $\tau$ lepton. The selection followed a well-known method, the unbalanced pairs $e^\pm\mu^\mp$. The unbalanced pairs are only used to cross-check the sample. The yield of $e^\pm\mu^\mp$ pairs vs $\sqrt{s}$ immediately points to the threshold $\sqrt{s}=2m_\tau$. This gives $m_\tau\approx1780$\;MeV.\\
+Why is it a lepton? At the time, the evidence came from the lack of any other plausible explanation. Today instead, the evidence is solid: the $Z$ and $W$ decay into $(e,\mu,\tau)$ with the same branching ratio, the $\tau$ lifetime and decays have been measured and found in agreement with predictions.\\
 The discovery of the $\tau$ started the hunt for the particles of the new family, still unknown: the \textbf{tau neutrino} $\nu_\tau$ and the pair of quarks up and down similar to $u$ and $d$, now called \textbf{top} $t$ and \textbf{bottom} $b$.\\
 In 1977 Lederman and collaborators built at Fermilab a spectrometer with two arms, designed to study $\mu^+\mu^-$ pairs produced by interactions of 400 GeV protons on a copper target. This type of events is rare, therefore it requires intense beams and high rejection power against charged hadrons. There is a clear visible excess between 9 and 10 GeV. When the $\mu\mu$ continuum is subtracted, the excess appears as the superimposition of three separate states. These states called $\Upsilon$(1S), $\Upsilon$(2S) and $\Upsilon$(3S) are bound states $b\overline{b}$.\\
-The top quark was directly searched in hadron ($Sp\overline{p}S$ at Fermilab) and lepton (Tristan, LEP) colliders, but it was not found until '90s. At the time, the mass limit was $m_t\ge90$\;GeV. At $m_t\approx m_W\pm m_b$ the search changes: the golden discovery channel moves from $W^+\to t\overline{b}\to W^{+*}b\overline{b}$ to $t\to W^+b$. $m_t$ was first computed from the radiative corrections for $m_W$ and $m_Z$. The LEP data allowed for predictions of $m_t\approx175$\;GeV. In the '90s the search was concluded at Tevatron. The top is produced in pairs via hadronic interactions. In $pp$ and $\overline{p}p$, the probability density function of initial state partons are different: the $q\overline{q}$ decreases from 90\% to 5\%. In the same range, the total cross section increases from 5 to 600 pb. The top quark decays weakly in $W$ and a \textit{down} type quark, i.e. $d,s,b$ with a coupling proportional to the CKM matrix element $V_{tq}$, therefore the most common decay is $t\to bW^+$. Since $\Gamma=\frac{G_F m_t^3}{8\pi\sqrt{2}}\sim2$\;GeV and $\tau_t\sim4\cdot10^{-25}$\;s, the top decays before any hadronic process may happen. In turn, the $W$ decays into all the lepton-neutrino $q\overline{q}$ pairs. Finally, a simple table with all the quarks and their quantum numbers.
-\begin{table}[h]
-    \centering
-    \begin{tabular}{l|cccccc}
-    \hline
-    \cellcolor{gray!50} & \cellcolor{yellow!50}$u$ & \cellcolor{yellow!50}$d$ & \cellcolor{yellow!50}$c$ & \cellcolor{yellow!50}$s$ & \cellcolor{yellow!50}$t$ & \cellcolor{yellow!50}$b$\\
-    \hline\hline
-    \cellcolor{yellow!50}Baryon number $\pazocal{B}$ & 1/3 & 1/3 & 1/3 & 1/3 & 1/3 & 1/3\\
-    \hline
-    \cellcolor{yellow!50}Electric Charge $Q$ & +2/3 & -1/3 & +2/3 & -1/3 & +2/3 & -1/3\\
-    \hline
-    \cellcolor{yellow!50}Isospin $I$ & 1/2 & 1/2 & 1/2 & 1/2 & 1/2 & 1/2\\
-    \hline
-    \cellcolor{yellow!50}\nth{3} Isospin $I_3$ & +1/2 & -1/2 & +1/2 & -1/2 & +1/2 & -1/2\\
-    \hline
-    \cellcolor{yellow!50}Charm $C$ & 0 & 0 & +1 & 0 & 0 & 0\\
-    \hline
-    \cellcolor{yellow!50}Strangeness $S$ & 0 & 0 & 0 & -1 & 0 & 0\\
-    \hline
-    \cellcolor{yellow!50}Topness $T$ & 0 & 0 & 0 & 0 & +1 & 0\\
-    \hline
-    \cellcolor{yellow!50}Bottomness $B$ & 0 & 0 & 0 & 0 & 0 & -1\\
-    \hline
-    \end{tabular}
-    \caption{Quantum numbers of all known quarks}
-    \label{tabquarks}
-\end{table}
+The top quark was directly searched in hadron ($Sp\overline{p}S$ at Fermilab) and lepton (Tristan, LEP) colliders, but it was not found until '90s. At the time, the mass limit was $m_t\ge90$\;GeV. At $m_t\approx m_W\pm m_b$ the search changes: the golden discovery channel moves from $W^+\to t\overline{b}\to W^{+*}b\overline{b}$ to $t\to W^+b$.\\
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (v1);
+    \vertex [right=of v1] (v2);
+    \vertex [left=of v1] (i1);
+    \vertex [below right=of v1] (f1) {$\overline{b}$};
+    \vertex [above right= of v2] (f2) {$b$};
+    \vertex [below right=of v2] (f3) {$W^{+*}$};
+
+    \diagram* {
+    (i1) -- [photon, edge label=$W^+$] (v1),
+    (v1) -- [fermion, edge label=$t$] (v2),
+    (v1) -- [anti fermion] (f1),
+    (v2) -- [fermion] (f2),
+    (v2) -- [photon] (f3),
+    };
+  \end{feynman}
+\end{tikzpicture}    
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (v1);
+    \vertex [left=of v1] (i1);
+    \vertex [above right= of v1] (f2) {$b$};
+    \vertex [below right=of v1] (f3) {$W^+$};
+
+    \diagram* {
+    (i1) -- [fermion, edge label=$t$] (v1),
+    (v1) -- [fermion] (f2),
+    (v1) -- [photon] (f3),
+    };
+  \end{feynman}
+\end{tikzpicture}    
+\end{center}
+\end{minipage}\\
+$m_t$ was first computed from the radiative corrections for $m_W$ and $m_Z$. The LEP data allowed for predictions of $m_t\approx175$\;GeV. At present, we measure $m_t=(173\pm0.4)$\,GeV.\\
+In the '90s the search was concluded at Tevatron. The top is produced in pairs via hadronic interactions. In $pp$ and $\overline{p}p$, the probability density function of initial state partons are different: the $q\overline{q}$ decreases from 90\% to 5\%. In the same range, the total cross section increases from 5 to 600 pb. The top quark decays weakly in $W$ and a \textit{down} type quark, i.e. $d,s,b$ with a coupling proportional to the CKM matrix element $V_{tq}$, therefore the most common decay is $t\to bW^+$. Since $\Gamma=\frac{G_F m_t^3}{8\pi\sqrt{2}}\sim2$\;GeV and $\tau_t\sim4\cdot10^{-25}$\;s, the top decays before any hadronic process may happen. In turn, the $W$ decays into all the lepton-neutrino $q\overline{q}$ pairs.\\
+% Finally, a simple table with all the quarks and their quantum numbers.
+% \begin{table}[h]
+%     \centering
+%     \begin{tabular}{l|cccccc}
+%     \hline
+%     \cellcolor{gray!50} & \cellcolor{yellow!50}$u$ & \cellcolor{yellow!50}$d$ & \cellcolor{yellow!50}$c$ & \cellcolor{yellow!50}$s$ & \cellcolor{yellow!50}$t$ & \cellcolor{yellow!50}$b$\\
+%     \hline\hline
+%     \cellcolor{yellow!50}Baryon number $\pazocal{B}$ & 1/3 & 1/3 & 1/3 & 1/3 & 1/3 & 1/3\\
+%     \hline
+%     \cellcolor{yellow!50}Electric Charge $Q$ & +2/3 & -1/3 & +2/3 & -1/3 & +2/3 & -1/3\\
+%     \hline
+%     \cellcolor{yellow!50}Isospin $I$ & 1/2 & 1/2 & 1/2 & 1/2 & 1/2 & 1/2\\
+%     \hline
+%     \cellcolor{yellow!50}\nth{3} Isospin $I_3$ & +1/2 & -1/2 & +1/2 & -1/2 & +1/2 & -1/2\\
+%     \hline
+%     \cellcolor{yellow!50}Charm $C$ & 0 & 0 & +1 & 0 & 0 & 0\\
+%     \hline
+%     \cellcolor{yellow!50}Strangeness $S$ & 0 & 0 & 0 & -1 & 0 & 0\\
+%     \hline
+%     \cellcolor{yellow!50}Topness $T$ & 0 & 0 & 0 & 0 & +1 & 0\\
+%     \hline
+%     \cellcolor{yellow!50}Bottomness $B$ & 0 & 0 & 0 & 0 & 0 & -1\\
+%     \hline
+%     \end{tabular}
+%     \caption{Quantum numbers of all known quarks}
+%     \label{tabquarks}
+% \end{table}
 \newpage
 \section{Weak Interactions}
 In rare occasions, we see \textbf{violations} of those conservation laws valid for strong and EM interactions: these are known as \textbf{weak interactions} (WI), because of their small coupling. WI take place in almost all processes but they have a negligible effect, except in cases otherwise forbidden. Because of them, stable matter contains only $u,d,e^-$, the other quarks and charged leptons are unstable with respect to WI decays. All elementary particles but gluons and photons \textit{see} WI. Most of our knowledge about WI was obtained from decays of particles and neutrino beams.\\
