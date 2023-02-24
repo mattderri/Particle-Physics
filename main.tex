@@ -875,17 +875,57 @@ In the '90s the search was concluded at Tevatron. The top is produced in pairs v
 % \end{table}
 \newpage
 \section{Weak Interactions}
-In rare occasions, we see \textbf{violations} of those conservation laws valid for strong and EM interactions: these are known as \textbf{weak interactions} (WI), because of their small coupling. WI take place in almost all processes but they have a negligible effect, except in cases otherwise forbidden. Because of them, stable matter contains only $u,d,e^-$, the other quarks and charged leptons are unstable with respect to WI decays. All elementary particles but gluons and photons \textit{see} WI. Most of our knowledge about WI was obtained from decays of particles and neutrino beams.\\
+In rare occasions, we see \textbf{violations} of those conservation laws valid for strong and EM interactions: these are known as \textbf{weak interactions} (WI), because of their small coupling.\\
+WI take place in almost all processes but they have a negligible effect, except in cases otherwise forbidden. Because of them, stable matter contains only $u,d,e^-$, the other quarks and charged leptons are unstable with respect to WI decays. All elementary particles but gluons and photons \textit{see} WI. Most of our knowledge about WI was obtained from decays of particles and neutrino beams.\\
 In the SM, those interactions are classified in two types, according to the charge of their carriers.
 \beginbox{Types of Currents in the Weak Interactions}
 \begin{itemize}
     \item \textbf{Charged currents} (CC), $W^\pm$ exchange. In CC processes, the charge of quarks and leptons changes by $\pm1$ and at the same time there is a variation of flavour, according to the Cabibbo theory.
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (i1) {$\nu_\mu$};
+    \vertex [below=of i1] (i2) {$d$};
+    \vertex [right=of i1] (v1);
+    \vertex [right=of i2] (v2);
+    \vertex [right=of v1] (f1) {$\mu^-$};
+    \vertex [right=of v2] (f2) {$u/c$};
+    \diagram* {
+    (i1) -- [fermion] (v1),
+    (i2) -- [fermion] (v2),
+    (v1) -- [photon, edge label=$W^\pm$] (v2),
+    (v1) -- [fermion] (f1),
+    (v2) -- [fermion] (f2),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{center}  
     \item \textbf{Neutral currents} (NC), $Z$ exchange. In the NC case, quark and lepton flavours remain unchanged (no FCNC).
+    \begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (i1) {$\nu_\mu$};
+    \vertex [below=of i1] (i2) {$e^\pm$};
+    \vertex [right=of i1] (v1);
+    \vertex [right=of i2] (v2);
+    \vertex [right=of v1] (f1) {$\nu_\mu$};
+    \vertex [right=of v2] (f2) {$e^\pm$};
+    \diagram* {
+    (i1) -- [fermion] (v1),
+    (i2) -- [fermion] (v2),
+    (v1) -- [photon, edge label=$Z$] (v2),
+    (v1) -- [fermion] (f1),
+    (v2) -- [fermion] (f2),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{center} 
 \end{itemize}
 \endbox
 In the '60s, Glashow, Salam, Weinberg and others developed a theory that unifies WI and EM, which is today part of the SM. The SM was conceived before the discovery of NC, so the existence of NC and its carrier, predicted by the SM in the '60s and directly observed at CERN in 1983, were among the first great success of the SM.
 \subsection{Charged Currents}
-The modern theory of CC interactions is a successor of the Fermi theory of $\beta$-decay, which describes a point-like interaction proportional to the coupling $G_F$. However, this theory has some intrinsic problems: it is not renormalizable, which means that the cross section violates unitarity at high energy. The SM expands the point-like interaction, introducing a \textbf{heavy charged mediator} $W^\pm$.\\
+The modern theory of CC interactions is a successor of the Fermi theory of $\beta$-decay, which describes a point-like interaction proportional to the coupling $G_F$.\\
+However, this theory has some intrinsic problems: it is not renormalizable, which means that the cross section violates unitarity at high energy. The SM expands the point-like interaction, introducing a \textbf{heavy charged mediator} $W^\pm$. The SM is mathematically consistent and, more important, reproduces the experimental data with unprecedented accuracy.\\
 \begin{minipage}{0.5\textwidth}
 \begin{center}
 \begin{tikzpicture}
@@ -928,7 +968,7 @@ The modern theory of CC interactions is a successor of the Fermi theory of $\bet
 \end{tikzpicture}
 \end{center}    
 \end{minipage}
-The SM is mathematically consistent and, more important, reproduces the experimental data with unprecedented accuracy. Unlike $\alpha$, $G_F$ is not dimensionless. The EM coupling is proportional to $e^2$, similarly the intensity of the CC $G_F$ is proportional to $g^2$. The matrix elements of the transitions are proportional to the square of of the \textit{weak charge} $g$ and to the propagator:
+Unlike $\alpha$, $G_F$ is not dimensionless. The EM coupling is proportional to $e^2$, similarly the intensity of the CC $G_F$ is proportional to $g^2$. The matrix elements of the transitions are proportional to the square of of the \textit{weak charge} $g$ and to the propagator:
 \[
 \pazocal{M}\propto g\frac{1}{Q^2+m_W^2}g\approx\frac{g^2}{m_W^2}\approx G_F\Rightarrow\frac{G_F}{\sqrt{2}}=\frac{g^2}{8m_W^2}
 \]
@@ -992,36 +1032,46 @@ Z\to e^-e^+&:\qquad\mu^-\mu^+&&:\quad\tau^-\tau^+\\
 The total amount of information is impressive and essentially no margin is left to any alternative theory.
 \subsection{Parity Violation}
 The effect was proposed in 1956 and immediately verified by Madame Wu experiment. The historical reason was a review of weak interaction processes and the explanation of the so-called $\theta-\tau$ puzzle, in modern terms the $K^0$ decay, $(K^0\to2\pi)$ vs $(K^0\to3\pi)$.\\
-They found that \textbf{parity conservation} in weak decays was \textbf{not} really supported by measurements. The CC is V-A which is an acronym for the factor $\gamma_\mu(1-\gamma_5)$ in the current, i.e. the CC have a \textit{preference} for \textbf{left-handed particles} and \textbf{right-handed anti-particles}: these effects clearly violates parity.\\
+It was found that \textbf{parity conservation} in weak decays was \textbf{not} really supported by measurements. The CC is V-A which is an acronym for the factor $\gamma_\mu(1-\gamma_5)$ in the current, i.e. the CC have a \textit{preference} for \textbf{left-handed particles} and \textbf{right-handed anti-particles}: these effects clearly violates parity.\\
 Consider for example a neutrino $\nu$ with helicity $h=-1$. The parity operator turns it into a $\nu$ with $h=+1$ which does not exist. The conservation is restored when applying also charge conjugation, anti-neutrinos with $h=+1$ do exist. However, this discussion holds only if neutrinos are massless or in the ultra-relativistic approximation where $m_\nu\ll E_\nu$.\\
-In 1958, Goldhaber, Grodzins and Sunyar measured the helicity of $\nu_e$, which gave a crucial confirmation of the V-A theory. They used metastable Europium $^{152}$Eu which decays via K-capture into excited Samarium Sm* and an electron neutrino $\nu_e$. Sm* decays again into more stable Sm, emitting photons $\gamma_1$. These photons are used to excite another Sm, producing $\gamma_2$ which are finally detected. 
+In 1958, Goldhaber, Grodzins and Sunyar measured the helicity of $\nu_e$, which gave a crucial confirmation of the V-A theory. They used metastable Europium $^{152}$Eu which decays via electronic capture into excited Samarium Sm* emitting an electron neutrino $\nu_e$.
 \[
-^{152}\text{Eu}+e^-\to^{152}\text{Sm*}+\nu_e\to^{152}\text{Sm}+\gamma_1\to^{152}\text{Sm*}\to^{152}\text{Sm}+\gamma_2
+^{152}\text{Eu}+e^-\to^{152}\text{Sm*}+\nu_e
 \]
-For such photons, the transmission in matter depends on the $e^-$ spins, therefore a large magnetic field is applied to polarize the iron. The experiment detects the number of $\gamma_2$ when the magnetic field is parallel and anti-parallel to $\gamma_1$. The asymmetry depends on the spin of $\gamma_1$, hence on $\nu_e$ helicity. The Sm* lifetime $\sim10^{-14}$\;s is short enough to neglect all other interactions. The final result gives $h(\nu_e)=-1.0\pm0.3$, consistent with V-A only.
+The excited Samarium Sm* decays again into more stable Sm, emitting a photon $\gamma_1$.
+\[
+^{152}\text{Sm*}\to^{152}\text{Sm}+\gamma_1
+\]
+The photons emitted in this way are then used to excite another Sm, producing $\gamma_2$ which are finally detected. 
+\[
+\gamma_1+^{152}\text{Sm}\to^{152}\text{Sm*}\to^{152}\text{Sm}+\gamma_2
+\]
+The helicity of the neutrino can be determined by looking at the spin of the elements involved in the process. $^{152}$Eu has spin 0, the neutrino has spin 1/2 and $^{152}$Sm* has spin-parity $1^-$. It follows that $^{152}$Sm* has opposite spin with respect to the neutrino, hence they have the same helicity.\\
+In the following gamma emission, the photon has spin-parity $1^-$ and $^{152}$Sm is an even-even nucleus, in the state $0^+$. In this case, the helicity of the photon corresponds to the helicity of $^{152}$Sm*, hence to the helicity of the neutrino. By measuring the helicity of such photons, it is possible to measure the helicity of the neutrino.\\
+The final result gives $h(\nu_e)=-1.0\pm0.3$, consistent with V-A only.
 \subsection{Weak Decays}
 The $\pi^\pm$ is the lightest hadron, therefore it may only decay through semi-leptonic CC weak processes:
 \[
 \pi^+\to\mu^+\nu_\mu \quad \pi^+\to e^+\nu_e
 \]
 However, in reality it decays only into muons, the electron decay is suppressed roughly by a factor 8000. The reason of this suppression is the \textbf{helicity}: in the $\pi^+$ reference frame, the momenta of $l^+$ and $\nu_l$ must be opposite. Since $\pi^+$ has spin 0, also the spins of $l^+$ and $\nu_l$ must be opposite, therefore the two particles must have the same helicity. The neutrino must have a negative helicity, so the lepton is also forced to have a negative helicity: the transition is suppressed by a factor $(1-\beta_l)$. The $e^+$ is ultra-relativistic while the $\mu^+$ has a smaller $\beta$ due to its larger mass.
-\subsection{$\beta$-Decay}
-For point-like fermions, CC is V-A both for leptons and quarks. However, nucleons and hyperons $(p, n, \Lambda, \Sigma, \Xi, \Omega)$ are bound states of non-free quarks. In this case, strong interaction corrections are important and modify the V-A dynamics.\\
-In the Fermi theory, CC are classified according to the properties of the transition operator. In neutron $\beta$-decay, the electron-neutrino pair may be created as a spin singlet $(S=0)$ or triplet $(S=1)$. In the case of no orbital angular momentum, there are two possibilities to conserve the total angular momentum:
-\begin{itemize}
-    \item \textbf{Fermi transitions}: $S=0, \Delta J_{e\nu}=0$. The direction of the spin of the nucleus remains unchanged, i.e. the interaction takes place with vector coupling $G_V$.
-    \item \textbf{Gamow-Teller transitions}: $S=1, \Delta J_{e\nu}=0,\pm1$. The direction of the spin of the nucleon is flipped, i.e. the transition happens with axial-vector coupling $G_A$
-\end{itemize}
-In principle, these two processes are different, there is no reason why the coupling should be similar or even related.\\
-Assume now that $p,n, e^\pm$ and $\nu$ are spin-1/2 fermions but only neutrinos with $h=-1$ exist. The most general matrix element for the four-body interaction is:
-\[
-\pazocal{M}=\frac{G_F}{\sqrt{2}}\sum_j C_j[\overline{u}_pO_ju_n]\left[\overline{u}_eO_j\left(\frac{1-\gamma_5}{2}\right)u_\nu\right]
-\]
-where $O_j$ are the current operators with given properties: S for scalar, P for pseudo-scalar, V for vector, A for axial-vector, T for tensor. The pseudo-scalar case is irrelevant, since it can only be built from the proton velocity in the neutron rest frame and it is suppressed. From comparison with data, we can exclude the S and V terms, due to lack of interference between them they cannot be both present. Same argument holds for A and T. The angular distribution of the electrons are consistent only with V for Fermi transitions and with A for Gamow-Teller transitions. The matrix element now becomes:
-\[
-\pazocal{M}=\frac{G_F}{\sqrt{2}}[\overline{u}_p\gamma^\mu(C_V+C_A\gamma_5)u_n]\left[\overline{u}_e\gamma^\mu\left(\frac{1-\gamma_5}{2}\right)u_\nu\right]
-\]
-The value of $C_V$ can be measured by comparing composite hadrons with free pure V-A leptons and it turns out to be $C_V\approx1$. $(C_A)^2$ can be measured from the relative strength of Fermi and Gamow-Teller transitions, by comparing the neutron $\beta$-decay with a pure Fermi, $^{14}$O$\to^{14}$N$e^+\nu$, obtaining $|C_A|\simeq1.267$. The sign can be measured from the polarization of protons and it turns out to be negative.
+% \subsection{$\beta$-Decay}
+% For point-like fermions, CC is V-A both for leptons and quarks. However, nucleons and hyperons $(p, n, \Lambda, \Sigma, \Xi, \Omega)$ are bound states of non-free quarks. In this case, strong interaction corrections are important and modify the V-A dynamics.\\
+% In the Fermi theory, CC are classified according to the properties of the transition operator. In neutron $\beta$-decay, the electron-neutrino pair may be created as a spin singlet $(S=0)$ or triplet $(S=1)$. In the case of no orbital angular momentum, there are two possibilities to conserve the total angular momentum:
+% \begin{itemize}
+%     \item \textbf{Fermi transitions}: $S=0, \Delta J_{e\nu}=0$. The direction of the spin of the nucleus remains unchanged, i.e. the interaction takes place with vector coupling $G_V$.
+%     \item \textbf{Gamow-Teller transitions}: $S=1, \Delta J_{e\nu}=0,\pm1$. The direction of the spin of the nucleon is flipped, i.e. the transition happens with axial-vector coupling $G_A$
+% \end{itemize}
+% In principle, these two processes are different, there is no reason why the coupling should be similar or even related.\\
+% Assume now that $p,n, e^\pm$ and $\nu$ are spin-1/2 fermions but only neutrinos with $h=-1$ exist. The most general matrix element for the four-body interaction is:
+% \[
+% \pazocal{M}=\frac{G_F}{\sqrt{2}}\sum_j C_j[\overline{u}_pO_ju_n]\left[\overline{u}_eO_j\left(\frac{1-\gamma_5}{2}\right)u_\nu\right]
+% \]
+% where $O_j$ are the current operators with given properties: S for scalar, P for pseudo-scalar, V for vector, A for axial-vector, T for tensor. The pseudo-scalar case is irrelevant, since it can only be built from the proton velocity in the neutron rest frame and it is suppressed. From comparison with data, we can exclude the S and V terms, due to lack of interference between them they cannot be both present. Same argument holds for A and T. The angular distribution of the electrons are consistent only with V for Fermi transitions and with A for Gamow-Teller transitions. The matrix element now becomes:
+% \[
+% \pazocal{M}=\frac{G_F}{\sqrt{2}}[\overline{u}_p\gamma^\mu(C_V+C_A\gamma_5)u_n]\left[\overline{u}_e\gamma^\mu\left(\frac{1-\gamma_5}{2}\right)u_\nu\right]
+% \]
+% The value of $C_V$ can be measured by comparing composite hadrons with free pure V-A leptons and it turns out to be $C_V\approx1$. $(C_A)^2$ can be measured from the relative strength of Fermi and Gamow-Teller transitions, by comparing the neutron $\beta$-decay with a pure Fermi, $^{14}$O$\to^{14}$N$e^+\nu$, obtaining $|C_A|\simeq1.267$. The sign can be measured from the polarization of protons and it turns out to be negative.
 \subsection{Quark Decays}
 For high mass quarks and at high $Q^2$, the structure V-A seems restored and quarks behave as free point-like particles. However, with more accurate data some discrepancies appear, not due to strong interactions. Some tiny but well measured effects seem to contradict the universality: $G_F$ turns out to be slightly larger for leptons than for quarks.
 \[
@@ -1158,14 +1208,71 @@ In the GIM mechanism, NC contains four hadronic terms coupled with the $Z$.\\
     };
     \end{feynman}
     \end{tikzpicture}
-\end{center}\\
+\end{center}
 Assuming the validity of Cabibbo theory and summing all terms we get:
 \begin{align*}
 u\overline{u}+d'\overline{d}'+c\overline{c}+s'\overline{s}'=&u\overline{u}+(d\cos\theta_c+s\sin\theta_c)(\overline{d}\cos\theta_c+\overline{s}\sin\theta_c)\\
 &+c\overline{c}+(s\cos\theta_c-d\sin\theta_c)(\overline{s}\cos\theta_c-\overline{d}\sin\theta_c)\\
 =&u\overline{u}+d\overline{d}+c\overline{c}+s\overline{s}
 \end{align*}
-The non-diagonal terms, which induce FCNC, disappear. Why is $\text{BR}(K^0\to\mu^+\mu^-)$ small but not zero? Technically, it is a \nth{2} order CC, proportional to $g^4\sin\theta_c\cos\theta_c$. The final state is the same as a \nth{1} order FCNC but it is incompatible with data. This is cured by introducing the $c$ quark, whose contribution cancels the ones coming from FCNC in the limit $m_c\to m_u$. The data on this process put limits on $m_c$ between 1 and 3 GeV.\\
+The non-diagonal terms, which induce FCNC, disappear.\\
+Why is $\text{BR}(K^0\to\mu^+\mu^-)$ small but not zero?\\ Technically, it is a \nth{2} order CC, proportional to $g^4\sin\theta_c\cos\theta_c$ (diagram on the left). The final state is the same as a \nth{1} order FCNC but it is incompatible with data. This is cured by introducing the $c$ quark (diagram on the right), whose contribution cancels the ones coming from FCNC in the limit $m_c\to m_u$. The data on this process put limits on $m_c$ between 1 and 3 GeV.\\
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+    \begin{tikzpicture}
+    \begin{feynman}
+    \vertex (v1);
+    \vertex [below=of v1] (v2);
+    \vertex [left=of v1] (i1) {$d$};
+    \vertex [left=of v2] (i2) {$\overline{s}$};
+    \vertex [right=of v1] (v3);
+    \vertex [right=of v2] (v4);
+    \vertex [right=of v3] (f1) {$\mu^-$};
+    \vertex [right=of v4] (f2) {$\mu^+$};
+    \vertex [above=0.05cm of v1] () {$\cos\theta_c$};
+    \vertex [below=0.05cm of v2] () {$\sin\theta_c$};
+    \diagram*{
+    (i1) -- [fermion] (v1),
+    (i2) -- [anti fermion] (v2),
+    (v1) -- [fermion, edge label'=$u$] (v2),
+    (v1) -- [photon, edge label'=$W^-$] (v3),
+    (v2) -- [photon, edge label=$W^+$] (v4),
+    (v4) -- [fermion] (v3),
+    (v3) -- [fermion] (f1),
+    (v4) -- [anti fermion] (f2),
+    };
+    \end{feynman}
+    \end{tikzpicture}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+    \begin{tikzpicture}
+    \begin{feynman}
+    \vertex (v1);
+    \vertex [below=of v1] (v2);
+    \vertex [left=of v1] (i1) {$d$};
+    \vertex [left=of v2] (i2) {$\overline{s}$};
+    \vertex [right=of v1] (v3);
+    \vertex [right=of v2] (v4);
+    \vertex [right=of v3] (f1) {$\mu^-$};
+    \vertex [right=of v4] (f2) {$\mu^+$};
+    \vertex [above=0.05cm of v1] () {$-\sin\theta_c$};
+    \vertex [below=0.05cm of v2] () {$\cos\theta_c$};
+    \diagram*{
+    (i1) -- [fermion] (v1),
+    (i2) -- [anti fermion] (v2),
+    (v1) -- [fermion, edge label'=$c$] (v2),
+    (v1) -- [photon, edge label'=$W^-$] (v3),
+    (v2) -- [photon, edge label=$W^+$] (v4),
+    (v4) -- [fermion] (v3),
+    (v3) -- [fermion] (f1),
+    (v4) -- [anti fermion] (f2),
+    };
+    \end{feynman}
+    \end{tikzpicture}
+\end{center}
+\end{minipage}
 In 1973, Kobayashi and Maskawa extended the Cabibbo scheme to the new generation of quarks. The new mixing matrix is a \textbf{three-dimension unitary matrix} with three real parameters and one imaginary phase:
 \beginbox{CKM Matrix}
 \[
@@ -1190,34 +1297,44 @@ The neutral mesons $K^0$ and $\overline{K}^0$ are special quark systems in which
 \]
 Simple kinematics shows that it is possible to produce a pure sample of $K^0$. Consider the reaction $ab\to cd$, if $(m_c+m_d)>(m_a+m_b)$ it requires some kinetic energy to happen. Study the process in the system where the target $b$ is at rest:
 \[
-s\Bigr|_{\substack{\text{LAB}}}^{\text{ini}}=m_a^2+m_b^2+2E_a^{\min} m_b=s\Bigr|_{\substack{\text{CM}}}^{\text{fin}}=(m_c+m_d)^2\Rightarrow E_a^{\min}=\frac{(m_c+m_d)^2-(m_a+m_b)^2}{2m_b}
+s\Bigr|_{\substack{\text{LAB}}}^{\text{ini}}=m_a^2+m_b^2+2E_a^{\min} m_b=s\Bigr|_{\substack{\text{CM}}}^{\text{fin}}=(m_c+m_d)^2\Rightarrow E_a^{\min}=\frac{(m_c+m_d)^2-(m_a^2+m_b^2)}{2m_b}
 \]
 The process $\pi^- p\to\Lambda K^0$ has a threshold energy $E_{\pi^-}^{\min}=0.91$\;GeV, to compare it with\\
-$\pi^- p\to K^0\overline{K}^0n$ which has $E_{\pi^-}^{\min}=1.50$\;GeV. It follows that for $0.91<E_{\pi^-}<1.50$\;GeV only $K^0$ are produced. However, even when selecting pure $K^0$ some unexpected $\overline{K}^0$ show up in subsequent processes. This demonstrates that production and decay of these mesons follow complicated rules. The following strong interactions are allowed because they conserve strangeness:
+$\pi^- p\to K^0\overline{K}^0n$ which has $E_{\pi^-}^{\min}=1.50$\;GeV. It follows that for $0.91<E_{\pi^-}<1.50$\;GeV only $K^0$ are produced.\\
+However, even when selecting pure $K^0$ some unexpected $\overline{K}^0$ show up in subsequent processes. This demonstrates that production and decay of these mesons follow complicated rules. The following strong interactions are allowed because they conserve strangeness:
 \[
 (1)\,K^+n\to K^0p \quad (2)\,K^-p\to\overline{K}^0n \quad (3)\,K^0p\to K^+n \quad (4)\,\overline{K}^0p\to\pi^0\Sigma^+
 \]
 Sometimes, the $K^0$ generated in (1) re-interacts as a $\overline{K}^0$ via reaction (4) or the same with (2) and (3). It seems that there are transitions, i.e. \textbf{oscillations}, in flight $K^0\leftrightarrow\overline{K}^0$. Notice that transitions $n\leftrightarrow\overline{n}$ are forbidden because of baryon number and $e^+\leftrightarrow e^-$ are forbidden because of electric charge and lepton number. These quantum numbers are conserved in all interactions, instead the $K^0\leftrightarrow\overline{K}^0$ oscillations are only forbidden by strangeness conservation, which is conserved in strong interactions but \textbf{violated} in weak interactions.
 \subsection{$K^0$ and $\overline{K}^0$ Decays}
 Moreover, the decay of $K^0$ and $\overline{K}^0$ was not understood and created a puzzle. Both $K^0$ and $\overline{K}^0$ can decay into $\pi^+\pi^-$ and $\pi^+\pi^-\pi^0$, two states with different G-parity but we know that G-parity is not conserved in WI. The explanation was provided by Gell-Mann and Pais before the discovery that WI violates parity.\\
-$K^0$ and $\overline{K}^0$ are eigenstates of the strong interaction, each one is the anti-particle of the other. They have opposite strangeness but WI does not conserve strangeness and see a mixture of $K^0$ and $\overline{K}^0$. This mixture is interpreted as two new states, a \textbf{superposition} of $K^0$ and $\overline{K}^0$. These two new states are not a particle-anti-particle pair so they may have in principle different properties. If the mass difference allows that, they might oscillate one into the other. The two $K^0$ states have different values of CP, respectively CP=+1 and CP=-1. The first decays into $2\pi$ and the second into $3\pi$. The $3\pi$ state is near the kinematic threshold ($m_K\approx3m_\pi+70$\;MeV) so the lifetime of this state is much longer than the lifetime of the $2\pi$ state: the proposal was to call \textbf{short} the CP=+1 state and \textbf{long} the CP=-1 state.
+$K^0$ and $\overline{K}^0$ are eigenstates of the strong interaction, each one is the anti-particle of the other. They have opposite strangeness but WI does not conserve strangeness and see a mixture of $K^0$ and $\overline{K}^0$. This mixture is interpreted as two new states, a \textbf{superposition} of $K^0$ and $\overline{K}^0$. These two new states are not a particle-anti-particle pair so they may have in principle different properties. If the mass difference allows that, they might oscillate one into the other.\\
+The two $K^0$ states have different values of CP, respectively CP=+1 and CP=$-$1. The first decays into $2\pi$ and the second into $3\pi$. The $3\pi$ state is near the kinematic threshold\\
+($m_K\approx3m_\pi+70$\;MeV) so the lifetime of this state is much longer than the lifetime of the $2\pi$ state: the proposal was to call \textbf{short} the CP=+1 state and \textbf{long} the CP=$-$1 state.
 \[
 K_S^0: \text{CP}=+1, \tau=0.895\cdot10^{-10}\;\text{s} \quad K_L^0: \text{CP}=-1, \tau=0.512\cdot10^{-7}\;\text{s}
 \]
 The $K_L^0$ was first observed in 1956 by Lande and collaboration with a cloud chamber. The path between the 3 GeV proton beam and the cloud chamber was 6 meters, long enough for the decay of all strange particles known at the time. They observed interactions with nuclei of He, producing a final state with $S\neq0$, like $\overline{K}^0 \text{He}\to\Sigma^-ppn\pi^+$. These final states cannot be generated by a $K^0$ because of the value of $S$ but no $\overline{K}^0$ should be present, because the primary proton energy was chosen to be below the energy threshold for $\overline{K}^0$ production: for some reasons, $\overline{K}^0$ mesons have appeared.\\
-Both $K^0$ and $\overline{K}^0$ are strong interaction and parity eigenstates but not C or CP eigenstates. We define $\ket{K_1^0}$ and $\ket{K_2^0}$ as linear combinations of $K^0$ and $\overline{K}^0$:
+Both $K^0$ and $\overline{K}^0$ are strong interaction and parity eigenstates but not C or CP eigenstates. 
+\[
+\begin{aligned}
+&C\ket{K^0}=-\ket{\overline{K}^0} &&CP\ket{K^0}=+\ket{\overline{K}^0}\\    
+&C\ket{\overline{K}^0}=-\ket{K^0} &&CP\ket{\overline{K}^0}=+\ket{K^0}
+\end{aligned}
+\]
+We define $\ket{K_1^0}$ and $\ket{K_2^0}$ as linear combinations of $K^0$ and $\overline{K}^0$:
 \[
 \left\{
 \begin{aligned}
-&\ket{K_1^0}=\frac{1}{\sqrt{2}}[\ket{K^0}+\ket{\overline{K}^0}]\\    
-&\ket{K_2^0}=\frac{1}{\sqrt{2}}[\ket{K^0}-\ket{\overline{K}^0}]
+&\ket{K_1^0}=\frac{1}{\sqrt{2}}\left[\ket{K^0}+\ket{\overline{K}^0}\right]\\    
+&\ket{K_2^0}=\frac{1}{\sqrt{2}}\left[\ket{K^0}-\ket{\overline{K}^0}\right]
 \end{aligned}
 \right.
 \longleftrightarrow
 \left\{
 \begin{aligned}
-&\ket{K^0}=\frac{1}{\sqrt{2}}[\ket{K_1^0}+\ket{K_2^0}]\\ 
-&\ket{\overline{K}^0}=\frac{1}{\sqrt{2}}[\ket{K_1^0}-\ket{K_2^0}]
+&\ket{K^0}=\frac{1}{\sqrt{2}}\left[\ket{K_1^0}+\ket{K_2^0}\right]\\ 
+&\ket{\overline{K}^0}=\frac{1}{\sqrt{2}}\left[\ket{K_1^0}-\ket{K_2^0}\right]
 \end{aligned}
 \right.
 \]
@@ -1260,7 +1377,7 @@ While the $K^0$ and $\overline{K}^0$ masses are equal because of CPT, there is n
 \]
 The mass difference tells us that the two states evolve with different time constants:
 \[
-\Psi_S(t)=\Psi_S(0)\exp\left[-\left(\frac{\Gamma_S}{2}+im_S\right)\right] \quad \Psi_L(t)=\Psi_L(0)\exp\left[-\left(\frac{\Gamma_L}{2}+im_L\right)\right]
+\Psi_S(t)=\Psi_S(0)\exp\left[-\left(\frac{\Gamma_S}{2}+im_S\right)t\right] \quad \Psi_L(t)=\Psi_L(0)\exp\left[-\left(\frac{\Gamma_L}{2}+im_L\right)t\right]
 \]
 Take now a pure $K^0$ at $t=0$. In the case of no decay, i.e. $\Gamma_{S,L}=0$, the probability to find a $K^0$ or $\overline{K}^0$ is a function of time:
 \[
@@ -1340,7 +1457,7 @@ If $\eta=0$, therefore $\delta=0$, the matrix is \textbf{real} and there is \tex
 \[
 \pazocal{M}(K^0\to\overline{K}^0)\propto V_{cd}V_{ts}^*V_{cs}^*V_{td} \quad \pazocal{M}(\overline{K}^0\to K^0)\propto V_{cs}^*V_{ts}V_{cs}V_{td}^*
 \]
-If $V_{ij}$ is real, then $\pazocal{M}(K^0\to\overline{K}^0)=\pazocal{M}(\overline{K}^0\to K^0)$ and there is no CP violation, while if $V_{ij}$ is complex, then $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and we have CP violation. In this case, $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and their difference is proportional to $\mathfrak{Im}(V_{td})=iA\lambda^3\eta$.\\
+If $V_{ij}$ is real, then $\pazocal{M}(K^0\to\overline{K}^0)=\pazocal{M}(\overline{K}^0\to K^0)$ and there is no CP violation, while if $V_{ij}$ is complex, then $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and we have CP violation. In this case, $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and their difference is proportional to $i\mathfrak{Im}(V_{td})=iA\lambda^3\eta$.\\
 In the SM, CP violation is expected to occur also in the $D^0-\overline{D}^0$ and $B^0-\overline{B}^0$ systems through the same dynamical mechanism. The importance of the phenomenon depends on the value of the CKM matrix, i.e. by the quark mixing: in the first case, the main contribution is from the $b$ quark exchange but the product $V_{cb}V_{ub}$ is very small. In the second case, it is dominated by the $t$ quark exchange and substantial levels of mixing are expected.
 \subsection{$\nu$ Oscillations}
 Quarks of same charge and different flavours mix together, with the CKM matrix parametrizing this process. What about the lepton sector? Do neutrinos oscillate? The answer is yes. Consider a simple toy model with only two families:
@@ -1383,7 +1500,7 @@ Current oscillation experiments measure:
 \Delta m_{12}^2=m_2^2-m_1^2\approx7.37\cdot10^{-5}\;\text{eV$^2$} \quad |\Delta m_{32}|^2=|m_3^2-m_2^2|^2\approx2.56\cdot10^{-3}\;\text{eV$^2$}
 \]
 with an ambiguity about the hierarchy still not resolved.\\
-In the SM, there are three families, the neutrinos mixing matrix is a $3\times3$ with the same mathematical properties as the CKM one, it is called the \textbf{Pontecorvo-Maki-Nakagawa-Sakata matrix} (PMNS). 
+In the SM, there are three families, the neutrinos mixing matrix is a $3\times3$ with the same mathematical properties as the CKM one, it is called the \textbf{Pontecorvo-Maki-Nakagawa-Sakata matrix} (PMNS) and it connects flavour eigenstates with mass eigenstates.
 \[
 \begin{pmatrix}
     \nu_e\\ \nu_\mu\\ \nu_\tau
