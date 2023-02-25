@@ -1192,30 +1192,30 @@ In this context, the GIM mechanism was proposed to explain the absence of flavou
 &\text{BR}(K^+\to\pi^+\nu\overline{\nu})=(1.5^{+1.3}_{-0.9})\cdot10^{-10} &&\text{BR}(K^+\to\pi^0e^+\nu_e)=(4.98\pm0.07)\cdot10^{-2}
 \end{aligned}
 \]
-which means a factor $\sim10^{-8}$ between NC and CC decays. If the $Z$, the carrier of NC, sees the same quark mixture as the $W^\pm$ in the CC, then the CC decay would be suppressed only by a factor 5\%. The idea was to introduce a \textbf{fourth quark}, the charm $c$ with charge +2/3 to solve this problem.\\
-In the GIM mechanism, NC contains four hadronic terms coupled with the $Z$.\\
-\begin{center}
-    \begin{tikzpicture}
-    \begin{feynman}
-    \vertex (a);
-    \vertex [left=of a] (b);
-    \vertex [above right=of a] (c) {$q=u,d',c,s'$};
-    \vertex [below right=of a] (d) {$\overline{q}=\overline{u},\overline{d}',\overline{c},\overline{s}'$};
-    \diagram*{
-    (a) -- [photon, edge label'=$Z$] (b),
-    (a) -- [anti fermion] (c),
-    (a) -- [fermion] (d),
-    };
-    \end{feynman}
-    \end{tikzpicture}
-\end{center}
-Assuming the validity of Cabibbo theory and summing all terms we get:
-\begin{align*}
-u\overline{u}+d'\overline{d}'+c\overline{c}+s'\overline{s}'=&u\overline{u}+(d\cos\theta_c+s\sin\theta_c)(\overline{d}\cos\theta_c+\overline{s}\sin\theta_c)\\
-&+c\overline{c}+(s\cos\theta_c-d\sin\theta_c)(\overline{s}\cos\theta_c-\overline{d}\sin\theta_c)\\
-=&u\overline{u}+d\overline{d}+c\overline{c}+s\overline{s}
-\end{align*}
-The non-diagonal terms, which induce FCNC, disappear.\\
+which means a factor $\sim10^{-8}$ between NC and CC decays. If the $Z$, the carrier of NC, sees the same quark mixture as the $W^\pm$ in the CC, then the CC decay would be suppressed only by a factor 5\%. The idea was to introduce a \textbf{fourth quark}, the charm $c$ with charge +2/3 to solve this problem.
+% In the GIM mechanism, NC contains four hadronic terms coupled with the $Z$.\\
+% \begin{center}
+%     \begin{tikzpicture}
+%     \begin{feynman}
+%     \vertex (a);
+%     \vertex [left=of a] (b);
+%     \vertex [above right=of a] (c) {$q=u,d',c,s'$};
+%     \vertex [below right=of a] (d) {$\overline{q}=\overline{u},\overline{d}',\overline{c},\overline{s}'$};
+%     \diagram*{
+%     (a) -- [photon, edge label'=$Z$] (b),
+%     (a) -- [anti fermion] (c),
+%     (a) -- [fermion] (d),
+%     };
+%     \end{feynman}
+%     \end{tikzpicture}
+% \end{center}
+% Assuming the validity of Cabibbo theory and summing all terms we get:
+% \begin{align*}
+% u\overline{u}+d'\overline{d}'+c\overline{c}+s'\overline{s}'=&u\overline{u}+(d\cos\theta_c+s\sin\theta_c)(\overline{d}\cos\theta_c+\overline{s}\sin\theta_c)\\
+% &+c\overline{c}+(s\cos\theta_c-d\sin\theta_c)(\overline{s}\cos\theta_c-\overline{d}\sin\theta_c)\\
+% =&u\overline{u}+d\overline{d}+c\overline{c}+s\overline{s}
+% \end{align*}
+% The non-diagonal terms, which induce FCNC, disappear.\\
 Why is $\text{BR}(K^0\to\mu^+\mu^-)$ small but not zero?\\ Technically, it is a \nth{2} order CC, proportional to $g^4\sin\theta_c\cos\theta_c$ (diagram on the left). The final state is the same as a \nth{1} order FCNC but it is incompatible with data. This is cured by introducing the $c$ quark (diagram on the right), whose contribution cancels the ones coming from FCNC in the limit $m_c\to m_u$. The data on this process put limits on $m_c$ between 1 and 3 GeV.\\
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -1309,12 +1309,6 @@ Sometimes, the $K^0$ generated in (1) re-interacts as a $\overline{K}^0$ via rea
 \subsection{$K^0$ and $\overline{K}^0$ Decays}
 Moreover, the decay of $K^0$ and $\overline{K}^0$ was not understood and created a puzzle. Both $K^0$ and $\overline{K}^0$ can decay into $\pi^+\pi^-$ and $\pi^+\pi^-\pi^0$, two states with different G-parity but we know that G-parity is not conserved in WI. The explanation was provided by Gell-Mann and Pais before the discovery that WI violates parity.\\
 $K^0$ and $\overline{K}^0$ are eigenstates of the strong interaction, each one is the anti-particle of the other. They have opposite strangeness but WI does not conserve strangeness and see a mixture of $K^0$ and $\overline{K}^0$. This mixture is interpreted as two new states, a \textbf{superposition} of $K^0$ and $\overline{K}^0$. These two new states are not a particle-anti-particle pair so they may have in principle different properties. If the mass difference allows that, they might oscillate one into the other.\\
-The two $K^0$ states have different values of CP, respectively CP=+1 and CP=$-$1. The first decays into $2\pi$ and the second into $3\pi$. The $3\pi$ state is near the kinematic threshold\\
-($m_K\approx3m_\pi+70$\;MeV) so the lifetime of this state is much longer than the lifetime of the $2\pi$ state: the proposal was to call \textbf{short} the CP=+1 state and \textbf{long} the CP=$-$1 state.
-\[
-K_S^0: \text{CP}=+1, \tau=0.895\cdot10^{-10}\;\text{s} \quad K_L^0: \text{CP}=-1, \tau=0.512\cdot10^{-7}\;\text{s}
-\]
-The $K_L^0$ was first observed in 1956 by Lande and collaboration with a cloud chamber. The path between the 3 GeV proton beam and the cloud chamber was 6 meters, long enough for the decay of all strange particles known at the time. They observed interactions with nuclei of He, producing a final state with $S\neq0$, like $\overline{K}^0 \text{He}\to\Sigma^-ppn\pi^+$. These final states cannot be generated by a $K^0$ because of the value of $S$ but no $\overline{K}^0$ should be present, because the primary proton energy was chosen to be below the energy threshold for $\overline{K}^0$ production: for some reasons, $\overline{K}^0$ mesons have appeared.\\
 Both $K^0$ and $\overline{K}^0$ are strong interaction and parity eigenstates but not C or CP eigenstates. 
 \[
 \begin{aligned}
@@ -1369,7 +1363,16 @@ These are CP eigenstates, CP$\ket{K_1^0}=+\ket{K_1^0}$ and CP$\ket{K_2^0}=-\ket{
 \end{itemize}
 \end{multicols}
 \endbox
-Therefore, we identify $K_1^0$ with $K_S^0$ and $K_2^0$ with $K_L^0$.
+The two $K^0$ states have different values of CP, respectively CP=+1 and CP=$-$1. The first decays into $2\pi$ and the second into $3\pi$.
+\[
+K_1^0\to(2\pi) \quad K_2^0\to(3\pi)
+\]
+The $3\pi$ state is near the kinematic threshold
+($m_K\approx3m_\pi+70$\;MeV) so the lifetime of this state is much longer than the lifetime of the $2\pi$ state: the proposal was to call \textbf{short} the CP=+1 state and \textbf{long} the CP=$-$1 state.
+\[
+K_S^0: \text{CP}=+1, \tau=0.895\cdot10^{-10}\;\text{s} \quad K_L^0: \text{CP}=-1, \tau=0.512\cdot10^{-7}\;\text{s}
+\]
+The $K_L^0$ was first observed in 1956 by Lande and collaboration with a cloud chamber. The path between the 3 GeV proton beam and the cloud chamber was 6 meters, long enough for the decay of all strange particles known at the time. They observed interactions with nuclei of He, producing a final state with $S\neq0$, like $\overline{K}^0 \text{He}\to\Sigma^-ppn\pi^+$. These final states cannot be generated by a $K^0$ because of the value of $S$ but no $\overline{K}^0$ should be present, because the primary proton energy was chosen to be below the energy threshold for $\overline{K}^0$ production: for some reasons, $\overline{K}^0$ mesons have appeared.
 \subsection{$K^0$ Oscillations}
 While the $K^0$ and $\overline{K}^0$ masses are equal because of CPT, there is no symmetry regarding the masses of $K_S^0$ and $K_L^0$. The measurement gives:
 \[
@@ -1391,7 +1394,7 @@ Starting with a pure $K^0$, there is an oscillation between the two states accor
 &s\to ul^-\overline{\nu}_l\Rightarrow\overline{K}^0\to\pi^+l^-\overline{\nu}_l
 \end{aligned}
 \]
-The sign of the charged lepton flags the strangeness of the $K^0/\overline{K}^0$. The experimental measure regards the charge asymmetry $\delta$, i.e. the difference between positive charged and negative charged leptons, which is directly correlated to the oscillations. The results are in good agreement with the expectations except for the tail.
+The sign of the charged lepton flags the strangeness of the $K^0/\overline{K}^0$. The experimental measure regards the charge asymmetry $\delta=R(K^0)-R(\overline{K}^0)$, i.e. the difference between positive charged and negative charged leptons, which is directly correlated to the oscillations. The results are in good agreement with the expectations except for the tail, which is connected to CP violation.
 \subsection{$K^0$ Regeneration}
 The regeneration consists in a clever use of an absorber to demonstrate the superposition of $K^0$ and $\overline{K}^0$. Again, start with a pure $K^0$ beam in vacuum, i.e. equal amounts of $K_S^0$ and $K_L^0$. After $t\approx10\tau_S$, the $K_S^0$ intensity is damped by a factor $e^{-t/\tau_S}\approx45\cdot10^{-6}$. On the other hand, the $K_L^0$ intensity is damped by a factor $e^{-t/\tau_L}\approx0.98$. For $K^0$ with 1 GeV momentum, this corresponds to roughly 0.5m so after this distance we are left with a pure beam of $K_L^0$, 50\% $K^0$ and 50\% $\overline{K}^0$. If we put another target after $t=20\tau_S$, we will get $K^0$ and $\overline{K}^0$ interactions. The two mesons interact differently in the target:
 \[
@@ -1402,7 +1405,7 @@ The regeneration consists in a clever use of an absorber to demonstrate the supe
 \]
 The $s$ quark from the $\overline{K}^0$ can swap with one of the quarks in the proton or the neutron but this is not possible for the $\overline{s}$ in the $K^0$. It follows that there are more $\overline{K}^0$ processes and we will no longer have 50\% $K^0+50\%\overline{K}^0$ but an amount of $K_S^0$ is born and we will see $K_S^0$ decays again. 200 $2\pi$ decays were observed, so it was possible to confirm oscillations and regeneration. 
 \subsection{CP Violation}
-If we observe some decays $K_L^0\to2\pi$ or $K_S^0\to3\pi$ with small but non-zero branching ratio, it would be an experimental evidence of the non-conservation of CP. Since a small amount of $K_S^0\to3\pi$ is not observable due to background, the key observation is $K_L^0\to2\pi$.\\
+CP conservation implies that $K_S^0\to(2\pi)$ and $K_L^0\to(3\pi)$. However, if we observe some decays $K_L^0\to2\pi$ or $K_S^0\to3\pi$ with small but non-zero branching ratio, it would be an experimental evidence of the non-conservation of CP. Since a small amount of $K_S^0\to3\pi$ is not observable due to background, the key observation is $K_L^0\to2\pi$.\\
 In 1964, an experiment was built at the Brookhaven AGS, following this scheme: the primary 30 GeV proton beam hits a beryllium target and the secondaries at $\theta=30^\circ$ are selected. If they are charged, they are collimated and bent away while if they are neutral they are collimated and let decay. The resultant $K_L^0$ hit a second lead target, regenerate and let decay again in a long decay tube $\sim18$\;m. No $K_S^0$  are left, so if CP is conserved then we should observe only $3\pi$ decays while if there is a violation $2\pi$ decays should also be present. The final results tell us:
 \[
 R=\frac{\text{BR}(K_L^0\to\pi^+\pi^-)}{\text{BR}(K_L^0\to\text{charged})}=(2.0\pm0.4)\cdot10^{-3}\Rightarrow\text{CP is violated!}
@@ -1457,8 +1460,78 @@ If $\eta=0$, therefore $\delta=0$, the matrix is \textbf{real} and there is \tex
 \[
 \pazocal{M}(K^0\to\overline{K}^0)\propto V_{cd}V_{ts}^*V_{cs}^*V_{td} \quad \pazocal{M}(\overline{K}^0\to K^0)\propto V_{cs}^*V_{ts}V_{cs}V_{td}^*
 \]
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a);
+    \vertex [above=0.1cm of a] () {$V_{cd}$};
+    \vertex [below=of a] (b);
+    \vertex [below=0.1cm of b] () {$V_{cs}^*$};
+    \vertex [right=of b] (c);
+    \vertex [below=0.1cm of c] () {$V_{td}$};
+    \vertex [right=of a] (d);
+    \vertex [above=0.1cm of d] () {$V_{ts}^*$};
+    \vertex [left=of a] (i1) {$d$};
+    \vertex [left=of b] (i2) {$\overline{s}$};
+    \vertex [right=of d] (f1) {$s$};
+    \vertex [right=of c] (f2) {$\overline{d}$};
+
+    \diagram* {
+    (a) -- [photon, edge label'=$W^-$] (d),
+    (b) -- [photon, edge label=$W^+$] (c),
+    (a) -- [fermion, edge label=$c$] (b),
+    (c) -- [fermion, edge label=$t$] (d),
+    (i1) -- [fermion] (a),
+    (i2) -- [anti fermion] (b),
+    (c) -- [anti fermion] (f2),
+    (d) -- [fermion] (f1),
+    };
+    \draw [decoration={brace}, decorate] 
+    (i2.south west) -- (i1.north west) node [below left=0.75cm and 0.1cm] {$K^0$};
+    \draw [decoration={brace}, decorate] 
+    (f1.north east) -- (f2.south east) node [above right=0.75cm and 0.1cm] {$\overline{K}^0$};
+  \end{feynman}
+\end{tikzpicture}    
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a);
+    \vertex [above=0.1cm of a] () {$V_{cs}$};
+    \vertex [below=of a] (b);
+    \vertex [below=0.1cm of b] () {$V_{cd}^*$};
+    \vertex [right=of b] (c);
+    \vertex [below=0.1cm of c] () {$V_{ts}$};
+    \vertex [right=of a] (d);
+    \vertex [above=0.1cm of d] () {$V_{td}^*$};
+    \vertex [left=of a] (i1) {$s$};
+    \vertex [left=of b] (i2) {$\overline{d}$};
+    \vertex [right=of d] (f1) {$d$};
+    \vertex [right=of c] (f2) {$\overline{s}$};
+
+    \diagram* {
+    (a) -- [photon, edge label'=$W^-$] (d),
+    (b) -- [photon, edge label=$W^+$] (c),
+    (a) -- [fermion, edge label=$c$] (b),
+    (c) -- [fermion, edge label=$t$] (d),
+    (i1) -- [fermion] (a),
+    (i2) -- [anti fermion] (b),
+    (c) -- [anti fermion] (f2),
+    (d) -- [fermion] (f1),
+    };
+    \draw [decoration={brace}, decorate] 
+    (i2.south west) -- (i1.north west) node [below left=0.65cm and 0.1cm] {$\overline{K}^0$};
+    \draw [decoration={brace}, decorate] 
+    (f1.north east) -- (f2.south east) node [above right=0.75cm and 0.1cm] {$K^0$};
+  \end{feynman}
+\end{tikzpicture}    
+\end{center}
+\end{minipage}\\
 If $V_{ij}$ is real, then $\pazocal{M}(K^0\to\overline{K}^0)=\pazocal{M}(\overline{K}^0\to K^0)$ and there is no CP violation, while if $V_{ij}$ is complex, then $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and we have CP violation. In this case, $\pazocal{M}(K^0\to\overline{K}^0)\neq\pazocal{M}(\overline{K}^0\to K^0)$ and their difference is proportional to $i\mathfrak{Im}(V_{td})=iA\lambda^3\eta$.\\
-In the SM, CP violation is expected to occur also in the $D^0-\overline{D}^0$ and $B^0-\overline{B}^0$ systems through the same dynamical mechanism. The importance of the phenomenon depends on the value of the CKM matrix, i.e. by the quark mixing: in the first case, the main contribution is from the $b$ quark exchange but the product $V_{cb}V_{ub}$ is very small. In the second case, it is dominated by the $t$ quark exchange and substantial levels of mixing are expected.
+The importance of the phenomenon depends on the value of the CKM matrix, i.e. by the quark mixing.
 \subsection{$\nu$ Oscillations}
 Quarks of same charge and different flavours mix together, with the CKM matrix parametrizing this process. What about the lepton sector? Do neutrinos oscillate? The answer is yes. Consider a simple toy model with only two families:
 \[
